@@ -1095,8 +1095,8 @@ title="Print to PDF"
 <h1>Section 1 : Temperature Dependent Albedo<a class="headerlink" href="#section-1-temperature-dependent-albedo" title="Permalink to this headline">#</a></h1>
 <p>When earth’s surface warms, snow and ice melt. This decreases the amount of solar radiation that is reflected off Earth’s surface, and lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>. This in turn warms the climate and more snow and ice melt. This is referred to as a <strong>postive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
 <p>A simple introduction of this feature is through a temperature dependent albedo defined by a ramp function (see lecture slides).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ecb33a7-8237-46f5-886c-270709dd161b">
-<span class="eqno">(12)<a class="headerlink" href="#equation-1ecb33a7-8237-46f5-886c-270709dd161b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ed77a3f2-c619-456c-a21d-72e03abc2673">
+<span class="eqno">(12)<a class="headerlink" href="#equation-ed77a3f2-c619-456c-a21d-72e03abc2673" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \left\{
         \begin{array}{cl}
         0.3 &amp; T \gt 280 K \\
@@ -1267,8 +1267,8 @@ title="Print to PDF"
 <div class="section" id="section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
 <h1>Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence<a class="headerlink" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">#</a></h1>
 <p>To verify the equilibria identified graphically in the previous section, we can use python to find the solutions to the equation when the rate of change in temeparture is zero. That is find the solution to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-57bfc5aa-0aec-49d6-8c35-5726beebca0e">
-<span class="eqno">(13)<a class="headerlink" href="#equation-57bfc5aa-0aec-49d6-8c35-5726beebca0e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-56f39ac4-7f1f-4655-88f1-c453d0440261">
+<span class="eqno">(13)<a class="headerlink" href="#equation-56f39ac4-7f1f-4655-88f1-c453d0440261" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 = ASR-OLR
 \end{align}\]</div>
 <p>To aid us, we will use a ‘root-finding function’ from the scipy package.</p>
