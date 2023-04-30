@@ -507,11 +507,53 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
-   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+   Future Climate - IPCC I Physical Basis (W2D1)
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
+     Figure settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -544,8 +586,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
    Climate Response - Extremes &amp; Variability (W2D4)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -576,8 +618,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
    Climate Response - Adaptation Impact (W2D5)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1053,8 +1095,8 @@ title="Print to PDF"
 <h1>Section 1 : Temperature Dependent Albedo<a class="headerlink" href="#section-1-temperature-dependent-albedo" title="Permalink to this headline">#</a></h1>
 <p>When earth’s surface warms, snow and ice melt. This decreases the amount of solar radiation that is reflected off Earth’s surface, and lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>. This in turn warms the climate and more snow and ice melt. This is referred to as a <strong>postive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
 <p>A simple introduction of this feature is through a temperature dependent albedo defined by a ramp function (see lecture slides).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a60bc23-d664-4f5e-b008-f193fb415c2e">
-<span class="eqno">(12)<a class="headerlink" href="#equation-3a60bc23-d664-4f5e-b008-f193fb415c2e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6b841799-3aea-4e30-ad6f-1b62730ad7c9">
+<span class="eqno">(12)<a class="headerlink" href="#equation-6b841799-3aea-4e30-ad6f-1b62730ad7c9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \left\{
         \begin{array}{cl}
         0.3 &amp; T \gt 280 K \\
@@ -1225,8 +1267,8 @@ title="Print to PDF"
 <div class="section" id="section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
 <h1>Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence<a class="headerlink" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">#</a></h1>
 <p>To verify the equilibria identified graphically in the previous section, we can use python to find the solutions to the equation when the rate of change in temeparture is zero. That is find the solution to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2ec474e5-bf32-412c-8d8b-859d7ac2d538">
-<span class="eqno">(13)<a class="headerlink" href="#equation-2ec474e5-bf32-412c-8d8b-859d7ac2d538" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3cbfa6c8-2e97-48de-a54b-b0d0a8591b8c">
+<span class="eqno">(13)<a class="headerlink" href="#equation-3cbfa6c8-2e97-48de-a54b-b0d0a8591b8c" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 = ASR-OLR
 \end{align}\]</div>
 <p>To aid us, we will use a ‘root-finding function’ from the scipy package.</p>
