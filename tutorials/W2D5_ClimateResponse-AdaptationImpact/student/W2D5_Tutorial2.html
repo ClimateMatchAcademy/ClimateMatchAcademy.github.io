@@ -6,12 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tutorial 2: Logistic Regression &#8212; Climatematch Academy: Computational Climate Science</title>
-
+    
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-
+    
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
@@ -55,10 +55,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Tutorial 1: Linear Regression" href="W2D5_Tutorial1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
-
+    
 
     <!-- Google Analytics -->
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -75,31 +75,31 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="announcement header-item noprint"></div>
 <div class="header header-item noprint"></div>
 
-
+    
     <div class="container-fluid" id="banner"></div>
 
-
+    
 
     <div class="container-xl">
       <div class="row">
-
+          
 <!-- Sidebar -->
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
-
-
-
+      
+      
+      
       <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
-
+      
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-
+        
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
@@ -695,41 +695,41 @@ const thebe_selector_output = ".output, .cell_output"
 </nav></div>
         <div class="bd-sidebar__bottom">
              <!-- To handle the deprecated key -->
-
+            
             <div class="navbar_extra_footer">
             Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-
+            
         </div>
     </div>
     <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-
-
+          
 <!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
 <!-- Main content -->
 <div class="col py-0 content-container">
-
+    
     <div class="header-article row sticky-top noprint">
-
+        
 
 
 
 <div class="col py-1 d-flex header-article-main">
     <div class="header-article__left">
-
+        
         <label for="__navigation"
   class="headerbtn"
   data-toggle="tooltip"
 data-placement="right"
 title="Toggle navigation"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-bars"></i>
@@ -737,7 +737,7 @@ title="Toggle navigation"
 
 </label>
 
-
+        
     </div>
     <div class="header-article__right">
 <div class="menu-dropdown menu-dropdown-launch-buttons">
@@ -757,7 +757,7 @@ title="Toggle navigation"
 data-placement="bottom"
 title="Fullscreen mode"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
@@ -779,7 +779,7 @@ title="Fullscreen mode"
 data-placement="left"
 title="Source repository"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fab fa-github"></i>
@@ -788,7 +788,7 @@ title="Source repository"
 </a>
 
       </li>
-
+      
       <li>
         <a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html&body=Your%20issue%20content%20here."
    class="headerbtn"
@@ -796,7 +796,7 @@ title="Source repository"
 data-placement="left"
 title="Open an issue"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-lightbulb"></i>
@@ -805,7 +805,7 @@ title="Open an issue"
 </a>
 
       </li>
-
+      
     </ul>
   </div>
 </div>
@@ -824,7 +824,7 @@ title="Open an issue"
 data-placement="left"
 title="Download source file"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
@@ -833,16 +833,16 @@ title="Download source file"
 </a>
 
       </li>
-
+      
       <li>
-
+        
 <button onclick="printPdf(this)"
   class="headerbtn"
   data-toggle="tooltip"
 data-placement="left"
 title="Print to PDF"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -851,15 +851,15 @@ title="Print to PDF"
 </button>
 
       </li>
-
+      
     </ul>
   </div>
 </div>
 <label for="__page-toc"
   class="headerbtn headerbtn-page-toc"
-
+  
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-list"></i>
@@ -1150,7 +1150,7 @@ title="Print to PDF"
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
-
+                        
                         <div>
                             <h2> Contents </h2>
                         </div>
@@ -1423,9 +1423,9 @@ title="Print to PDF"
                 </div>
             </div>
             <main id="main-content" role="main">
-
+                
               <div>
-
+                
   <div class="section" id="tutorial-2-logistic-regression">
 <h1><strong>Tutorial 2: Logistic Regression</strong><a class="headerlink" href="#tutorial-2-logistic-regression" title="Permalink to this headline">#</a></h1>
 <hr class="docutils" />
@@ -1468,6 +1468,8 @@ title="Print to PDF"
 <p>These are the slides for the videos in all tutorials today</p>
 <p>########  Tutorial slides</p>
 <p>These are the slides for the videos in all tutorials today</p>
+<p>#########  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 </div>
@@ -1491,6 +1493,7 @@ title="Print to PDF"
 <h6>Import necessary libraries:<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h6>
 <p>#######  Import necessary libraries:</p>
 <p>########  Import necessary libraries:</p>
+<p>#########  Import necessary libraries:</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Import necessary libraries:</span>
@@ -1527,11 +1530,12 @@ title="Print to PDF"
 <h6>Video 1: Video 1 Name<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h6>
 <p>#######  Video 1: Video 1 Name</p>
 <p>########  Video 1: Video 1 Name</p>
+<p>#########  Video 1: Video 1 Name</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <p>Logistic regression is built from the same fundamentals as linear regression but can be applied to classification problems instead of just regression. Here we will create synthetic data that represents a binary classification problem:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-78f1bfea-03f8-45ff-9b05-ee09187d09d2">
-<span class="eqno">(16)<a class="headerlink" href="#equation-78f1bfea-03f8-45ff-9b05-ee09187d09d2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2a9bc753-1e65-416c-a3e9-e2ad23c065f9">
+<span class="eqno">(16)<a class="headerlink" href="#equation-2a9bc753-1e65-416c-a3e9-e2ad23c065f9" title="Permalink to this equation">#</a></span>\[\begin{align}
  y = H( \alpha x_1 + (1-\alpha) x_2 + \beta \epsilon)
 \end{align}\]</div>
 <p>Here, H represents the Heaviside function, which sets all negative values to 0 and all positive values to 1. By applying this function, each data point will have a label of 0 or 1, indicating which of two categories it belongs to. The goal of the logisitic regression will be to recover this relationship and therefore learn how to correctly classify new inputs.</p>
@@ -1556,6 +1560,7 @@ title="Print to PDF"
 <p>#######  Synthetic classification data</p>
 <p>########  Synthetic classification data</p>
 <p>#########  Synthetic classification data</p>
+<p>##########  Synthetic classification data</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Synthetic classification data</span>
@@ -1608,6 +1613,7 @@ title="Print to PDF"
 <p>#######   Logistic regression model building</p>
 <p>########   Logistic regression model building</p>
 <p>#########   Logistic regression model building</p>
+<p>##########   Logistic regression model building</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title  Logistic regression model building</span>
@@ -1635,6 +1641,7 @@ title="Print to PDF"
 <p>#######  Prediction and evaluation of logistic regression model</p>
 <p>########  Prediction and evaluation of logistic regression model</p>
 <p>#########  Prediction and evaluation of logistic regression model</p>
+<p>##########  Prediction and evaluation of logistic regression model</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Prediction and evaluation of logistic regression model</span>
@@ -1701,9 +1708,9 @@ The plot shows a confusion matrix, which is a way of visualizing how well a bina
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/climatematchacademy/course-content/tree/pre-pod//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial2_Solution_7a30f42e.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial2_Solution_7a30f42e.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/climatematchacademy/course-content/pre-pod/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial2_Solution_7a30f42e_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/climatematchacademy/course-content/pre-pod/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial2_Solution_7a30f42e_1.png" style="width: 498.0px; height: 432.0px;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial2_Solution_7a30f42e_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial2_Solution_7a30f42e_1.png" style="width: 498.0px; height: 432.0px;" /></a>
 <p>As the plot and percent correct show, the model does well on this new data!</p>
 <p>But what if something changed between when we collected data to train the model and when we collected a second data set to test it on? Then the relationship between x and y may have changed. Would the model still work well?</p>
 </div>
@@ -1753,9 +1760,9 @@ The plot shows a confusion matrix, which is a way of visualizing how well a bina
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/climatematchacademy/course-content/tree/pre-pod//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial2_Solution_5865b989.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial2_Solution_5865b989.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/climatematchacademy/course-content/pre-pod/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial2_Solution_5865b989_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/climatematchacademy/course-content/pre-pod/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial2_Solution_5865b989_1.png" style="width: 498.0px; height: 432.0px;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial2_Solution_5865b989_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial2_Solution_5865b989_1.png" style="width: 498.0px; height: 432.0px;" /></a>
 <p>We can see the accuracy has dropped!</p>
 <p>What do you conclude from this?</p>
 </div>
@@ -1790,10 +1797,10 @@ The plot shows a confusion matrix, which is a way of visualizing how well a bina
     <script>kernelName = 'pangeo'</script>
 
               </div>
-
+              
             </main>
             <footer class="footer-article noprint">
-
+                
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="W2D5_Tutorial1.html" title="previous page">
@@ -1816,9 +1823,9 @@ The plot shows a confusion matrix, which is a way of visualizing how well a bina
     </div>
     <div class="footer-content row">
         <footer class="col footer"><p>
-
+  
     By Climatematch<br/>
-
+  
     <div class="extra_footer">
       <div>
 <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
@@ -1831,13 +1838,13 @@ Software elements are additionally licensed under the <a href="https://opensourc
 </p>
         </footer>
     </div>
-
+    
 </div>
 
 
       </div>
     </div>
-
+  
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 

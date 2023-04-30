@@ -6,12 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tutorial 5: Decision Trees &#8212; Climatematch Academy: Computational Climate Science</title>
-
+    
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-
+    
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
@@ -53,10 +53,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Tutorial 4: Dengue Fever Regression" href="W2D5_Tutorial4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
-
+    
 
     <!-- Google Analytics -->
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -73,31 +73,31 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="announcement header-item noprint"></div>
 <div class="header header-item noprint"></div>
 
-
+    
     <div class="container-fluid" id="banner"></div>
 
-
+    
 
     <div class="container-xl">
       <div class="row">
-
+          
 <!-- Sidebar -->
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
-
-
-
+      
+      
+      
       <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
-
+      
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-
+        
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
@@ -693,41 +693,41 @@ const thebe_selector_output = ".output, .cell_output"
 </nav></div>
         <div class="bd-sidebar__bottom">
              <!-- To handle the deprecated key -->
-
+            
             <div class="navbar_extra_footer">
             Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-
+            
         </div>
     </div>
     <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-
-
+          
 <!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
 <!-- Main content -->
 <div class="col py-0 content-container">
-
+    
     <div class="header-article row sticky-top noprint">
-
+        
 
 
 
 <div class="col py-1 d-flex header-article-main">
     <div class="header-article__left">
-
+        
         <label for="__navigation"
   class="headerbtn"
   data-toggle="tooltip"
 data-placement="right"
 title="Toggle navigation"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-bars"></i>
@@ -735,7 +735,7 @@ title="Toggle navigation"
 
 </label>
 
-
+        
     </div>
     <div class="header-article__right">
 <div class="menu-dropdown menu-dropdown-launch-buttons">
@@ -755,7 +755,7 @@ title="Toggle navigation"
 data-placement="bottom"
 title="Fullscreen mode"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
@@ -777,7 +777,7 @@ title="Fullscreen mode"
 data-placement="left"
 title="Source repository"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fab fa-github"></i>
@@ -786,7 +786,7 @@ title="Source repository"
 </a>
 
       </li>
-
+      
       <li>
         <a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial5.html&body=Your%20issue%20content%20here."
    class="headerbtn"
@@ -794,7 +794,7 @@ title="Source repository"
 data-placement="left"
 title="Open an issue"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-lightbulb"></i>
@@ -803,7 +803,7 @@ title="Open an issue"
 </a>
 
       </li>
-
+      
     </ul>
   </div>
 </div>
@@ -822,7 +822,7 @@ title="Open an issue"
 data-placement="left"
 title="Download source file"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
@@ -831,16 +831,16 @@ title="Download source file"
 </a>
 
       </li>
-
+      
       <li>
-
+        
 <button onclick="printPdf(this)"
   class="headerbtn"
   data-toggle="tooltip"
 data-placement="left"
 title="Print to PDF"
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -849,15 +849,15 @@ title="Print to PDF"
 </button>
 
       </li>
-
+      
     </ul>
   </div>
 </div>
 <label for="__page-toc"
   class="headerbtn headerbtn-page-toc"
-
+  
 >
-
+  
 
 <span class="headerbtn__icon-container">
   <i class="fas fa-list"></i>
@@ -1116,7 +1116,7 @@ title="Print to PDF"
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
-
+                        
                         <div>
                             <h2> Contents </h2>
                         </div>
@@ -1357,9 +1357,9 @@ title="Print to PDF"
                 </div>
             </div>
             <main id="main-content" role="main">
-
+                
               <div>
-
+                
   <div class="section" id="tutorial-5-decision-trees">
 <h1>Tutorial 5: Decision Trees<a class="headerlink" href="#tutorial-5-decision-trees" title="Permalink to this headline">#</a></h1>
 <p><strong>Week 2, Day 5: Climate Response: adaptation and impact</strong></p>
@@ -1400,6 +1400,8 @@ title="Print to PDF"
 <p>These are the slides for the videos in all tutorials today</p>
 <p>########  Tutorial slides</p>
 <p>These are the slides for the videos in all tutorials today</p>
+<p>#########  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 </div>
@@ -1423,6 +1425,7 @@ title="Print to PDF"
 <h6>Import necessary libraries:<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h6>
 <p>#######  Import necessary libraries:</p>
 <p>########  Import necessary libraries:</p>
+<p>#########  Import necessary libraries:</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Import necessary libraries:</span>
@@ -1461,6 +1464,7 @@ NOTE: Please note that if you are running this code on a local machine and encou
 <h6>Video 1: Video 1 Name<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h6>
 <p>#######  Video 1: Video 1 Name</p>
 <p>########  Video 1: Video 1 Name</p>
+<p>#########  Video 1: Video 1 Name</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <p>We have learned about loading, exploring, and preprocessing datasets in the previous tutorial. Now, our focus will be on the subsequent steps.</p>
@@ -1508,6 +1512,7 @@ NOTE: Please note that if you are running this code on a local machine and encou
 <p>In this code, we are working with the df_features dataframe. The df_features.head() function call will display the first 5 rows of the dataframe, which is helpful for quickly inspecting the data and getting a sense of its structure.</p>
 <p>In this code, we are working with the df_features dataframe. The df_features.head() function call will display the first 5 rows of the dataframe, which is helpful for quickly inspecting the data and getting a sense of its structure.</p>
 <p>In this code, we are working with the df_features dataframe. The df_features.head() function call will display the first 5 rows of the dataframe, which is helpful for quickly inspecting the data and getting a sense of its structure.</p>
+<p>In this code, we are working with the df_features dataframe. The df_features.head() function call will display the first 5 rows of the dataframe, which is helpful for quickly inspecting the data and getting a sense of its structure.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown In this code, we are working with the df_features dataframe. The df_features.head() function call will display the first 5 rows of the dataframe, which is helpful for quickly inspecting the data and getting a sense of its structure.</span>
@@ -1540,6 +1545,8 @@ NOTE: Please note that if you are running this code on a local machine and encou
 <p>########  Data Cleaning</p>
 <p>We will first load and clean our data as we did before. Specifically, we will drop certain columns, replace missing values, and divide into training and test sets.</p>
 <p>#########  Data Cleaning</p>
+<p>We will first load and clean our data as we did before. Specifically, we will drop certain columns, replace missing values, and divide into training and test sets.</p>
+<p>##########  Data Cleaning</p>
 <p>We will first load and clean our data as we did before. Specifically, we will drop certain columns, replace missing values, and divide into training and test sets.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -1607,9 +1614,9 @@ NOTE: Please note that if you are running this code on a local machine and encou
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/climatematchacademy/course-content/tree/pre-pod//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial5_Solution_a471cb41.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W2D5_ClimateResponse-AdaptationImpact/solutions/W2D5_Tutorial5_Solution_a471cb41.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/climatematchacademy/course-content/pre-pod/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial5_Solution_a471cb41_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/climatematchacademy/course-content/pre-pod/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial5_Solution_a471cb41_1.png" style="width: 585.0px; height: 453.0px;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial5_Solution_a471cb41_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/static/W2D5_Tutorial5_Solution_a471cb41_1.png" style="width: 585.0px; height: 453.0px;" /></a>
 <div class="section" id="evaluating-the-performance-of-the-model-using-metrics-such-as-mean-absolute-error-mae-and-mean-squared-error-mse">
 <h3>Evaluating the performance of the model using metrics such as mean absolute error (MAE) and mean squared error (MSE)<a class="headerlink" href="#evaluating-the-performance-of-the-model-using-metrics-such-as-mean-absolute-error-mae-and-mean-squared-error-mse" title="Permalink to this headline">#</a></h3>
 <div class="section" id="id16">
@@ -1621,6 +1628,7 @@ NOTE: Please note that if you are running this code on a local machine and encou
 <p>#######  Evaluating the performance of the model using metrics such as mean absolute error (MAE) and mean squared error (MSE)</p>
 <p>########  Evaluating the performance of the model using metrics such as mean absolute error (MAE) and mean squared error (MSE)</p>
 <p>#########  Evaluating the performance of the model using metrics such as mean absolute error (MAE) and mean squared error (MSE)</p>
+<p>##########  Evaluating the performance of the model using metrics such as mean absolute error (MAE) and mean squared error (MSE)</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Evaluating the performance of the model using metrics such as mean absolute error (MAE) and mean squared error (MSE)</span>
@@ -1660,6 +1668,7 @@ NOTE: Please note that if you are running this code on a local machine and encou
 <hr class="docutils" />
 <p>When we train a model to predict an outcome, we can also use ‘feature importance’ methods to figure out which inputs to the model are most important in driving that prediction. Here we will apply a permutation importance method to our random forest model.</p>
 <p>For a given feature in the model, the permutation method randomly shuffles the values of that feature and tests the performance of the network with these permuted values. The amount that the model performance decreases when the feature’s values are permuted can provide an indication of how important it is. Sci-kit learn has a method that implements permutation importance. It outputs a normalized measure of how much the feature impacts performance.</p>
+<p><em>Execute this cell to enable the plotting function to be used for plotting performance of our model in next cell: <code class="docutils literal notranslate"><span class="pre">plot_feature_importance</span></code></em></p>
 <p><em>Execute this cell to enable the plotting function to be used for plotting performance of our model in next cell: <code class="docutils literal notranslate"><span class="pre">plot_feature_importance</span></code></em></p>
 <p><em>Execute this cell to enable the plotting function to be used for plotting performance of our model in next cell: <code class="docutils literal notranslate"><span class="pre">plot_feature_importance</span></code></em></p>
 <p><em>Execute this cell to enable the plotting function to be used for plotting performance of our model in next cell: <code class="docutils literal notranslate"><span class="pre">plot_feature_importance</span></code></em></p>
@@ -1812,10 +1821,10 @@ The plot shows the feature importance values of each input feature to the random
     <script>kernelName = 'pangeo'</script>
 
               </div>
-
+              
             </main>
             <footer class="footer-article noprint">
-
+                
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="W2D5_Tutorial4.html" title="previous page">
@@ -1838,9 +1847,9 @@ The plot shows the feature importance values of each input feature to the random
     </div>
     <div class="footer-content row">
         <footer class="col footer"><p>
-
+  
     By Climatematch<br/>
-
+  
     <div class="extra_footer">
       <div>
 <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
@@ -1853,13 +1862,13 @@ Software elements are additionally licensed under the <a href="https://opensourc
 </p>
         </footer>
     </div>
-
+    
 </div>
 
 
       </div>
     </div>
-
+  
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
