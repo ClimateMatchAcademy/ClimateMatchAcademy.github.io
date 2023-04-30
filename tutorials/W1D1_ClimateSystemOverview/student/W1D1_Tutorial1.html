@@ -1,0 +1,1522 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W1D1: Introduction to the Climate System and Xarray &#8212; Climatematch Academy: Computational Climate Science</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Tutorial 2: Selection, Interpolation and Slicing" href="W1D1_Tutorial2.html" />
+    <link rel="prev" title="Climate System Overview" href="../chapter_title.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../TechnicalHelp/tech_intro.html">
+   Technical Help
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">
+     Using jupyterbook
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
+       Using Google Colab
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">
+       Using Kaggle
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../TechnicalHelp/Discord.html">
+     Using discord
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">
+   Quick links and policies
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fundamentals
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../chapter_title.html">
+   Climate System Overview (W1D1)
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <strong>
+      W1D1: Introduction to the Climate System and Xarray
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D1_Tutorial2.html">
+     <strong>
+      Tutorial 2: Selection, Interpolation and Slicing
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D1_Tutorial3.html">
+     <strong>
+      Tutorial 3: Opening and Plotting netCDF Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D1_Tutorial4.html">
+     <strong>
+      Tutorial 4: Arithmetic and Aggregation Methods
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D1_Tutorial5.html">
+     <strong>
+      Tutorial 5: Xarray Data Analysis and Climatology
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D1_Tutorial6.html">
+     <strong>
+      Tutorial 6: Compute and Plot Temperature Anomalies
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D1_Tutorial7.html">
+     <strong>
+      Tutorial 7: Other Computational Tools in Xarray
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D1_Tutorial8.html">
+     <strong>
+      Tutorial 8: Masking with One Condition
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="W1D1_Tutorial9.html">
+     <strong>
+      Tutorial 9: Masking with Multiple Conditions
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D2_GoodResearchPractices/chapter_title.html">
+   Good Research Practices (W2D2)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html">
+     Demos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial2.html">
+     Video 2: Doing a Literature Review
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial3.html">
+     Video 3: Identifying the Basic Ingredients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial4.html">
+     Video 4: Formulating a Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial5.html">
+     Video 6: Drafting the Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial7.html">
+     Demos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D2_GoodResearchPractices/student/W2D2_Tutorial8.html">
+     Video 1: Communicating Your Conclusions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Climate Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+   State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
+     Calculating ENSO with Xarray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
+     Tutorial 2: A lot of weather makes climate - exploring the ERA5 Reanalysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
+     Tutorial 3: Atmospheric wind driven circulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
+     Tutorial 4: Ocean wind driven circulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
+     Tutorial 5: Thermohaline circulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
+     Tutorial 6: Ocean heat content
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+   Remote Sensing Land Ocean and Atmosphere (W1D3)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
+     Video 1: What is Remote Sensing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">
+     Figure settings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">
+     Figure settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+   Paleoclimate (W1D4)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
+     Tutorial 1: Paleoclimate Proxies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
+     <strong>
+      Tutorial 2: Reconstructing Past Changes in Ocean Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
+     <strong>
+      Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
+     <strong>
+      Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
+     <strong>
+      Tutorial 5: Paleoclimate Data Analysis Tools
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
+     <strong>
+      Tutorial 6: Spectral Analysis of Paleoclimate Data
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
+     <strong>
+      Tutorial 7: Assessing Climate Forcings
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
+     <strong>
+      Tutorial 8: Paleoclimate Models
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
+     <strong>
+      Tutorial 9: Paleoclimate Data Assimilation
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Climate Future
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">
+   Climate Modeling (W1D5)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
+     Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">
+     Setup
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
+     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
+     Tutorial 2 - A first look at integrated assessment models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
+     Tutorial 5 - Text analysis of COP tweets
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Climate Response
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
+   Climate Response - Extremes &amp; Variability (W2D4)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
+     Data investigation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
+     Fit Moments using a different method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
+     Load CMIP6 data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
+     scale as function of time
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+   Climate Response - Adaptation Impact (W2D5)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
+     <strong>
+      Tutorial 1: Linear Regression
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
+     <strong>
+      Tutorial 2: Logistic Regression
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
+     Tutorial 3:  Dengue Fever Data Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
+     Tutorial 4:  Dengue Fever Regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial5.html">
+     Tutorial 5: Decision Trees
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial6.html">
+     <strong>
+      Tutorial 6:  Remote sensing crops dataset
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial7.html">
+     Tutorial 7:  Logisitc Regression on Crops Dataset
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial8.html">
+     Tutorial 8:  Artificial neural networks on crops dataset
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial9.html">
+     Tutorial 9:  Exploring other applications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Project Booklet
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/README.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/ClimatematchAcademy/course-content"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    W1D1: Introduction to the Climate System and Xarray
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overview">
+     Overview
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorial-1-creating-dataarrays-and-datasets-to-assess-global-climate-data">
+   <strong>
+    Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tutorial-1-objectives">
+     <strong>
+      Tutorial 1 Objectives
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introducing-the-dataarray-and-dataset">
+     Introducing the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       DataArray
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Dataset
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creation-of-a-dataarray-object">
+       Creation of a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataArray
+        </span>
+       </code>
+       object
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#generate-a-random-numpy-array">
+         Generate a random numpy array
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#wrap-the-array-first-attempt">
+         Wrap the array: first attempt
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#assign-dimension-names">
+         Assign dimension names
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-a-dataarray-with-named-coordinates">
+       Create a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataArray
+        </span>
+       </code>
+       with named Coordinates
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#make-time-and-space-coordinates">
+         Make time and space coordinates
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#initialize-the-dataarray-with-complete-coordinate-info">
+         Initialize the
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           DataArray
+          </span>
+         </code>
+         with complete coordinate info
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#set-useful-attributes">
+         Set useful attributes
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#attributes-are-not-preserved-by-default">
+         Attributes are not preserved by default!
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-dataset-a-container-for-dataarrays-with-shared-coordinates">
+       The
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         Dataset
+        </span>
+       </code>
+       : a container for
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataArray
+        </span>
+       </code>
+       s with shared coordinates
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-a-pressure-dataarray-using-the-same-coordinates">
+         Create a pressure
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           DataArray
+          </span>
+         </code>
+         using the same coordinates
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-a-dataset-object">
+         Create a
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           Dataset
+          </span>
+         </code>
+         object
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#access-data-variables-and-coordinates-in-a-dataset">
+         Access Data variables and Coordinates in a
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           Dataset
+          </span>
+         </code>
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>W1D1: Introduction to the Climate System and Xarray</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    W1D1: Introduction to the Climate System and Xarray
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overview">
+     Overview
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorial-1-creating-dataarrays-and-datasets-to-assess-global-climate-data">
+   <strong>
+    Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+   </strong>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tutorial-1-objectives">
+     <strong>
+      Tutorial 1 Objectives
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introducing-the-dataarray-and-dataset">
+     Introducing the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       DataArray
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Dataset
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creation-of-a-dataarray-object">
+       Creation of a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataArray
+        </span>
+       </code>
+       object
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#generate-a-random-numpy-array">
+         Generate a random numpy array
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#wrap-the-array-first-attempt">
+         Wrap the array: first attempt
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#assign-dimension-names">
+         Assign dimension names
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-a-dataarray-with-named-coordinates">
+       Create a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataArray
+        </span>
+       </code>
+       with named Coordinates
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#make-time-and-space-coordinates">
+         Make time and space coordinates
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#initialize-the-dataarray-with-complete-coordinate-info">
+         Initialize the
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           DataArray
+          </span>
+         </code>
+         with complete coordinate info
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#set-useful-attributes">
+         Set useful attributes
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#attributes-are-not-preserved-by-default">
+         Attributes are not preserved by default!
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-dataset-a-container-for-dataarrays-with-shared-coordinates">
+       The
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         Dataset
+        </span>
+       </code>
+       : a container for
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataArray
+        </span>
+       </code>
+       s with shared coordinates
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-a-pressure-dataarray-using-the-same-coordinates">
+         Create a pressure
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           DataArray
+          </span>
+         </code>
+         using the same coordinates
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-a-dataset-object">
+         Create a
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           Dataset
+          </span>
+         </code>
+         object
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#access-data-variables-and-coordinates-in-a-dataset">
+         Access Data variables and Coordinates in a
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           Dataset
+          </span>
+         </code>
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="section" id="w1d1-introduction-to-the-climate-system-and-xarray">
+<h1><strong>W1D1: Introduction to the Climate System and Xarray</strong><a class="headerlink" href="#w1d1-introduction-to-the-climate-system-and-xarray" title="Permalink to this headline">#</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<p>The first three tutorials of today will introduce the basics of gridded, labeled data with Xarray. Since Xarray introduces additional abstractions on top of plain arrays of data, our goal is to show why these abstractions are useful and how they frequently lead to simpler, more robust code.</p>
+<p>We’ll cover these topics:</p>
+<ol class="simple">
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>, one of the core object types in Xarray</p></li>
+<li><p>Understand how to use named coordinates and metadata in a <code class="docutils literal notranslate"><span class="pre">DataArray</span></code></p></li>
+<li><p>Combine individual <code class="docutils literal notranslate"><span class="pre">DataArrays</span></code> into a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>, the other core object type in Xarray</p></li>
+<li><p>Subset, slice, and interpolate the data using named coordinates</p></li>
+<li><p>Open netCDF data using XArray</p></li>
+<li><p>Basic subsetting and aggregation of a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code></p></li>
+<li><p>Brief introduction to plotting with Xarray</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="tutorial-1-creating-dataarrays-and-datasets-to-assess-global-climate-data">
+<h1><strong>Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data</strong><a class="headerlink" href="#tutorial-1-creating-dataarrays-and-datasets-to-assess-global-climate-data" title="Permalink to this headline">#</a></h1>
+<p><strong>Week 1, Day 1, Introduction to the Climate System</strong></p>
+<p><strong>Content creators:</strong> Sloane Garelick, Julia Kent</p>
+<p><strong>Content reviewers:</strong> Danika Gupta, Younkap Nina Duplex</p>
+<p><strong>Content editors:</strong> Yosmely Bermúdez</p>
+<p><strong>Production editors:</strong> TBD</p>
+<p><strong>Our 2023 Sponsors:</strong> TBD</p>
+<p>###<strong>Code and Data Sources</strong></p>
+<p>Code and data for this tutorial is based on existing content from <a class="reference external" href="https://foundations.projectpythia.org/core/xarray/xarray-intro.html">Project Pythia</a>.</p>
+<div class="section" id="tutorial-1-objectives">
+<h2><strong>Tutorial 1 Objectives</strong><a class="headerlink" href="#tutorial-1-objectives" title="Permalink to this headline">#</a></h2>
+<p>As you just learned in the Introduction to Climate video, variations in global climate involve various forcings and interactions between multiple systems. Because of this complexity, global climate datasets are often very large with multiple dimensions and variables.</p>
+<p>One useful computational tool for organizing, analyzing and interpreting large global datasets is XArray, an open source project and Python package that makes working with labelled multi-dimensional arrays simple and efficient.</p>
+<p>In this first tutorial, we will use the <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> and <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> objects to practice organizing large datasets.</p>
+</div>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
+<p>Simmilar to <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">np</span></code>; <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">pd</span></code>; you may often encounter <code class="docutils literal notranslate"><span class="pre">xarray</span></code> imported within a shortened namespace as <code class="docutils literal notranslate"><span class="pre">xr</span></code>. <code class="docutils literal notranslate"><span class="pre">pythia_datasets</span></code> provides example data for us to work with.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>datetime
+
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>numpy
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>xarray
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pythia_datasets
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">from</span> <span class="nn">pythia_datasets</span> <span class="kn">import</span> <span class="n">DATASETS</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="introducing-the-dataarray-and-dataset">
+<h2>Introducing the <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> and <code class="docutils literal notranslate"><span class="pre">Dataset</span></code><a class="headerlink" href="#introducing-the-dataarray-and-dataset" title="Permalink to this headline">#</a></h2>
+<p>Xarray expands on the capabilities on NumPy arrays, providing a lot of streamlined data manipulation. It is similar in that respect to Pandas, but whereas Pandas excels at working with tabular data, Xarray is focused on N-dimensional arrays of data (i.e. grids). Its interface is based largely on the netCDF data model (variables, attributes, and dimensions), but it goes beyond the traditional netCDF interfaces to provide functionality similar to netCDF-java’s <a class="reference external" href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/common_data_model_overview.html">Common Data Model (CDM)</a>.</p>
+<div class="section" id="creation-of-a-dataarray-object">
+<h3>Creation of a <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> object<a class="headerlink" href="#creation-of-a-dataarray-object" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> is one of the basic building blocks of Xarray (see docs <a class="reference external" href="http://xarray.pydata.org/en/stable/user-guide/data-structures.html#dataarray">here</a>). It provides a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>-like object that expands to provide two critical pieces of functionality:</p>
+<ol class="simple">
+<li><p>Coordinate names and values are stored with the data, making slicing and indexing much more powerful</p></li>
+<li><p>It has a built-in container for attributes</p></li>
+</ol>
+<p>Here we’ll initialize a <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> object by wrapping a plain NumPy array, and explore a few of its properties.</p>
+<div class="section" id="generate-a-random-numpy-array">
+<h4>Generate a random numpy array<a class="headerlink" href="#generate-a-random-numpy-array" title="Permalink to this headline">#</a></h4>
+<p>For our first example, we’ll just create a random array of “temperature” data in units of Kelvin:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="mi">283</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="wrap-the-array-first-attempt">
+<h4>Wrap the array: first attempt<a class="headerlink" href="#wrap-the-array-first-attempt" title="Permalink to this headline">#</a></h4>
+<p>Now we create a basic <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> just by passing our plain <code class="docutils literal notranslate"><span class="pre">data</span></code> as input:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note two things:</p>
+<ol class="simple">
+<li><p>Xarray generates some basic dimension names for us (<code class="docutils literal notranslate"><span class="pre">dim_0</span></code>, <code class="docutils literal notranslate"><span class="pre">dim_1</span></code>, <code class="docutils literal notranslate"><span class="pre">dim_2</span></code>). We’ll improve this with better names in the next example.</p></li>
+<li><p>Wrapping the numpy array in a <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> gives us a rich display in the notebook! (Try clicking the array symbol to expand or collapse the view)</p></li>
+</ol>
+</div>
+<div class="section" id="assign-dimension-names">
+<h4>Assign dimension names<a class="headerlink" href="#assign-dimension-names" title="Permalink to this headline">#</a></h4>
+<p>Much of the power of Xarray comes from making use of named dimensions. So let’s add some more useful names! We can do that by passing an ordered list of names using the keyword argument <code class="docutils literal notranslate"><span class="pre">dims</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])</span>
+<span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is already improved upon from a NumPy array, because we have names for each of the dimensions (or axes in NumPy parlance). Even better, we can take arrays representing the values for the coordinates for each of these dimensions and associate them with the data when we create the <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>. We’ll see this in the next example.</p>
+</div>
+</div>
+<div class="section" id="create-a-dataarray-with-named-coordinates">
+<h3>Create a <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> with named Coordinates<a class="headerlink" href="#create-a-dataarray-with-named-coordinates" title="Permalink to this headline">#</a></h3>
+<div class="section" id="make-time-and-space-coordinates">
+<h4>Make time and space coordinates<a class="headerlink" href="#make-time-and-space-coordinates" title="Permalink to this headline">#</a></h4>
+<p>Here we will use <span class="xref myst">Pandas</span> to create an array of <span class="xref myst">datetime data</span>, which we will then use to create a <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> with a named coordinate <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">times</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;2018-01-01&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">times</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll also create arrays to represent sample longitude and latitude:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="initialize-the-dataarray-with-complete-coordinate-info">
+<h4>Initialize the <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> with complete coordinate info<a class="headerlink" href="#initialize-the-dataarray-with-complete-coordinate-info" title="Permalink to this headline">#</a></h4>
+<p>When we create the <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> instance, we pass in the arrays we just created:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">times</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">lons</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])</span>
+<span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-useful-attributes">
+<h4>Set useful attributes<a class="headerlink" href="#set-useful-attributes" title="Permalink to this headline">#</a></h4>
+<p>…and while we’re at it, we can also set some attribute metadata:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;kelvin&#39;</span>
+<span class="n">temp</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;air_temperature&#39;</span>
+
+<span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="attributes-are-not-preserved-by-default">
+<h4>Attributes are not preserved by default!<a class="headerlink" href="#attributes-are-not-preserved-by-default" title="Permalink to this headline">#</a></h4>
+<p>Notice what happens if we perform a mathematical operaton with the <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>: the coordinate values persist, but the attributes are lost. This is done because it is very challenging to know if the attribute metadata is still correct or appropriate after arbitrary arithmetic operations.</p>
+<p>To illustrate this, we’ll do a simple unit conversion from Kelvin to Celsius:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_in_celsius</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">-</span> <span class="mf">273.15</span>
+<span class="n">temp_in_celsius</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For an in-depth discussion of how Xarray handles metadata, start in the Xarray docs <a class="reference external" href="http://xarray.pydata.org/en/stable/getting-started-guide/faq.html#approach-to-metadata">here</a>.</p>
+</div>
+</div>
+<div class="section" id="the-dataset-a-container-for-dataarrays-with-shared-coordinates">
+<h3>The <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>: a container for <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>s with shared coordinates<a class="headerlink" href="#the-dataset-a-container-for-dataarrays-with-shared-coordinates" title="Permalink to this headline">#</a></h3>
+<p>Along with <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>, the other key object type in Xarray is the <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>: a dictionary-like container that holds one or more <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>s, which can also optionally share coordinates (see docs <a class="reference external" href="http://xarray.pydata.org/en/stable/user-guide/data-structures.html#dataset">here</a>).</p>
+<p>The most common way to create a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object is to load data from a file (see <a class="reference external" href="#Opening-netCDF-data">below</a>). Here, instead, we will create another <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> and combine it with our <code class="docutils literal notranslate"><span class="pre">temp</span></code> data.</p>
+<p>This will illustrate how the information about common coordinate axes is used.</p>
+<div class="section" id="create-a-pressure-dataarray-using-the-same-coordinates">
+<h4>Create a pressure <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> using the same coordinates<a class="headerlink" href="#create-a-pressure-dataarray-using-the-same-coordinates" title="Permalink to this headline">#</a></h4>
+<p>This code mirrors how we created the <code class="docutils literal notranslate"><span class="pre">temp</span></code> object above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pressure_data</span> <span class="o">=</span> <span class="mf">1000.0</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">pressure</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+    <span class="n">pressure_data</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">times</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">lons</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">pressure</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hPa&#39;</span>
+<span class="n">pressure</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;standard_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;air_pressure&#39;</span>
+
+<span class="n">pressure</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-dataset-object">
+<h4>Create a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object<a class="headerlink" href="#create-a-dataset-object" title="Permalink to this headline">#</a></h4>
+<p>Each <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> in our <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> needs a name!</p>
+<p>The most straightforward way to create a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> with our <code class="docutils literal notranslate"><span class="pre">temp</span></code> and <code class="docutils literal notranslate"><span class="pre">pressure</span></code> arrays is to pass a dictionary using the keyword argument <code class="docutils literal notranslate"><span class="pre">data_vars</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">data_vars</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Temperature&#39;</span><span class="p">:</span> <span class="n">temp</span><span class="p">,</span> <span class="s1">&#39;Pressure&#39;</span><span class="p">:</span> <span class="n">pressure</span><span class="p">})</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that the <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object <code class="docutils literal notranslate"><span class="pre">ds</span></code> is aware that both data arrays sit on the same coordinate axes.</p>
+</div>
+<div class="section" id="access-data-variables-and-coordinates-in-a-dataset">
+<h4>Access Data variables and Coordinates in a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code><a class="headerlink" href="#access-data-variables-and-coordinates-in-a-dataset" title="Permalink to this headline">#</a></h4>
+<p>We can pull out any of the individual <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> objects in a few different ways.</p>
+<p>Using the “dot” notation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">Pressure</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>… or using dictionary access like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;Pressure&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll return to the <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object when we start loading data from files.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/W1D1_ClimateSystemOverview/student"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../chapter_title.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Climate System Overview</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="W1D1_Tutorial2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Tutorial 2: Selection, Interpolation and Slicing</strong></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Climatematch<br/>
+  
+    <div class="extra_footer">
+      <div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
