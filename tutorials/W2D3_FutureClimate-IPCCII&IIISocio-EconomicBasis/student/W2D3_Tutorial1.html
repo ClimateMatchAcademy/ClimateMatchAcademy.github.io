@@ -568,7 +568,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="W2D3_Tutorial4.html">
-     Tutorial 5 - Text analysis of COP tweets
+     Tutorial 4 - Text analysis of COP tweets
     </a>
    </li>
   </ul>
@@ -882,9 +882,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorial-objectives">
-   <em>
-    Tutorial Objectives
-   </em>
+   Tutorial Objectives
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -896,34 +894,6 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#figure-functions">
      Figure functions
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Figure functions
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         Figure functions
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h5 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#id3">
-           Figure functions
-          </a>
-          <ul class="nav section-nav flex-column">
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#id4">
-             Figure functions
-            </a>
-           </li>
-          </ul>
-         </li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -990,9 +960,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorial-objectives">
-   <em>
-    Tutorial Objectives
-   </em>
+   Tutorial Objectives
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -1004,34 +972,6 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#figure-functions">
      Figure functions
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Figure functions
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         Figure functions
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h5 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#id3">
-           Figure functions
-          </a>
-          <ul class="nav section-nav flex-column">
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#id4">
-             Figure functions
-            </a>
-           </li>
-          </ul>
-         </li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -1086,7 +1026,7 @@ title="Print to PDF"
 <h1>Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources<a class="headerlink" href="#tutorial-1-limits-to-growth-in-world3-a-toy-world-model-of-diminishing-non-renewable-resources" title="Permalink to this headline">#</a></h1>
 <p>Week 2, Day 3: IPCC Socio-economic Basis</p>
 <p>By Neuromatch Academy</p>
-<p>Content creators: Name Surname, Name Surname, Maximilian Puelma Touzel</p>
+<p>Content creators: Maximilian Puelma Touzel</p>
 <p>Content reviewers: Name Surname, Name Surname</p>
 <p>Content editors: Name Surname, Name Surname</p>
 <p>Production editors: Name Surname, Name Surname</p>
@@ -1094,8 +1034,8 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="tutorial-objectives">
-<h1><em>Tutorial Objectives</em><a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">#</a></h1>
-<p>Learn about nonlinear, coupled dynamics of various aggregated world system variables in one of the first toy world models that combined economic activity and the effects it has on the natural world, <code class="docutils literal notranslate"><span class="pre">World3</span></code>.</p>
+<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">#</a></h1>
+<p>Learn about nonlinear, coupled dynamics of various aggregated world system variables in <code class="docutils literal notranslate"><span class="pre">World3</span></code>, one of the first toy world models that combined economic activity and the effects it has on the natural world.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="setup">
@@ -1111,8 +1051,8 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pooch</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
 </pre></div>
 </div>
 </div>
@@ -1129,63 +1069,33 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Mount local drive</p>
 <div class="section" id="figure-functions">
 <h2>Figure functions<a class="headerlink" href="#figure-functions" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id1">
-<h3>Figure functions<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<div class="section" id="id2">
-<h4>Figure functions<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
-<div class="section" id="id3">
-<h5>Figure functions<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h5>
-<div class="section" id="id4">
-<h6>Figure functions<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h6>
-<p>#######  Figure functions</p>
-<p>########  Figure functions</p>
-<p>#########  Figure functions</p>
-<p>##########  Figure functions</p>
-<p>###########  Figure functions</p>
-<p>############  Figure functions</p>
-<p>#############  Figure functions</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Figure functions</span>
-<span class="k">def</span> <span class="nf">plot_IPCC_data</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ax_idx</span><span class="p">,</span><span class="n">varstr</span><span class="p">):</span>
-  <span class="n">fname_mapping</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;iamc_db_CO2.xlsx&quot;</span><span class="p">:</span> <span class="s2">&quot;https://osf.io/gcb79/download&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;iamc_db_forcing.xlsx&quot;</span><span class="p">:</span> <span class="s2">&quot;https://osf.io/tkrf7/download&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;iamc_db_pop.xlsx&quot;</span><span class="p">:</span> <span class="s2">&quot;https://osf.io/ed9aq/download&quot;</span><span class="p">,</span>
-  <span class="p">}</span>
-  <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;iamc_db_&quot;</span> <span class="o">+</span> <span class="n">varstr</span> <span class="o">+</span> <span class="s2">&quot;.xlsx&quot;</span>
-  <span class="n">url</span> <span class="o">=</span> <span class="n">fname_mapping</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-  <span class="k">if</span> <span class="n">url</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">FileNotFoundError</span>
-  <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_IPCC_data</span><span class="p">(</span><span class="n">var_name</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+    <span class="n">IAMdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">IAMdf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># excel file has 2 trailing rows of notes</span>
+    <span class="n">IAMdf</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span><span class="s1">&#39;Unit&#39;</span><span class="p">,</span><span class="s1">&#39;Notes&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span> <span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#remove columns we won&#39;t need</span>
 
-  <span class="n">IAMdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-  <span class="n">IAMdf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># excel file has 2 trailing rows of notes</span>
-  <span class="n">IAMdf</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span><span class="s1">&#39;Unit&#39;</span><span class="p">,</span><span class="s1">&#39;Notes&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span> <span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#remove columns we won&#39;t need</span>
+    <span class="c1"># The data is in wideform (years are columns).</span>
+    <span class="c1"># Longform (year of each datum as a column) is more convenient.</span>
+    <span class="c1"># To collapse it to longform we&#39;ll use the `pd.wide_to_long` method that requires the following reformatting</span>
+    <span class="n">IAMdf</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:],[</span><span class="n">var_name</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">IAMdf</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]])),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#add &#39;pop&#39; to the year columns to tell the method which columns to map</span>
+    <span class="n">IAMdf</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">IAMdf</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">set_names</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">])</span> <span class="c1">#name index</span>
+    <span class="n">IAMdf</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="c1">#make index a column</span>
+    <span class="n">IAMdf</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">wide_to_long</span><span class="p">(</span><span class="n">IAMdf</span><span class="p">,</span> <span class="p">[</span><span class="n">var_name</span><span class="p">],</span> <span class="n">i</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">j</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
 
-  <span class="c1"># The data is in wideform (years are columns).</span>
-  <span class="c1"># Longform (year of each datum as a column) is more convenient.</span>
-  <span class="c1"># To collapse it to longform we&#39;ll use the `pd.wide_to_long` method that requires the following reformatting</span>
-  <span class="n">IAMdf</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:],[</span><span class="n">varstr</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">IAMdf</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]])),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#add &#39;pop&#39; to the year columns to tell the method which columns to map</span>
-  <span class="n">IAMdf</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">IAMdf</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">set_names</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">])</span> <span class="c1">#name index</span>
-  <span class="n">IAMdf</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="c1">#make index a column</span>
-  <span class="n">IAMdf</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">wide_to_long</span><span class="p">(</span><span class="n">IAMdf</span><span class="p">,</span> <span class="p">[</span><span class="n">varstr</span><span class="p">],</span> <span class="n">i</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">j</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
-
-  <span class="n">IAMdf</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#do some post mapping renaming</span>
-  <span class="n">IAMdf</span><span class="o">.</span><span class="n">year</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1">#turn year data from string to int</span>
-  <span class="k">if</span> <span class="n">varstr</span><span class="o">==</span><span class="s1">&#39;pop&#39;</span><span class="p">:</span>
-    <span class="n">IAMdf</span><span class="p">[</span><span class="n">varstr</span><span class="p">]</span><span class="o">=</span><span class="mf">1e6</span><span class="o">*</span><span class="n">IAMdf</span><span class="p">[</span><span class="n">varstr</span><span class="p">]</span> <span class="c1">#pop is in millions</span>
-    <span class="n">IAMpopdf</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-  <span class="k">elif</span> <span class="n">varstr</span><span class="o">==</span><span class="s1">&#39;CO2&#39;</span><span class="p">:</span>
-    <span class="n">IAMdf</span><span class="p">[</span><span class="n">varstr</span><span class="p">]</span><span class="o">=</span><span class="mf">1e6</span><span class="o">*</span><span class="n">IAMdf</span><span class="p">[</span><span class="n">varstr</span><span class="p">]</span> <span class="c1">#CO2 is in Mt CO2/yr</span>
-    <span class="n">IAMCO2df</span><span class="o">=</span><span class="n">IAMdf</span>
-  <span class="k">else</span><span class="p">:</span>
-    <span class="n">IAMforcingdf</span><span class="o">=</span><span class="n">IAMdf</span> <span class="c1"># forcing in W/m2</span>
-  <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="n">ax_idx</span><span class="p">],</span><span class="n">data</span><span class="o">=</span><span class="n">IAMdf</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">varstr</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Scenario&#39;</span><span class="p">)</span> <span class="c1"># plot the data</span>
+    <span class="n">IAMdf</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#do some post mapping renaming</span>
+    <span class="n">IAMdf</span><span class="o">.</span><span class="n">year</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1">#turn year data from string to int</span>
+    <span class="k">if</span> <span class="n">var_name</span><span class="o">==</span><span class="s1">&#39;pop&#39;</span><span class="p">:</span>
+        <span class="n">IAMdf</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span><span class="o">=</span><span class="mf">1e6</span><span class="o">*</span><span class="n">IAMdf</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span> <span class="c1">#pop is in millions</span>
+    <span class="k">elif</span> <span class="n">var_name</span><span class="o">==</span><span class="s1">&#39;CO2&#39;</span><span class="p">:</span>
+        <span class="n">IAMdf</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span><span class="o">=</span><span class="mf">1e6</span><span class="o">*</span><span class="n">IAMdf</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span> <span class="c1">#CO2 is in Mt CO2/yr</span>
+    <span class="k">elif</span> <span class="n">var_name</span><span class="o">==</span><span class="s1">&#39;forcing&#39;</span><span class="p">:</span>
+        <span class="n">IAMdf</span><span class="o">=</span><span class="n">IAMdf</span> <span class="c1"># forcing in W/m2</span>
+    <span class="k">return</span> <span class="n">IAMdf</span>
 
 <span class="k">def</span> <span class="nf">run_and_plot</span><span class="p">(</span><span class="n">world3</span><span class="p">,</span> <span class="n">nri_factor</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">new_lifetime_industrial_capital</span><span class="o">=</span><span class="mi">14</span><span class="p">):</span>
     <span class="c1"># nonrenewable resources initial [resource units]</span>
@@ -1221,36 +1131,14 @@ title="Print to PDF"
 
     <span class="c1"># overlay an SSP projection</span>
     <span class="n">scenario_name</span><span class="o">=</span><span class="s1">&#39;SSP2-Baseline&#39;</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;iamc_db_pop.xlsx&quot;</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/ed9aq/download&quot;</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-        <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-
-    <span class="n">IAMdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-    <span class="c1"># IAMpopdf[&#39;pop&#39;]=1e6*IAMpopdf[&#39;pop&#39;] #pop is in millions</span>
-    <span class="n">IAMdf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># excel file has 2 trailing rows of notes</span>
-    <span class="n">IAMdf</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span><span class="s1">&#39;Unit&#39;</span><span class="p">,</span><span class="s1">&#39;Notes&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span> <span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#remove columns we won&#39;t need</span>
-
-    <span class="c1"># The data is in wideform (years are columns).</span>
-    <span class="c1"># Longform (year of each datum as a column) is more convenient.</span>
-    <span class="c1"># To collapse it to longform we&#39;ll use the `pd.wide_to_long` method that requires the following reformatting</span>
-    <span class="n">IAMdf</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:],[</span><span class="s1">&#39;pop&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">IAMdf</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]])),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#add &#39;pop&#39; to the year columns to tell the method which columns to map</span>
-    <span class="n">IAMdf</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">IAMdf</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">set_names</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">])</span> <span class="c1">#name index</span>
-    <span class="n">IAMdf</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="c1">#make index a column</span>
-    <span class="n">IAMdf</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">wide_to_long</span><span class="p">(</span><span class="n">IAMdf</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;pop&#39;</span><span class="p">],</span> <span class="n">i</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">j</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
-
-    <span class="n">IAMdf</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#do some post mapping renaming</span>
-    <span class="n">IAMdf</span><span class="o">.</span><span class="n">year</span><span class="o">=</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1">#turn year data from string to int</span>
-    <span class="n">year_data</span> <span class="o">=</span> <span class="n">IAMdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">Scenario</span><span class="o">==</span><span class="n">scenario_name</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">]</span>
-    <span class="n">var_data</span> <span class="o">=</span> <span class="n">IAMdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">IAMdf</span><span class="o">.</span><span class="n">Scenario</span><span class="o">==</span><span class="n">scenario_name</span><span class="p">,</span><span class="s1">&#39;pop&#39;</span><span class="p">]</span>
+    <span class="n">pop_path</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s1">&#39;https://osf.io/download/ed9aq/&#39;</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">IAMpopdf</span><span class="o">=</span><span class="n">get_IPCC_data</span><span class="p">(</span><span class="s1">&#39;pop&#39;</span><span class="p">,</span> <span class="n">pop_path</span><span class="p">)</span>
+    <span class="n">year_data</span> <span class="o">=</span> <span class="n">IAMpopdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">IAMpopdf</span><span class="o">.</span><span class="n">Scenario</span><span class="o">==</span><span class="n">scenario_name</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">]</span>
+    <span class="n">var_data</span> <span class="o">=</span> <span class="n">IAMpopdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">IAMpopdf</span><span class="o">.</span><span class="n">Scenario</span><span class="o">==</span><span class="n">scenario_name</span><span class="p">,</span><span class="s1">&#39;pop&#39;</span><span class="p">]</span>
     <span class="n">axs</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">axes</span>
     <span class="n">axs</span><span class="p">[</span><span class="n">variable_labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;POP&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year_data</span><span class="p">,</span><span class="n">var_data</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">scenario_name</span><span class="p">)</span>
     <span class="n">axs</span><span class="p">[</span><span class="n">variable_labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;POP&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1267,14 +1155,17 @@ If you give them only an email, you can download any data you select. I download
 <li><p>total CO<sub>2</sub> emissions (harmonized), and</p></li>
 <li><p>climate forcing</p></li>
 </ul>
-<p>The files all download with the same name, <code class="docutils literal notranslate"><span class="pre">iamc_db.xlsx</span></code>, so I appended ‘_pop’,’_CO2’, and ‘_forcing’ to distinguish them. I put these files in the local folder. Let’s load and plot that data here using a plotting function that you don’t need to understand, which is defined in the plotting functions section above.</p>
+<p>The files all download with the same name, <code class="docutils literal notranslate"><span class="pre">iamc_db.xlsx</span></code>, so I appended ‘_pop’,’_CO2’, and ‘_forcing’ to distinguish them. Let’s load and plot that data here using a plotting function that you don’t need to understand, which is defined in the plotting functions section above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">varstrs</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;forcing&#39;</span><span class="p">,</span><span class="s1">&#39;pop&#39;</span><span class="p">,</span><span class="s1">&#39;CO2&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;forcing&#39;</span><span class="p">,</span><span class="s1">&#39;pop&#39;</span><span class="p">,</span><span class="s1">&#39;CO2&#39;</span><span class="p">]</span>
+<span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://osf.io/download/tkrf7/&#39;</span><span class="p">,</span> <span class="s1">&#39;https://osf.io/download/ed9aq/&#39;</span><span class="p">,</span><span class="s1">&#39;https://osf.io/download/gcb79/&#39;</span><span class="p">]</span>
 <span class="n">axis_size</span><span class="o">=</span><span class="mi">4</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">varstrs</span><span class="p">),</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">axis_size</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">varstrs</span><span class="p">),</span><span class="n">axis_size</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">ax_idx</span><span class="p">,</span><span class="n">varstr</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">varstrs</span><span class="p">):</span>
-  <span class="n">plot_IPCC_data</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ax_idx</span><span class="p">,</span><span class="n">varstr</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">var_names</span><span class="p">),</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">axis_size</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">var_names</span><span class="p">),</span><span class="n">axis_size</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">ax_idx</span><span class="p">,</span><span class="n">var_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">var_names</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">ax_idx</span><span class="p">],</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">data_df</span><span class="o">=</span><span class="n">get_IPCC_data</span><span class="p">(</span><span class="n">var_name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="n">ax_idx</span><span class="p">],</span><span class="n">data</span><span class="o">=</span><span class="n">data_df</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">var_name</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Scenario&#39;</span><span class="p">)</span> <span class="c1"># plot the data</span>
 </pre></div>
 </div>
 </div>
@@ -1304,16 +1195,11 @@ The IAM projections that use these forcings profiles feed the temperature effect
 <p>OKay, so welcome to World3! Here’s a stock-flow diagram of the full model:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;flows_diagram.png&#39;</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/hzrsn/download&quot;</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">fname</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">unconfined</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://osf.io/download/hzrsn/&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">unconfined</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 <span class="c1"># copyrighted image from the textbook:</span>
 <span class="c1"># Meadows, D.L.; Behrens, W.W.; Meadows, D.L.; Naill, R.F.; Randers, J.; Zahn, E.K.O. The Dynamics of Growth in a Finite World; Wright-Allen Press: Cambridge, MA, USA, 1974.</span>
-<span class="c1"># HTML Source: https://www.mdpi.com/sustainability/sustainability-07-09864/article_deploy/html/images/sustainability-07-09864-g001.png</span>
-<span class="c1"># We could just link to it?</span>
-<span class="c1"># Or the precursor model: Jay Forrester&#39;s world dynamic model: https://petterholdotme.files.wordpress.com/2022/04/world-dynamics.png</span>
+<span class="c1"># Source: https://www.mdpi.com/sustainability/sustainability-07-09864/article_deploy/html/images/sustainability-07-09864-g001.png</span>
+<span class="c1"># Alternate image from the precursor model: Jay Forrester&#39;s world dynamic model: https://petterholdotme.files.wordpress.com/2022/04/world-dynamics.png</span>
 </pre></div>
 </div>
 </div>
@@ -1323,12 +1209,7 @@ The IAM projections that use these forcings profiles feed the temperature effect
 <p>Here is a reduced diagram containing only some major variables and thier couplings:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;major_flows_diagram.png&#39;</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/h3mj2/download&quot;</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">fname</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">unconfined</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://osf.io/download/h3mj2/&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">))</span>
 <span class="c1">#modified from another copyrighted image from Limits To Growth (1972, page 97). This woudl be easy to reproduce</span>
 </pre></div>
 </div>
@@ -1448,16 +1329,14 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;fig7-7.png&quot;</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/r4npd/download&quot;</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
                      <span class="p">[</span><span class="n">world3</span><span class="o">.</span><span class="n">nrfr</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">iopc</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">fpc</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">pop</span><span class="p">,</span>
                       <span class="n">world3</span><span class="o">.</span><span class="n">ppolx</span><span class="p">],</span>
                      <span class="p">[</span><span class="s2">&quot;NRFR&quot;</span><span class="p">,</span> <span class="s2">&quot;IOPC&quot;</span><span class="p">,</span> <span class="s2">&quot;FPC&quot;</span><span class="p">,</span> <span class="s2">&quot;POP&quot;</span><span class="p">,</span> <span class="s2">&quot;PPOLX&quot;</span><span class="p">],</span>
                      <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">16e9</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">]],</span>
-                     <span class="n">img_background</span><span class="o">=</span><span class="n">fname</span><span class="p">,</span>
+                     <span class="n">img_background</span><span class="o">=</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">&quot;https://osf.io/download/r4npd/&quot;</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+<span class="c1">#                      img_background=urllib.request.urlopen(&quot;https://osf.io/download/r4npd/&quot;),</span>
+<span class="c1">#                      img_background=data_dir+&quot;fig7-7.png&quot;,</span>
                      <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
                      <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                      <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1467,16 +1346,12 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;fig7-8.png&quot;</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/d6gz2/download&quot;</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
                      <span class="p">[</span><span class="n">world3</span><span class="o">.</span><span class="n">fcaor</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">io</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">tai</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">aiph</span><span class="p">,</span>
                       <span class="n">world3</span><span class="o">.</span><span class="n">fioaa</span><span class="p">],</span>
                      <span class="p">[</span><span class="s2">&quot;FCAOR&quot;</span><span class="p">,</span> <span class="s2">&quot;IO&quot;</span><span class="p">,</span> <span class="s2">&quot;TAI&quot;</span><span class="p">,</span> <span class="s2">&quot;AI&quot;</span><span class="p">,</span> <span class="s2">&quot;FIOAA&quot;</span><span class="p">],</span>
                      <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">4e12</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">4e12</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2e2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.201</span><span class="p">]],</span>
-                     <span class="n">img_background</span><span class="o">=</span><span class="n">fname</span><span class="p">,</span>
+                     <span class="n">img_background</span><span class="o">=</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">&quot;https://osf.io/download/d6gz2/&quot;</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
                      <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
                      <span class="n">title</span><span class="o">=</span><span class="s2">&quot;World3 standard run - Capital sector&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1485,16 +1360,12 @@ The IAM projections that use these forcings profiles feed the temperature effect
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;fig7-9.png&quot;</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/t2qdm/download&quot;</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_world_variables</span><span class="p">(</span><span class="n">world3</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
                      <span class="p">[</span><span class="n">world3</span><span class="o">.</span><span class="n">ly</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">al</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">fpc</span><span class="p">,</span> <span class="n">world3</span><span class="o">.</span><span class="n">lmf</span><span class="p">,</span>
                       <span class="n">world3</span><span class="o">.</span><span class="n">pop</span><span class="p">],</span>
                      <span class="p">[</span><span class="s2">&quot;LY&quot;</span><span class="p">,</span> <span class="s2">&quot;AL&quot;</span><span class="p">,</span> <span class="s2">&quot;FPC&quot;</span><span class="p">,</span> <span class="s2">&quot;LMF&quot;</span><span class="p">,</span> <span class="s2">&quot;POP&quot;</span><span class="p">],</span>
                      <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">4e3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">4e9</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">8e2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">16e9</span><span class="p">]],</span>
-                     <span class="n">img_background</span><span class="o">=</span><span class="n">fname</span><span class="p">,</span>
+                    <span class="n">img_background</span><span class="o">=</span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">&quot;https://osf.io/download/t2qdm/&quot;</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
                      <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
                      <span class="n">title</span><span class="o">=</span><span class="s2">&quot;World3 standard run - Agriculture sector&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1512,16 +1383,16 @@ The IAM projections that use these forcings profiles feed the temperature effect
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "pangeo"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "pangeo",
             path: "./tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/student"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'pangeo'</script>
 
               </div>
               

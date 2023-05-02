@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="W2D3_Tutorial4.html">
-     Tutorial 5 - Text analysis of COP tweets
+     Tutorial 4 - Text analysis of COP tweets
     </a>
    </li>
   </ul>
@@ -883,8 +883,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutorial-objective">
-   Tutorial Objective
+  <a class="reference internal nav-link" href="#tutorial-objectives">
+   Tutorial Objectives
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -1025,8 +1025,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutorial-objective">
-   Tutorial Objective
+  <a class="reference internal nav-link" href="#tutorial-objectives">
+   Tutorial Objectives
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -1156,16 +1156,16 @@ title="Print to PDF"
 <h1>Tutorial 2 - A first look at integrated assessment models<a class="headerlink" href="#tutorial-2-a-first-look-at-integrated-assessment-models" title="Permalink to this headline">#</a></h1>
 <p>Week 2, Day 3: IPCC Socio-economic Basis</p>
 <p>By Neuromatch Academy</p>
-<p>Content creators: Name Surname, Name Surname, Maximilian Puelma Touzel</p>
+<p>Content creators: Maximilian Puelma Touzel</p>
 <p>Content reviewers: Name Surname, Name Surname</p>
 <p>Content editors: Name Surname, Name Surname</p>
 <p>Production editors: Name Surname, Name Surname</p>
 <p>Our 2023 Sponsors</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="tutorial-objective">
-<h1>Tutorial Objective<a class="headerlink" href="#tutorial-objective" title="Permalink to this headline">#</a></h1>
-<p>To understand in a computationally tractable integrated assessment model how parameters that set how we distribute value in society affect what is the resulting best climate policy in the model.</p>
+<div class="section" id="tutorial-objectives">
+<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">#</a></h1>
+<p>To understand in a relatively simple Integrated Assessment Model (IAM) how parameters that set how we distribute value in society affect the corresponding optimal climate policy.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="setup">
@@ -1179,6 +1179,7 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pl</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">dicelib</span>
 </pre></div>
 </div>
 </div>
@@ -1195,14 +1196,6 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dicelib</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Helper functions:</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="section-1-background-on-iam-economics-and-the-dice-model">
@@ -1315,8 +1308,8 @@ $<span class="math notranslate nohighlight">\(V=\sum_{t=1}^{\infty}\gamma^t U(c_
 </div>
 <div class="section" id="utilities-over-different-populations">
 <h2>Utilities over different populations<a class="headerlink" href="#utilities-over-different-populations" title="Permalink to this headline">#</a></h2>
-<p>Now, let’s consider the case that there are populations of individuals of <em>different</em> types (e.g. different blocks of countries in the world economy). In a centralized planning setting, how do we value the utilities of each relative to each other? Consider the following family of <em>social welfare functions</em> (<em>social</em> is used here simply because there is more than 1) that combine the utilities of <span class="math notranslate nohighlight">\(N\)</span> groups (assuming these are discounted returns as computed above), $<span class="math notranslate nohighlight">\(W(U_1,\dots, U_N)=\sum_{i=1}^N U^\beta_i\)</span><span class="math notranslate nohighlight">\( The choice of exponent parameter \)</span>\beta<span class="math notranslate nohighlight">\( specifies the kind of welfare function. The socalled utilitarian choice is to set \)</span>\beta=1<span class="math notranslate nohighlight">\(, such that it is a sum that gives equal weight to each group. Alternatively, \)</span>\beta&lt;1<span class="math notranslate nohighlight">\( is a case analogous to how we transformed consumption to utility above (\)</span>\beta<span class="math notranslate nohighlight">\( analogoues to \)</span>1-\alpha<span class="math notranslate nohighlight">\() in a way that overweighs lower consumption. Here this means prioritizing groups having lower utility so it's called the prioritarian choice (studied in the context of climate policy by Adler et al. *Nat. Clim. Change* (2017)). Fairness excludes all cases of \)</span>\beta&gt;1<span class="math notranslate nohighlight">\(. Note that the case of \)</span>\beta=0<span class="math notranslate nohighlight">\( gives \)</span><span class="math notranslate nohighlight">\(W(U_1,\dots, U_N)-N=\sum_{i=1}^N\log U_i =\log\prod_{i=1}^{N}U_i.\)</span><span class="math notranslate nohighlight">\(
-Both the logarithm and the subtraction by \)</span>N$ do not change the ordering of joint utilities given by welfare and so these transformations can be omitted. The resulting simple product of utilities, called the Nash social welfare function, is uniquely fair and has many solution methods associated with it (see game theory literature).</p>
+<p>Now, let’s consider the case that there are populations of individuals of <em>different</em> types (e.g. different blocks of countries in the world economy). In a centralized planning setting, how do we value the utilities of each relative to each other? Consider the following family of <em>social welfare functions</em> (<em>social</em> is used here simply because there is more than 1) that combine the utilities of <span class="math notranslate nohighlight">\(N\)</span> groups (assuming these are discounted returns as computed above), $<span class="math notranslate nohighlight">\(W(U_1,\dots, U_N)=\sum_{i=1}^N U^\beta_i\)</span><span class="math notranslate nohighlight">\( The choice of exponent parameter \)</span>\beta<span class="math notranslate nohighlight">\( specifies the kind of welfare function. The socalled utilitarian choice is to set \)</span>\beta=1<span class="math notranslate nohighlight">\(, such that it is a sum that gives equal weight to each group. Alternatively, \)</span>\beta&lt;1<span class="math notranslate nohighlight">\( is a case analogous to how we transformed consumption to utility above (\)</span>\beta<span class="math notranslate nohighlight">\( analogoues to \)</span>1-\alpha<span class="math notranslate nohighlight">\() in a way that overweighs lower consumption. Here this means prioritizing groups having lower utility so it's called the prioritarian choice (studied in the context of climate policy by Adler et al. *Nat. Clim. Change* (2017)). Fairness excludes all cases of \)</span>\beta&gt;1<span class="math notranslate nohighlight">\(. Note that the case of \)</span>\beta<span class="math notranslate nohighlight">\( near 0 gives \)</span><span class="math notranslate nohighlight">\(\frac{W(U_1,\dots, U_N)-N}{\beta}=\sum_{i=1}^N\log U_i =\log\prod_{i=1}^{N}U_i.\)</span><span class="math notranslate nohighlight">\(
+Both the logarithm, subtraction by \)</span>N<span class="math notranslate nohighlight">\( and rescaling by \)</span>1/\beta<span class="math notranslate nohighlight">\( do not change the ordering of joint utilities induced by \)</span>W$. The result is then simply the product of utilities, called the Nash social welfare function. It is a natural fairness function and has many solution methods associated with it (see game theory literature).</p>
 </div>
 </div>
 <div class="section" id="damage-functions">
@@ -1392,9 +1385,9 @@ This is usually expressed by multiplying by a proportionality factor of \)</span
 <h1>Section 2: DICE simulations<a class="headerlink" href="#section-2-dice-simulations" title="Permalink to this headline">#</a></h1>
 <p>Now, let’s move to the DICE model that gives us some control over our emissions and consumption to see the effect of varying the parameters arising from the above design choices.</p>
 <p>We’ll use a <code class="docutils literal notranslate"><span class="pre">Python</span></code> implementation of the DICE2016 model (https://github.com/hazem2410/PyDICE) that I refactored into a class and made a few other changes to make it easier to vary parameters (https://github.com/mptouzel/PyDICE/blob/master/dicelib.py).
-N.b. that a new version of the DICE (DICE2023) was released recently.</p>
+N.b. that the DICE model was recently updated (<a class="reference external" href="https://www.nber.org/papers/w31112">DICE2023</a>).</p>
 <p>The model equations are described in the associated document that can be downloaded: https://github.com/hazem2410/PyDICE/blob/master/PyDICE2016.pdf. The notation is similar, but not identical.</p>
-<p><em>Exercise</em>: Open <code class="docutils literal notranslate"><span class="pre">dicelib.py</span></code> and look at the list of parameter definitions. Crosscheck some of them with the equations in the pdf above.</p>
+<p><em>Exercise</em>: Open <code class="docutils literal notranslate"><span class="pre">dicelib.py</span></code> in the local folder and look at the list of parameter definitions. Crosscheck some of them with the equations in the pdf above.</p>
 <div class="section" id="case-1-run-standard-run">
 <h2>Case 1 Run standard run<a class="headerlink" href="#case-1-run-standard-run" title="Permalink to this headline">#</a></h2>
 <p>Let’s run the standard run</p>

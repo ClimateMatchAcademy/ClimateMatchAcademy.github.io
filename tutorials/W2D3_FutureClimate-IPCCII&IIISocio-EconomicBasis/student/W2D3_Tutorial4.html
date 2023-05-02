@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorial 5 - Text analysis of COP tweets &#8212; Climatematch Academy: Computational Climate Science</title>
+    <title>Tutorial 4 - Text analysis of COP tweets &#8212; Climatematch Academy: Computational Climate Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Tutorial 5 - Text analysis of COP tweets
+     Tutorial 4 - Text analysis of COP tweets
     </a>
    </li>
   </ul>
@@ -879,12 +879,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Tutorial 5 - Text analysis of COP tweets
+   Tutorial 4 - Text analysis of COP tweets
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutorial-objective">
-   Tutorial Objective
+  <a class="reference internal nav-link" href="#tutorial-objectives">
+   Tutorial Objectives
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -893,16 +893,11 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-preprocessing">
-     Data preprocessing
+    <a class="reference internal nav-link" href="#section-0-data-preprocessing">
+     Section 0: Data preprocessing
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analysis-run-notebook-from-here">
-   Analysis (run notebook from here)
-  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#section-1-load-and-inspect-data">
@@ -910,8 +905,8 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-hypocrisy-language">
-     Section 2: Hypocrisy language
+    <a class="reference internal nav-link" href="#section-2-word-set-prevelance">
+     Section 2: Word set prevelance
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -935,7 +930,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tutorial 5 - Text analysis of COP tweets</h1>
+                <h1>Tutorial 4 - Text analysis of COP tweets</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -947,12 +942,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Tutorial 5 - Text analysis of COP tweets
+   Tutorial 4 - Text analysis of COP tweets
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutorial-objective">
-   Tutorial Objective
+  <a class="reference internal nav-link" href="#tutorial-objectives">
+   Tutorial Objectives
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -961,16 +956,11 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-preprocessing">
-     Data preprocessing
+    <a class="reference internal nav-link" href="#section-0-data-preprocessing">
+     Section 0: Data preprocessing
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analysis-run-notebook-from-here">
-   Analysis (run notebook from here)
-  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#section-1-load-and-inspect-data">
@@ -978,8 +968,8 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-hypocrisy-language">
-     Section 2: Hypocrisy language
+    <a class="reference internal nav-link" href="#section-2-word-set-prevelance">
+     Section 2: Word set prevelance
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -1004,19 +994,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="section" id="tutorial-5-text-analysis-of-cop-tweets">
-<h1>Tutorial 5 - Text analysis of COP tweets<a class="headerlink" href="#tutorial-5-text-analysis-of-cop-tweets" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="tutorial-4-text-analysis-of-cop-tweets">
+<h1>Tutorial 4 - Text analysis of COP tweets<a class="headerlink" href="#tutorial-4-text-analysis-of-cop-tweets" title="Permalink to this headline">#</a></h1>
 <p>Week 2, Day 3: IPCC Socio-economic Basis</p>
 <p>By Neuromatch Academy</p>
-<p>Content creators: Name Surname, Name Surname, Maximilian Puelma Touzel</p>
+<p>Content creators: Maximilian Puelma Touzel</p>
 <p>Content reviewers: Name Surname, Name Surname</p>
 <p>Content editors: Name Surname, Name Surname</p>
 <p>Production editors: Name Surname, Name Surname</p>
 <p>Our 2023 Sponsors</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="tutorial-objective">
-<h1>Tutorial Objective<a class="headerlink" href="#tutorial-objective" title="Permalink to this headline">#</a></h1>
+<div class="section" id="tutorial-objectives">
+<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">#</a></h1>
 <p>Learn to assess public sentiment about climate change and how it is changing by analyzing changes in word use on social media. An auxillary objective is to learn how to load and analyze large amounts of text</p>
 </div>
 <hr class="docutils" />
@@ -1040,10 +1030,8 @@ title="Print to PDF"
 <span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
 <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
 <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;ticks&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;axes.grid&#39;</span> <span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
 <span class="c1">#notebook config</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:100% !important; }&lt;/style&gt;&quot;</span><span class="p">))</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
 <span class="kn">import</span> <span class="nn">glob</span>
 <span class="kn">import</span> <span class="nn">time</span>
@@ -1062,10 +1050,17 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Mount local drive</p>
-<p>Helper functions</p>
-<div class="section" id="data-preprocessing">
-<h2>Data preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">#</a></h2>
+<p>figure settings</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;ticks&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;axes.grid&#39;</span> <span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:100% !important; }&lt;/style&gt;&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="section-0-data-preprocessing">
+<h2>Section 0: Data preprocessing<a class="headerlink" href="#section-0-data-preprocessing" title="Permalink to this headline">#</a></h2>
 <p>We have done the following preprocessing steps for you (just read along; no need to run anything in this section):</p>
 <p>Twitter ids of tweets mentioning COPx (x=20-26) used in Falkenberg et al. (2022) were placed by the authors in an osf archive: https://osf.io/nu75j. Download the 7 .csv files (one for each COP) here: https://osf.io/download/pr29x/</p>
 <p>The program <code class="docutils literal notranslate"><span class="pre">twarc2</span></code> interfaces with the Twitter API. It can be used to hydrate the tweets (i.e. download the full tweet and metadata using the provided tweet id). Similar to github you have to open a Twitter API account and set up twarc on your local machine by giving it your account authentication keys. The command to rehyrdate a set of tweets from their ids is simply <code class="docutils literal notranslate"><span class="pre">twarc2</span> <span class="pre">hydrate</span> <span class="pre">source_file.txt</span> <span class="pre">store_file.jsonl</span></code>, where each line of <code class="docutils literal notranslate"><span class="pre">source_file.txt</span></code> is a Twitter id and <code class="docutils literal notranslate"><span class="pre">store_file.jsonl</span></code> is where the hydrated tweets are stored.</p>
@@ -1165,21 +1160,16 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>(run notebook from here)</p>
 </div>
-</div>
-<div class="section" id="analysis-run-notebook-from-here">
-<h1>Analysis (run notebook from here)<a class="headerlink" href="#analysis-run-notebook-from-here" title="Permalink to this headline">#</a></h1>
 </div>
 <div class="section" id="section-1-load-and-inspect-data">
 <h1>Section 1: load and inspect data<a class="headerlink" href="#section-1-load-and-inspect-data" title="Permalink to this headline">#</a></h1>
 <p>Load the preprocessed data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;stored_tweets&#39;</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/8p52x/download&quot;</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
-<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s2">&quot;https://osf.io/8p52x/download&quot;</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1">#takes a couple minutes to download</span>
 </pre></div>
 </div>
 </div>
@@ -1237,12 +1227,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="section" id="section-2-hypocrisy-language">
-<h2>Section 2: Hypocrisy language<a class="headerlink" href="#section-2-hypocrisy-language" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://www.nature.com/articles/s41558-022-01533-z">Falkenberg et al.</a> investigated the hypothesis that <em>public sentiment</em> around the COP conferences has increasingly framed them as hypocritical (“political hypocrisy as a topic of cross-ideological appeal”). The authors operationalized hypocrisy talk as any tweet containing any of the following words:</p>
+<div class="section" id="section-2-word-set-prevelance">
+<h2>Section 2: Word set prevelance<a class="headerlink" href="#section-2-word-set-prevelance" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://www.nature.com/articles/s41558-022-01533-z">Falkenberg et al.</a> investigated the hypothesis that <em>public sentiment</em> around the COP conferences has increasingly framed them as hypocritical (“political hypocrisy as a topic of cross-ideological appeal”). The authors operationalized hypocrisy language as any tweet containing any of the following words:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hypocrisy_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hypocrisy&#39;</span><span class="p">,</span> <span class="s1">&#39;hypocrite&#39;</span><span class="p">,</span> <span class="s1">&#39;hypocritical&#39;</span><span class="p">,</span> <span class="s1">&#39;greenwash&#39;</span><span class="p">,</span><span class="s1">&#39;green wash&#39;</span><span class="p">,</span> <span class="s1">&#39;blah&#39;</span><span class="p">]</span> <span class="c1">#the last 3 words don&#39;t add much. Greta Thurnberg&#39;s &#39;blah, blah blah&#39; speech on Sept. 28th 2021.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hypocrisy&#39;</span><span class="p">,</span> <span class="s1">&#39;hypocrite&#39;</span><span class="p">,</span> <span class="s1">&#39;hypocritical&#39;</span><span class="p">,</span> <span class="s1">&#39;greenwash&#39;</span><span class="p">,</span><span class="s1">&#39;green wash&#39;</span><span class="p">,</span> <span class="s1">&#39;blah&#39;</span><span class="p">]</span> <span class="c1">#the last 3 words don&#39;t add much. Greta Thurnberg&#39;s &#39;blah, blah blah&#39; speech on Sept. 28th 2021.</span>
 </pre></div>
 </div>
 </div>
@@ -1252,8 +1242,8 @@ title="Print to PDF"
 <p>Here, we will instead focus on their acessible COP26 dataset and assess the nature of comments about specific topics, like political hypocrisy.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hypowords_detector</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(?:</span><span class="si">{0}</span><span class="s1">)\b&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">hypocrisy_words</span><span class="p">)))</span> <span class="c1">#compile for speed!</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;hypotalk&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">hypowords_detector</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">))</span> <span class="c1"># look through whole dataset, flagging tweets with hypotalk (computes in under a minute)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selectwords_detector</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(?:</span><span class="si">{0}</span><span class="s1">)\b&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">selected_words</span><span class="p">)))</span> <span class="c1">#compile for speed!</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;select_talk&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">selectwords_detector</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">))</span> <span class="c1"># look through whole dataset, flagging tweets with select_talk (computes in under a minute)</span>
 </pre></div>
 </div>
 </div>
@@ -1261,16 +1251,16 @@ title="Print to PDF"
 <p>Let’s pull these tweets out and look at thier occurence statistics relative to those of the whole dataset computed above</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hyp_tweets</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">hypotalk</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),:]</span>
-<span class="n">hypo_tweet_counts</span><span class="o">=</span><span class="n">hyp_tweets</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">hyp_tweets</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">date</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;counts&#39;</span><span class="p">)</span>
-<span class="n">hypo_tweet_fraction</span><span class="o">=</span><span class="n">hypo_tweet_counts</span><span class="o">/</span><span class="n">total_tweetCounts</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweets</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">select_talk</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),:]</span>
+<span class="n">selected_tweet_counts</span><span class="o">=</span><span class="n">selected_tweets</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">selected_tweets</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">date</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;counts&#39;</span><span class="p">)</span>
+<span class="n">selected_tweet_fraction</span><span class="o">=</span><span class="n">selected_tweet_counts</span><span class="o">/</span><span class="n">total_tweetCounts</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hypo_tweet_fraction</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;created_at&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;counts&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">style</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;.-&#39;</span><span class="p">])</span> <span class="c1">#this doesn&#39;t</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweet_fraction</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;created_at&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;counts&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">style</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;.-&#39;</span><span class="p">])</span> <span class="c1">#this doesn&#39;t</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">);</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="o">*</span><span class="n">COPdates</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="c1">#gray region</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;fraction talking about hypocrisy&#39;</span><span class="p">)</span>
@@ -1282,12 +1272,12 @@ title="Print to PDF"
 <p>Let’s look at what these tweets say. Take 100 randomly sampled.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hyp_tweets</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_tweets</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><em>Exercise</em>: Pick another sentiment other than ‘hypocrisy’, and come up with a list of words for it to run the same analysis. E.g. “renewable technology”</p>
+<p><em>Exercise</em>: Pick another topic, propose a list of topic words, and run the same analysis. (Example topic: “renewable technology”)</p>
 </div>
 <div class="section" id="section-3-sentiment-analysis">
 <h2>Section 3: Sentiment analysis<a class="headerlink" href="#section-3-sentiment-analysis" title="Permalink to this headline">#</a></h2>
@@ -1316,7 +1306,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>let’s look at the distribution of scores over all words in teh dictionary</p>
+<p>let’s look at the distribution of scores over all words in the dictionary</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afinn_wl_df</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
@@ -1336,7 +1326,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;afinn_score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">afinn</span><span class="o">.</span><span class="n">score</span><span class="p">)</span> <span class="c1">#intensive computation! 1 hrs 50 min long on full dataset! 1% takes about a minute</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;afinn_score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">afinn</span><span class="o">.</span><span class="n">score</span><span class="p">)</span> <span class="c1">#intensive computation! We have reduced the data set to frac=0.01 it&#39;s size so it takes ~1 min. (the full dataset takes 1hrs 50 min.)</span>
 </pre></div>
 </div>
 </div>
@@ -1348,14 +1338,14 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>The score is a sum over all words in the tweet so to compare we should convert to a per-word score by normalizing each tweet’s score by its word count.</p>
+<p>The score is a sum over all dictionary words in the tweet. A rough approach to making scores comparable across tweets of different length is convert to a per-word score by normalizing each tweet’s score by its word count (note this is not a per-dictionary word score and so this rough approach introduces a bias dependent on how much of each tweet is formed by dictionary words). Let’s call this normalized score <em>afinn_adjusted</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="n">text_string</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;Calculate the number of words in a string&#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">text_string</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
 <span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;word_count&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">smalldf</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_count</span><span class="p">)</span>
-<span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;afinn_adjusted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;afinn_score&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;word_count&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;afinn_adjusted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;afinn_score&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">smalldf</span><span class="p">[</span><span class="s1">&#39;word_count&#39;</span><span class="p">]</span> <span class="c1">#note this isn&#39;t a percentage</span>
 </pre></div>
 </div>
 </div>
@@ -1370,10 +1360,10 @@ title="Print to PDF"
 <p>Now let’s look at the sentiment of tweets with hypocrisy words versus those without those words. We’ll first plot for some other possibly negative words for reference.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sel_words</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">&#39;Fossil&#39;</span><span class="p">],[</span><span class="s1">&#39;G7&#39;</span><span class="p">],[</span><span class="s1">&#39;Boris&#39;</span><span class="p">],[</span><span class="s1">&#39;Davos&#39;</span><span class="p">],</span><span class="n">hypocrisy_words</span><span class="p">]:</span>
-    <span class="n">sel_name</span> <span class="o">=</span> <span class="n">sel_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;hypowords&#39;</span>
-    <span class="n">hypowords_detector</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(?:</span><span class="si">{0}</span><span class="s1">)\b&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)))</span> <span class="c1">#compile for speed!</span>
-    <span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">hypowords_detector</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="c1">#flag if tweet has word(s)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sel_words</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">&#39;Fossil&#39;</span><span class="p">],[</span><span class="s1">&#39;G7&#39;</span><span class="p">],[</span><span class="s1">&#39;Boris&#39;</span><span class="p">],[</span><span class="s1">&#39;Davos&#39;</span><span class="p">],</span><span class="n">selected_words</span><span class="p">]:</span>
+    <span class="n">sel_name</span> <span class="o">=</span> <span class="n">sel_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;select_talk&#39;</span>
+    <span class="n">selectwords_detector</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(?:</span><span class="si">{0}</span><span class="s1">)\b&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)))</span> <span class="c1">#compile for speed!</span>
+    <span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">smalldf</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">selectwords_detector</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="c1">#flag if tweet has word(s)</span>
 </pre></div>
 </div>
 </div>
@@ -1381,15 +1371,15 @@ title="Print to PDF"
 <p>make cumulative distribtion plots of score distributions</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sel_words</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">&#39;Fossil&#39;</span><span class="p">],[</span><span class="s1">&#39;G7&#39;</span><span class="p">],[</span><span class="s1">&#39;Boris&#39;</span><span class="p">],[</span><span class="s1">&#39;Davos&#39;</span><span class="p">],</span><span class="n">hypocrisy_words</span><span class="p">]:</span>
-    <span class="n">sel_name</span> <span class="o">=</span><span class="n">sel_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;hypowords&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sel_words</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">&#39;Fossil&#39;</span><span class="p">],[</span><span class="s1">&#39;G7&#39;</span><span class="p">],[</span><span class="s1">&#39;Boris&#39;</span><span class="p">],[</span><span class="s1">&#39;Davos&#39;</span><span class="p">],</span><span class="n">selected_words</span><span class="p">]:</span>
+    <span class="n">sel_name</span> <span class="o">=</span><span class="n">sel_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sel_words</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;select_talk&#39;</span>
     <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-    <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;adjusted Finn score&#39;</span><span class="p">)</span>
     <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;probabilty&#39;</span><span class="p">)</span>
-    <span class="n">counts</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">smalldf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">],</span><span class="s1">&#39;afinn_adjusted&#39;</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">101</span><span class="p">),</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">counts</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">smalldf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">],</span><span class="s1">&#39;afinn_adjusted&#39;</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">),</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">sel_name</span><span class="o">+</span><span class="s1">&#39; tweets&#39;</span><span class="p">)</span>
-    <span class="n">counts</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">smalldf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">],</span><span class="s1">&#39;afinn_adjusted&#39;</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">101</span><span class="p">),</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">counts</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">smalldf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">smalldf</span><span class="p">[</span><span class="n">sel_name</span><span class="p">],</span><span class="s1">&#39;afinn_adjusted&#39;</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">),</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;non-&#39;</span><span class="o">+</span><span class="n">sel_name</span><span class="o">+</span><span class="s1">&#39; tweets&#39;</span><span class="p">)</span>
     <span class="n">pl</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="mf">0.7</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">pl</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
@@ -1398,7 +1388,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Observe that tweets containing the hypocrisy word set are scored much more negative than all of these. So what is the content of these negative tweets?</p>
+<p>Observe that tweets containing the selected <em>hypocrisy</em>-associated words set are scored much more negative than all of these. So what is the content of these selected tweets?</p>
 </div>
 <div class="section" id="section-4-word-clouds">
 <h2>Section 4: word clouds<a class="headerlink" href="#section-4-word-clouds" title="Permalink to this headline">#</a></h2>
@@ -1408,33 +1398,26 @@ title="Print to PDF"
 <li><p>term frequency, <span class="math notranslate nohighlight">\(\mathrm{tf}(w,d)\)</span>. The frequency of a word <span class="math notranslate nohighlight">\(w\)</span> in a document <span class="math notranslate nohighlight">\(d\)</span> is $<span class="math notranslate nohighlight">\(\mathrm{tf}(w,d):=\frac{n(w,d)}{n(d)},\)</span><span class="math notranslate nohighlight">\( where \)</span>n(w,d)<span class="math notranslate nohighlight">\( is the number of times term \)</span>w<span class="math notranslate nohighlight">\( is in document \)</span>d<span class="math notranslate nohighlight">\( and \)</span>n(d)=\sum_{w=1}^W n(w,d)<span class="math notranslate nohighlight">\( is the total number of words in document \)</span>d<span class="math notranslate nohighlight">\(. The term frequency over all the documents is then, \)</span><span class="math notranslate nohighlight">\(\mathrm{tf}(w):=\frac{\sum_{d=1}^D n(d)\mathrm{tf}(w,d)}{N},\)</span><span class="math notranslate nohighlight">\( where the denominator \)</span>N=\sum_{d=1}^D n(d)$ is just the total word count across all documents.</p></li>
 <li><p>term frequency-inverse document frequency, <span class="math notranslate nohighlight">\(\mathrm{Tfidf}(w,d):=\mathrm{tf}(w,d)\mathrm{idf}(w)\)</span>. Here, $<span class="math notranslate nohighlight">\(\mathrm{idf}(w)=\frac{\log(D+1)}{\log(n(w)+1)+1},\)</span><span class="math notranslate nohighlight">\( where \)</span>n(w)<span class="math notranslate nohighlight">\( is the number of documents in which term \)</span>t<span class="math notranslate nohighlight">\( appears, i.e. \)</span>n(w,d)&gt;0<span class="math notranslate nohighlight">\(. Idf is like an inverse document frequency. The `sklearn` package then uses \)</span><span class="math notranslate nohighlight">\(\mathrm{Tfidf}(w)=\frac{1}{D}\sum_{d=1}^D \frac{\mathrm{Tfidf}(w,d)}{||\mathrm{Tfidf}(\cdot,d)||},\)</span><span class="math notranslate nohighlight">\( where \)</span>||\vec{x}||=\sqrt{\sum_{i=1}^Nx^2_i}$ is the Euclidean norm.</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\(\mathrm{Tfidf}\)</span> aims to improve frequency as a word relevance metric by downweighting words that appear in many documents since these common words are less discriminative.</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{Tfidf}\)</span> aims to add more discriminability to frequency as a word relevance metric by downweighting words that appear in many documents since these common words are less discriminative.</p>
 <p>Let’s run both these methods and store the vectorized data in a dictionary</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vectypes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;counts&#39;</span><span class="p">,</span><span class="s1">&#39;Tfidf&#39;</span><span class="p">]</span>
 <span class="k">def</span> <span class="nf">vectorize</span><span class="p">(</span><span class="n">doc_data</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">remove_words</span><span class="o">=</span><span class="p">[],</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 
-  <span class="n">vectorized_data_dict</span><span class="o">=</span><span class="p">{}</span>
-  <span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
-      <span class="k">if</span> <span class="n">vectorizer_type</span><span class="o">==</span><span class="s1">&#39;counts&#39;</span><span class="p">:</span>
-          <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_df</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">)</span>
-      <span class="k">elif</span> <span class="n">vectorizer_type</span><span class="o">==</span><span class="s1">&#39;Tfidf&#39;</span><span class="p">:</span>
-          <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_df</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">)</span>
+    <span class="n">vectorized_data_dict</span><span class="o">=</span><span class="p">{}</span>
+    <span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">vectorizer_type</span><span class="o">==</span><span class="s1">&#39;counts&#39;</span><span class="p">:</span>
+            <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_df</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">vectorizer_type</span><span class="o">==</span><span class="s1">&#39;Tfidf&#39;</span><span class="p">:</span>
+            <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_df</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">)</span>
 
-      <span class="n">vectorized_doc_list</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-      <span class="n">feature_names</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span> <span class="c1"># or  get_feature_names() depending on scikit learn version</span>
-      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vocabulary size:&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">feature_names</span><span class="p">)))</span>
-      <span class="n">wdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">vectorized_doc_list</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
-      <span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">]</span><span class="o">=</span><span class="n">wdf</span>
-  <span class="k">return</span> <span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span>
+        <span class="n">vectorized_doc_list</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">feature_names</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span> <span class="c1"># or  get_feature_names() depending on scikit learn version</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vocabulary size:&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">feature_names</span><span class="p">)))</span>
+        <span class="n">wdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">vectorized_doc_list</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
+        <span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">]</span><span class="o">=</span><span class="n">wdf</span>
+    <span class="k">return</span> <span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span>
 
 <span class="k">def</span> <span class="nf">plot_wordcloud_and_freqdist</span><span class="p">(</span><span class="n">wdf</span><span class="p">,</span><span class="n">title_str</span><span class="p">,</span><span class="n">feature_names</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
@@ -1461,6 +1444,9 @@ title="Print to PDF"
     <span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">wordfreqs</span><span class="p">)</span>
     <span class="n">ax_wc</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span><span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
     <span class="n">ax_wc</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span> <span class="c1">#downloads basic stop words, i.e. words with little semantic value  (e.g. &quot;the&quot;), to be used as words to be removed</span>
+<span class="n">remove_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;english&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1468,10 +1454,8 @@ title="Print to PDF"
 <p>Okay so let’s vectorize and look at the wordclouds for single word statistics. Let’s explicitly exclude some words and implicity exclude ones that appear in fewer than some threshold number of documents</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">hyp_tweets</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span> <span class="c1">#reduce size since this cell produces arrays of size: vocabulary size x number of tweets</span>
-
-<span class="n">remove_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;english&quot;</span><span class="p">)</span> <span class="c1">#stop words are words will little semantic value (e.g. &quot;the&quot;)</span>
-<span class="c1">#let&#39;s add some mroe words we don&#39;t want to track (you can generate this kind of list iteratively by looking at the results):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">selected_tweets</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span> <span class="c1">#reduce size since the vectorization computation transforms the corpus into an array of large size (vocabulary size x number of tweets)</span>
+<span class="c1">#let&#39;s add some more words that we don&#39;t want to track (you can generate this kind of list iteratively by looking at the results and adding to this list):</span>
 <span class="n">remove_words</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;cop26&#39;</span><span class="p">,</span><span class="s1">&#39;http&#39;</span><span class="p">,</span><span class="s1">&#39;https&#39;</span><span class="p">,</span><span class="s1">&#39;30&#39;</span><span class="p">,</span><span class="s1">&#39;000&#39;</span><span class="p">,</span><span class="s1">&#39;je&#39;</span><span class="p">,</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span><span class="s1">&#39;climate&#39;</span><span class="p">,</span><span class="s1">&#39;limacop20&#39;</span><span class="p">,</span><span class="s1">&#39;un_climatetalks&#39;</span><span class="p">,</span><span class="s1">&#39;climatechange&#39;</span><span class="p">,</span><span class="s1">&#39;via&#39;</span><span class="p">,</span><span class="s1">&#39;ht&#39;</span><span class="p">,</span><span class="s1">&#39;talks&#39;</span><span class="p">,</span><span class="s1">&#39;unfccc&#39;</span><span class="p">,</span><span class="s1">&#39;peru&#39;</span><span class="p">,</span><span class="s1">&#39;peruvian&#39;</span><span class="p">,</span><span class="s1">&#39;lima&#39;</span><span class="p">,</span><span class="s1">&#39;co&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span><span class="o">+</span><span class="s2">&quot; tweets&quot;</span><span class="p">)</span>
 <span class="n">min_doc_freq</span><span class="o">=</span><span class="mi">5</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -1482,29 +1466,29 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#start and end number of words</span>
-<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">hyp_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
+<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">selected_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
     <span class="n">plot_wordcloud_and_freqdist</span><span class="p">(</span><span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">],</span><span class="n">vectorizer_type</span><span class="p">,</span><span class="n">feature_names</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Note how the TFidf vectorizer has scaled down the hypocrisy words relative to the count vectorizer.</p>
-<p>There are some words here that look like they likely would appear in pairs. Let’s tell the vectorizer to also look for high frequency <em>pairs</em> of words.</p>
+<p>Note in the histograms how the TFidf vectorizer has scaled down the hypocrisy words such that they are less outlyingly prevalent relative to the count vectorizer.</p>
+<p>There are some words here  (e.g. <code class="docutils literal notranslate"><span class="pre">private</span></code> and <code class="docutils literal notranslate"><span class="pre">jet</span></code>) that look like they likely would appear in pairs. Let’s tell the vectorizer to also look for high frequency <em>pairs</em> of words.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ngram_range</span><span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="c1">#start and end number of words</span>
-<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">hyp_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
+<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">selected_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
     <span class="n">plot_wordcloud_and_freqdist</span><span class="p">(</span><span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">],</span><span class="n">vectorizer_type</span><span class="p">,</span><span class="n">feature_names</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>To clear this list a bit more, let’s also remove the hypocrisy words altogether.</p>
+<p>The hypocrisy words take up so much frequency it is hard to see what the remaining words are. To clear this list a bit more, let’s also remove the hypocrisy words altogether.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remove_words</span> <span class="o">+=</span> <span class="n">hypocrisy_words</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remove_words</span> <span class="o">+=</span> <span class="n">selected_words</span>
 </pre></div>
 </div>
 </div>
@@ -1512,7 +1496,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ngram_range</span><span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="c1">#start and end number of words</span>
-<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">hyp_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
+<span class="n">vectorized_data_dict</span><span class="p">,</span><span class="n">feature_names</span><span class="o">=</span><span class="n">vectorize</span><span class="p">(</span><span class="n">selected_tweets</span><span class="p">,</span><span class="n">ngram_range</span><span class="o">=</span><span class="n">ngram_range</span><span class="p">,</span><span class="n">remove_words</span><span class="o">=</span><span class="n">remove_words</span><span class="p">,</span><span class="n">min_doc_freq</span><span class="o">=</span><span class="n">min_doc_freq</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">vectorizer_type</span> <span class="ow">in</span> <span class="n">vectypes</span><span class="p">:</span>
     <span class="n">plot_wordcloud_and_freqdist</span><span class="p">(</span><span class="n">vectorized_data_dict</span><span class="p">[</span><span class="n">vectorizer_type</span><span class="p">],</span><span class="n">vectorizer_type</span><span class="p">,</span><span class="n">feature_names</span><span class="p">)</span>
 </pre></div>
@@ -1522,6 +1506,10 @@ title="Print to PDF"
 <p>Observe terms that we might have expected are associated to hypocrisy, e.g. “flying”. Even when allowing for pairs, the semantics are hard to extract from this analysis that ignores the correlations in usage among multiple words.</p>
 <p>To futher assess statistics, one approach is use a generative model with latent structure.</p>
 <p>Topic models (the <a class="reference external" href="https://www.structuraltopicmodel.com/">structural topic model</a> in particular) are a nice modelling framework to start analyzing those correlations.</p>
+<p>For a modern introduction to text analysis in the social sciences, I recommend the textbook:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Text as Data: A New Framework for Machine Learning and the Social Sciences (2022) by Justin Grimmer, Margaret E. Roberts, and Brandon M. Stewart
+</pre></div>
+</div>
 </div>
 </div>
 
