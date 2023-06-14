@@ -47,8 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="&lt;no title&gt;" href="../further_reading.html" />
@@ -689,6 +689,70 @@ const thebe_selector_output = ".output, .cell_output"
    Introduction
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Continuing your project after the course
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Sea%20level%20rise.html">
+     <strong>
+      ECCO: sea surface height
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Regional%20precipitation%20variability.html">
+     <strong>
+      CHIRPS Version 2.0 Global Daily 0.25°
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Surface%20albedo%20and%20land%20use.html">
+     Project setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Wildfires%20and%20burnt%20areas.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Ocean%20acidification.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/ENSO%20impact%20on%20precipitation%20and%20temperature.html">
+     <strong>
+      Dataset 3: Nino 3.4 Index : need to get from IRI or NOAA PSL
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+     <strong>
+      Q7: heatwave detection
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -1198,8 +1262,8 @@ title="Print to PDF"
 <h1>Section 2 :  Surface Energy Balance<a class="headerlink" href="#section-2-surface-energy-balance" title="Permalink to this headline">#</a></h1>
 <p>Up until this point we have been analyzing budgets at the top of the atmopshere. Now we will move to Earth’s surface, where we will run into both familiar and unfamiliar terminology.</p>
 <p>The first two terms we will analyze define the radiative component of the surface energy budget: shortwave and longwave radiation. For each of these terms, there is an upwelling and downwelling component. This is because, for example, some of the shortwave radiation is reflected due to the surface albedo, and some longwave radiation from Earth is directed back to Earth’s surface from the atmopshere. The net is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d13b5ed0-0b78-48f2-84ad-aafa758551b7">
-<span class="eqno">(14)<a class="headerlink" href="#equation-d13b5ed0-0b78-48f2-84ad-aafa758551b7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1809e7e5-0190-43c9-aea0-02a3c8c53f61">
+<span class="eqno">(14)<a class="headerlink" href="#equation-1809e7e5-0190-43c9-aea0-02a3c8c53f61" title="Permalink to this equation">#</a></span>\[\begin{align}
 R_{net} = [R_{\uparrow S} - R_{\downarrow S}] + [R_{\uparrow L} - R_{\downarrow L}]
 \end{align}\]</div>
 <p>where the arrows indicate up(down)welling and the S and L are shortwave and longwave. Note that in keeping with the rest of the variables we will look at, the net radiation is defined with a positive value to be a flux from the ocean or land to the atmosphere. That is, positive indicates an heat transport away from the surface (upward).</p>

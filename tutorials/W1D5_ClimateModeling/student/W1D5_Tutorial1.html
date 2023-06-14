@@ -47,8 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Setup" href="W1D5_Tutorial2.html" />
@@ -689,6 +689,70 @@ const thebe_selector_output = ".output, .cell_output"
    Introduction
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Continuing your project after the course
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Sea%20level%20rise.html">
+     <strong>
+      ECCO: sea surface height
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Regional%20precipitation%20variability.html">
+     <strong>
+      CHIRPS Version 2.0 Global Daily 0.25°
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Surface%20albedo%20and%20land%20use.html">
+     Project setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Wildfires%20and%20burnt%20areas.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Ocean%20acidification.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/ENSO%20impact%20on%20precipitation%20and%20temperature.html">
+     <strong>
+      Dataset 3: Nino 3.4 Index : need to get from IRI or NOAA PSL
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+     <strong>
+      Q7: heatwave detection
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -1072,14 +1136,14 @@ title="Print to PDF"
 <div class="section" id="section-1-blackbody-radiation">
 <h1>Section 1 : Blackbody Radiation<a class="headerlink" href="#section-1-blackbody-radiation" title="Permalink to this headline">#</a></h1>
 <p>Suppose Earth behaves as a perfect blackbody radiatior, emitting <strong>outgoing longwave radiation (OLR)</strong> for a given <strong>emission temperature</strong> (<span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) following the Stefan-Boltzmann law.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4a2a55d1-29c6-4be8-9a63-4fbef7d4ce71">
-<span class="eqno">(2)<a class="headerlink" href="#equation-4a2a55d1-29c6-4be8-9a63-4fbef7d4ce71" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a3d73994-340b-4a84-b722-b63d0f25eeaa">
+<span class="eqno">(2)<a class="headerlink" href="#equation-a3d73994-340b-4a84-b722-b63d0f25eeaa" title="Permalink to this equation">#</a></span>\[\begin{align}
 OLR = \sigma T^4
 \end{align}\]</div>
 <p>Where the Stefan-Boltzmann constant <span class="math notranslate nohighlight">\(\sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}\)</span>.</p>
 <p>Rearranging the equation above, we can solve for the emission temperature of Earth, <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f670c06a-fa28-4ea7-bc69-28a8d059023e">
-<span class="eqno">(3)<a class="headerlink" href="#equation-f670c06a-fa28-4ea7-bc69-28a8d059023e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-67763f7f-3bef-4c3b-bb64-5db57eac8c4b">
+<span class="eqno">(3)<a class="headerlink" href="#equation-67763f7f-3bef-4c3b-bb64-5db57eac8c4b" title="Permalink to this equation">#</a></span>\[\begin{align}
 T = \sqrt[4]{\frac{OLR}{\sigma}}
 \end{align}\]</div>
 <p>Using <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span>, python allows us to calculate this.</p>
@@ -1141,8 +1205,8 @@ T = \sqrt[4]{\frac{OLR}{\sigma}}
 <p>The expected surface temperature using blackbody radiation was much colder than we observe it to be. Using the blackbody radiation model, we assume that there is nothing that lies between Earth’s surface and space that interacts with Earth’s emitted radiation. From the initial lecture on the global energy budget we know this is not true. Earth has an atmosphere, and within it are many gases and that changes the picture of pure blackbody radiation we used before. The effect of these gases on radiation, called the <strong>greenhouse effect</strong>, is what warms earth to a habitable temperture.</p>
 <p>A first approach is to model the greenhouse effect on outgoing longwave radiation (OLR) to space by adding a transmissivity coefficient. The <strong>transmissivity coeficient (</strong><span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span><strong>)</strong> represents the fraction of the radiation emitted from Earth that actually makes it to space. This coefficient is a number that lies between 0 and 1, and represents the <em>effects</em> of all the greenhouse gases on radiation, rather than including them explicity in the model. This is called a <strong>parametrization</strong>, and it will be discussed in more detail in tomorrows lecture.</p>
 <p>Applying this to the original model for blackbody radiation, we find the modified model to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d9b80d46-74d6-4b9e-b0d7-b87181926b11">
-<span class="eqno">(4)<a class="headerlink" href="#equation-d9b80d46-74d6-4b9e-b0d7-b87181926b11" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-09430e67-8cb4-4f10-b7da-a72aef1fcc11">
+<span class="eqno">(4)<a class="headerlink" href="#equation-09430e67-8cb4-4f10-b7da-a72aef1fcc11" title="Permalink to this equation">#</a></span>\[\begin{align}
 OLR = \tau \sigma T^4
 \end{align}\]</div>
 <p>Using  <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span> and <span class="math notranslate nohighlight">\(T = 288 K\)</span>, estimate <span class="math notranslate nohighlight">\(\tau\)</span>.</p>

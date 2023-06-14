@@ -47,8 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Tutorial 2: Logistic Regression" href="W2D5_Tutorial2.html" />
@@ -688,6 +688,70 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../../projects/README.html">
    Introduction
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Continuing your project after the course
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Sea%20level%20rise.html">
+     <strong>
+      ECCO: sea surface height
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Regional%20precipitation%20variability.html">
+     <strong>
+      CHIRPS Version 2.0 Global Daily 0.25°
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Surface%20albedo%20and%20land%20use.html">
+     Project setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Wildfires%20and%20burnt%20areas.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Ocean%20acidification.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/ENSO%20impact%20on%20precipitation%20and%20temperature.html">
+     <strong>
+      Dataset 3: Nino 3.4 Index : need to get from IRI or NOAA PSL
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+     <strong>
+      Q7: heatwave detection
+     </strong>
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1447,6 +1511,16 @@ title="Print to PDF"
 <p>These are the slides for the videos in all tutorials today</p>
 <p>###########  Tutorial slides</p>
 <p>These are the slides for the videos in all tutorials today</p>
+<p>############  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
+<p>#############  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
+<p>##############  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
+<p>###############  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
+<p>################  Tutorial slides</p>
+<p>These are the slides for the videos in all tutorials today</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 </div>
@@ -1473,6 +1547,11 @@ title="Print to PDF"
 <p>#########  Import necessary libraries:</p>
 <p>##########  Import necessary libraries:</p>
 <p>###########  Import necessary libraries:</p>
+<p>############  Import necessary libraries:</p>
+<p>#############  Import necessary libraries:</p>
+<p>##############  Import necessary libraries:</p>
+<p>###############  Import necessary libraries:</p>
+<p>################  Import necessary libraries:</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Import necessary libraries:</span>
@@ -1512,12 +1591,17 @@ title="Print to PDF"
 <p>#########  Video 1: Video 1 Name</p>
 <p>##########  Video 1: Video 1 Name</p>
 <p>###########  Video 1: Video 1 Name</p>
+<p>############  Video 1: Video 1 Name</p>
+<p>#############  Video 1: Video 1 Name</p>
+<p>##############  Video 1: Video 1 Name</p>
+<p>###############  Video 1: Video 1 Name</p>
+<p>################  Video 1: Video 1 Name</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <p>In a regression problem, we need data features (‘regressors’, or independent variables) that we will use to predict a dependent variable. For example, we could try to predict an employee’s salary (dependent variable) based on features such as the number of years at the company and performance ratings (regressors).</p>
 <p>To try out linear regression with scikit-learn, we will start with synthetic data. Linear regression assumes there is a linear relationship between the regressors and the predicted value, so we will simulate data that does have such a linear relationship.  Specifically, we will build data with the following relationship:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5bbba3f8-3b2c-4442-ac76-eac8c3734bc9">
-<span class="eqno">(15)<a class="headerlink" href="#equation-5bbba3f8-3b2c-4442-ac76-eac8c3734bc9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fb901201-4ed2-490c-98a1-d1d25fa20698">
+<span class="eqno">(15)<a class="headerlink" href="#equation-fb901201-4ed2-490c-98a1-d1d25fa20698" title="Permalink to this equation">#</a></span>\[\begin{align}
  y = \beta x_1 + (1-\beta) x_2 + \alpha \epsilon 
 \end{align}\]</div>
 <p>where y is the dependent variable, and <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> are regressors. <span class="math notranslate nohighlight">\(\beta\)</span> can range from 0 to 1; it is a weighting variable that controls the relative influence from each regressor (at .5, both regressors contribute equally). <span class="math notranslate nohighlight">\(\epsilon\)</span> is a noise term that makes <span class="math notranslate nohighlight">\(y\)</span> only partially dependent on these regressors. The strength of the noise is controlled by <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
@@ -1548,6 +1632,11 @@ title="Print to PDF"
 <p>#########  Generating regressors value ‘x1’ and ‘x2’ with NumPy</p>
 <p>##########  Generating regressors value ‘x1’ and ‘x2’ with NumPy</p>
 <p>###########  Generating regressors value ‘x1’ and ‘x2’ with NumPy</p>
+<p>############  Generating regressors value ‘x1’ and ‘x2’ with NumPy</p>
+<p>#############  Generating regressors value ‘x1’ and ‘x2’ with NumPy</p>
+<p>##############  Generating regressors value ‘x1’ and ‘x2’ with NumPy</p>
+<p>###############  Generating regressors value ‘x1’ and ‘x2’ with NumPy</p>
+<p>################  Generating regressors value ‘x1’ and ‘x2’ with NumPy</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Generating regressors value &#39;x1&#39; and &#39;x2&#39; with NumPy</span>
@@ -1589,6 +1678,11 @@ title="Print to PDF"
 <p>#########  Generating dependent variable  ‘y’</p>
 <p>##########  Generating dependent variable  ‘y’</p>
 <p>###########  Generating dependent variable  ‘y’</p>
+<p>############  Generating dependent variable  ‘y’</p>
+<p>#############  Generating dependent variable  ‘y’</p>
+<p>##############  Generating dependent variable  ‘y’</p>
+<p>###############  Generating dependent variable  ‘y’</p>
+<p>################  Generating dependent variable  ‘y’</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Generating dependent variable  &#39;y&#39;</span>

@@ -47,8 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Setup" href="W1D5_Tutorial4.html" />
@@ -689,6 +689,70 @@ const thebe_selector_output = ".output, .cell_output"
    Introduction
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Continuing your project after the course
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Sea%20level%20rise.html">
+     <strong>
+      ECCO: sea surface height
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Regional%20precipitation%20variability.html">
+     <strong>
+      CHIRPS Version 2.0 Global Daily 0.25°
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Surface%20albedo%20and%20land%20use.html">
+     Project setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Wildfires%20and%20burnt%20areas.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Ocean%20acidification.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/ENSO%20impact%20on%20precipitation%20and%20temperature.html">
+     <strong>
+      Dataset 3: Nino 3.4 Index : need to get from IRI or NOAA PSL
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+     <strong>
+      Q7: heatwave detection
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -1090,8 +1154,8 @@ title="Print to PDF"
 <p>We can represent the change in temperature over time as the net heat input or loss from radiation (<span class="math notranslate nohighlight">\(ASR-OLR\)</span>) multiplied by the heat capacity of the Earth system.</p>
 <p>The heat capacity of a medium is it’s ability to increase in temperture given an input of heat. Not all components of the Earth system (for example land, ocean, atmosphere) have the same heat capacity.</p>
 <p>Mathematically the rate of change of global mean surface temperature (<span class="math notranslate nohighlight">\(T\)</span>) over time is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4feb1da2-8723-4a0e-9450-614ddf370a59">
-<span class="eqno">(10)<a class="headerlink" href="#equation-4feb1da2-8723-4a0e-9450-614ddf370a59" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3c9625c5-ff85-4b26-923e-9f3fc8134220">
+<span class="eqno">(10)<a class="headerlink" href="#equation-3c9625c5-ff85-4b26-923e-9f3fc8134220" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{rate of change of }T = \frac{1}{\text{heat capacity}}\cdot (\text{energy flux in - energy flux out}) = \frac{1}{C} \cdot ASR - OLR
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is the heat capacity of the Earth system. Note here that when <span class="math notranslate nohighlight">\(ASR &gt; OLR\)</span>, then the system is gaining heat. Conversly when <span class="math notranslate nohighlight">\(ASR &lt; OLR\)</span>, then the system is losing heat over time.</p>
@@ -1163,8 +1227,8 @@ title="Print to PDF"
 <div class="section" id="section-2-add-time-dependency-to-the-model">
 <h1>Section 2 : Add Time Dependency to the Model<a class="headerlink" href="#section-2-add-time-dependency-to-the-model" title="Permalink to this headline">#</a></h1>
 <p>Knowing the heat capacity, and the descriptions of <span class="math notranslate nohighlight">\(OLR\)</span> and <span class="math notranslate nohighlight">\(ASR\)</span> from previous tutorials, we can write the equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d9295dbf-56ee-4b87-852e-4f62c515b653">
-<span class="eqno">(11)<a class="headerlink" href="#equation-d9295dbf-56ee-4b87-852e-4f62c515b653" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fa256473-7911-4da6-a888-215b848265f1">
+<span class="eqno">(11)<a class="headerlink" href="#equation-fa256473-7911-4da6-a888-215b848265f1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{rate of change }T = \frac{\text{change in }T}{\text{change in time}}=\frac{dT}{dt}= \frac{1}{C}(ASR - OLR)
 \end{align}\]</div>
 <p>Numerically, we can use this equation to compute the global mean surface temprature after a small interval of time by adding on the amount of energy gained or lost multiplied by the time interval itself.</p>
@@ -1295,8 +1359,6 @@ title="Print to PDF"
 </div>
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_e46a8b27.py"><em>Click for solution</em></a></p>
-<p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial3_Solution_e46a8b27_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial3_Solution_e46a8b27_1.png" style="width: 775.0px; height: 575.0px;" /></a>
 </div>
 </div>
 <div class="section" id="section-3-revisiting-the-climate-change-scenario-from-tutorial-2">
@@ -1358,8 +1420,6 @@ title="Print to PDF"
 </div>
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial3_Solution_d6319fd3.py"><em>Click for solution</em></a></p>
-<p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial3_Solution_d6319fd3_0.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial3_Solution_d6319fd3_0.png" style="width: 775.0px; height: 575.0px;" /></a>
 </div>
 </div>
 

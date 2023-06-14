@@ -47,8 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Setup" href="W1D5_Tutorial5.html" />
@@ -689,6 +689,70 @@ const thebe_selector_output = ".output, .cell_output"
    Introduction
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+   Continuing your project after the course
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../projects/docs/project_guidance.html">
+   Daily guide for projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Sea%20level%20rise.html">
+     <strong>
+      ECCO: sea surface height
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Regional%20precipitation%20variability.html">
+     <strong>
+      CHIRPS Version 2.0 Global Daily 0.25°
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Surface%20albedo%20and%20land%20use.html">
+     Project setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Wildfires%20and%20burnt%20areas.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Ocean%20acidification.html">
+     <strong>
+      Project setup
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/ENSO%20impact%20on%20precipitation%20and%20temperature.html">
+     <strong>
+      Dataset 3: Nino 3.4 Index : need to get from IRI or NOAA PSL
+     </strong>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+     <strong>
+      Q7: heatwave detection
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -1095,8 +1159,8 @@ title="Print to PDF"
 <h1>Section 1 : Temperature Dependent Albedo<a class="headerlink" href="#section-1-temperature-dependent-albedo" title="Permalink to this headline">#</a></h1>
 <p>When earth’s surface warms, snow and ice melt. This decreases the amount of solar radiation that is reflected off Earth’s surface, and lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>. This in turn warms the climate and more snow and ice melt. This is referred to as a <strong>postive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
 <p>A simple introduction of this feature is through a temperature dependent albedo defined by a ramp function (see lecture slides).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dea65840-8316-494c-b980-a7cf12583668">
-<span class="eqno">(12)<a class="headerlink" href="#equation-dea65840-8316-494c-b980-a7cf12583668" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-56b01fb8-bde4-4937-924a-c6d8c2300396">
+<span class="eqno">(12)<a class="headerlink" href="#equation-56b01fb8-bde4-4937-924a-c6d8c2300396" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \left\{
         \begin{array}{cl}
         0.3 &amp; T \gt 280 K \\
@@ -1267,8 +1331,8 @@ title="Print to PDF"
 <div class="section" id="section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
 <h1>Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence<a class="headerlink" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">#</a></h1>
 <p>To verify the equilibria identified graphically in the previous section, we can use python to find the solutions to the equation when the rate of change in temeparture is zero. That is find the solution to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac22df7c-ea1a-4429-bc22-b60d00d06449">
-<span class="eqno">(13)<a class="headerlink" href="#equation-ac22df7c-ea1a-4429-bc22-b60d00d06449" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0c2b7e9e-9b74-4c00-b9a5-24560e53ed29">
+<span class="eqno">(13)<a class="headerlink" href="#equation-0c2b7e9e-9b74-4c00-b9a5-24560e53ed29" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 = ASR-OLR
 \end{align}\]</div>
 <p>To aid us, we will use a ‘root-finding function’ from the scipy package.</p>
@@ -1470,8 +1534,6 @@ title="Print to PDF"
 </div>
 </div>
 <p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D5_ClimateModeling/solutions/W1D5_Tutorial4_Solution_6f02e793.py"><em>Click for solution</em></a></p>
-<p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial4_Solution_6f02e793_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/static/W1D5_Tutorial4_Solution_6f02e793_1.png" style="width: 774.0px; height: 575.0px;" /></a>
 </div>
 </div>
 
