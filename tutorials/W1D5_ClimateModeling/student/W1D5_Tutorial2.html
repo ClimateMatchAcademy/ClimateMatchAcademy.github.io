@@ -129,6 +129,13 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../TechnicalHelp/Tutorial_jupyterhub.html">
+       <strong>
+        Using JupyterHub
+       </strong>
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
        Using Google Colab
       </a>
@@ -1149,8 +1156,8 @@ title="Print to PDF"
 <h1>Section 1 : Insolation and Albedo<a class="headerlink" href="#section-1-insolation-and-albedo" title="Permalink to this headline">#</a></h1>
 <p>Just as Earth emits radiation, so does the sun. The incoming solar radiation, called <strong>insolation</strong>, is observed to be <span class="math notranslate nohighlight">\(Q = 340 W m^{-2}\)</span>.</p>
 <p>Some of this radiation is reflected back to space (for example off of ice and snow). From observations the amount reflected back is <span class="math notranslate nohighlight">\(F_{ref} = 100 W m^{-2}\)</span>. The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b8a0c1a4-a14c-4f09-af39-8050bc49a844">
-<span class="eqno">(5)<a class="headerlink" href="#equation-b8a0c1a4-a14c-4f09-af39-8050bc49a844" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-78581bfb-7dd5-42f8-96ff-73f3b2408dd7">
+<span class="eqno">(5)<a class="headerlink" href="#equation-78581bfb-7dd5-42f8-96ff-73f3b2408dd7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \frac{F_{ref}}{Q}
 \end{align}\]</div>
 <p>Albedo is a unitless number between 0 and 1. We can use this formula and python to find the albedo of Earth.</p>
@@ -1189,8 +1196,8 @@ title="Print to PDF"
 <div class="section" id="section-2-absorbed-shortwave-radiation">
 <h1>Section 2 : Absorbed Shortwave Radiation<a class="headerlink" href="#section-2-absorbed-shortwave-radiation" title="Permalink to this headline">#</a></h1>
 <p>The <strong>absorbed shortwave radiation (ASR)</strong> is the amount of this isolation that is <em>not</em> reflected, and actually makes it to Earth’s surface. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9d9e2e29-e4a3-4c82-b0dc-80c66838a54c">
-<span class="eqno">(6)<a class="headerlink" href="#equation-9d9e2e29-e4a3-4c82-b0dc-80c66838a54c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b1def18e-8369-4867-b790-4e2568cba899">
+<span class="eqno">(6)<a class="headerlink" href="#equation-b1def18e-8369-4867-b790-4e2568cba899" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = Q-F_{ref} = (1-\alpha)Q
 \end{align}\]</div>
 <p>Using observations and python we can esimate the absorbed shortwave radiation.</p>
@@ -1225,19 +1232,19 @@ ASR = Q-F_{ref} = (1-\alpha)Q
 <div class="section" id="section-3-equilibrium-temperature">
 <h1>Section 3 : Equilibrium Temperature<a class="headerlink" href="#section-3-equilibrium-temperature" title="Permalink to this headline">#</a></h1>
 <p>Energy Balance is achieved when radiation absorbed by Earth’s surface (ASR) is equal to longwave radiation going out to space (OLR). That is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4265d921-90b9-48c6-84fa-b5887b41acc2">
-<span class="eqno">(7)<a class="headerlink" href="#equation-4265d921-90b9-48c6-84fa-b5887b41acc2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f339b9c1-5eab-485f-85eb-7a91e7ae6926">
+<span class="eqno">(7)<a class="headerlink" href="#equation-f339b9c1-5eab-485f-85eb-7a91e7ae6926" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = OLR
 \end{align}\]</div>
 <p>By substituting in the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
 <p>Recall <span class="math notranslate nohighlight">\(OLR = \tau\sigma T^4\)</span> and <span class="math notranslate nohighlight">\(ASR = (1-\alpha)Q\)</span>. The <strong>equilibrium temperature</strong> is the temperature the system would have if energy balance was perfectly reached. Assuming energy balance, we will call the emission temperature denoted previously the equilibrium temperature (<span class="math notranslate nohighlight">\(T_{eq}\)</span>) instead. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a57bfe1e-b9f4-4d9b-ae11-61b25a6871d2">
-<span class="eqno">(8)<a class="headerlink" href="#equation-a57bfe1e-b9f4-4d9b-ae11-61b25a6871d2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3ef8704d-b174-483a-b2fa-b4ed1dc6209a">
+<span class="eqno">(8)<a class="headerlink" href="#equation-3ef8704d-b174-483a-b2fa-b4ed1dc6209a" title="Permalink to this equation">#</a></span>\[\begin{align}
 (1-\alpha)Q = ASR = OLR = \tau\sigma T_{eq}^4
 \end{align}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(T_{eq}\)</span> we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b594ef6f-4736-47c2-8c92-6fcef1146f0b">
-<span class="eqno">(9)<a class="headerlink" href="#equation-b594ef6f-4736-47c2-8c92-6fcef1146f0b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b6b696d9-2a4b-45dd-a19b-0111583c604f">
+<span class="eqno">(9)<a class="headerlink" href="#equation-b6b696d9-2a4b-45dd-a19b-0111583c604f" title="Permalink to this equation">#</a></span>\[\begin{align}
 T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 \end{align}\]</div>
 <p>We can implement this equation in python to find the numeric value.</p>
