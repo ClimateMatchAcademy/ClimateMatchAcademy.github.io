@@ -1168,8 +1168,8 @@ title="Print to PDF"
 <h1>Section 1 : Insolation and Albedo<a class="headerlink" href="#section-1-insolation-and-albedo" title="Permalink to this headline">#</a></h1>
 <p>Just as Earth emits radiation, so does the sun. The incoming solar radiation, called <strong>insolation</strong>, is observed to be <span class="math notranslate nohighlight">\(Q = 340 W m^{-2}\)</span>.</p>
 <p>Some of this radiation is reflected back to space (for example off of ice and snow). From observations the amount reflected back is <span class="math notranslate nohighlight">\(F_{ref} = 100 W m^{-2}\)</span>. The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-23109a52-f5f7-4923-9831-25ea1cc479d0">
-<span class="eqno">(5)<a class="headerlink" href="#equation-23109a52-f5f7-4923-9831-25ea1cc479d0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1131f6f7-7587-4cb4-a466-71191ef1f3bd">
+<span class="eqno">(5)<a class="headerlink" href="#equation-1131f6f7-7587-4cb4-a466-71191ef1f3bd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \frac{F_{ref}}{Q}
 \end{align}\]</div>
 <p>Albedo is a unitless number between 0 and 1. We can use this formula and python to find the albedo of Earth.</p>
@@ -1208,8 +1208,8 @@ title="Print to PDF"
 <div class="section" id="section-2-absorbed-shortwave-radiation">
 <h1>Section 2 : Absorbed Shortwave Radiation<a class="headerlink" href="#section-2-absorbed-shortwave-radiation" title="Permalink to this headline">#</a></h1>
 <p>The <strong>absorbed shortwave radiation (ASR)</strong> is the amount of this isolation that is <em>not</em> reflected, and actually makes it to Earth’s surface. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5dde309f-547e-4681-b8e6-7c727918739c">
-<span class="eqno">(6)<a class="headerlink" href="#equation-5dde309f-547e-4681-b8e6-7c727918739c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c900a678-aa9f-448a-93b8-81399856bd70">
+<span class="eqno">(6)<a class="headerlink" href="#equation-c900a678-aa9f-448a-93b8-81399856bd70" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = Q-F_{ref} = (1-\alpha)Q
 \end{align}\]</div>
 <p>Using observations and python we can esimate the absorbed shortwave radiation.</p>
@@ -1244,19 +1244,19 @@ ASR = Q-F_{ref} = (1-\alpha)Q
 <div class="section" id="section-3-equilibrium-temperature">
 <h1>Section 3 : Equilibrium Temperature<a class="headerlink" href="#section-3-equilibrium-temperature" title="Permalink to this headline">#</a></h1>
 <p>Energy Balance is achieved when radiation absorbed by Earth’s surface (ASR) is equal to longwave radiation going out to space (OLR). That is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b78b82b0-eab8-486f-9eca-61b352ca257f">
-<span class="eqno">(7)<a class="headerlink" href="#equation-b78b82b0-eab8-486f-9eca-61b352ca257f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-150dcf30-988e-4941-b2ea-a32bfa19e1fe">
+<span class="eqno">(7)<a class="headerlink" href="#equation-150dcf30-988e-4941-b2ea-a32bfa19e1fe" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = OLR
 \end{align}\]</div>
 <p>By substituting in the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
 <p>Recall <span class="math notranslate nohighlight">\(OLR = \tau\sigma T^4\)</span> and <span class="math notranslate nohighlight">\(ASR = (1-\alpha)Q\)</span>. The <strong>equilibrium temperature</strong> is the temperature the system would have if energy balance was perfectly reached. Assuming energy balance, we will call the emission temperature denoted previously the equilibrium temperature (<span class="math notranslate nohighlight">\(T_{eq}\)</span>) instead. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-62351794-5584-4b1e-9ec4-f1ff2d7e06bd">
-<span class="eqno">(8)<a class="headerlink" href="#equation-62351794-5584-4b1e-9ec4-f1ff2d7e06bd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9839fc3b-29bd-4162-b92f-0c085778232e">
+<span class="eqno">(8)<a class="headerlink" href="#equation-9839fc3b-29bd-4162-b92f-0c085778232e" title="Permalink to this equation">#</a></span>\[\begin{align}
 (1-\alpha)Q = ASR = OLR = \tau\sigma T_{eq}^4
 \end{align}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(T_{eq}\)</span> we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f14f8123-8f61-42a2-945e-00e4d084459c">
-<span class="eqno">(9)<a class="headerlink" href="#equation-f14f8123-8f61-42a2-945e-00e4d084459c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-90d0f1b3-5eb2-4555-bb1f-05caa31e9e26">
+<span class="eqno">(9)<a class="headerlink" href="#equation-90d0f1b3-5eb2-4555-bb1f-05caa31e9e26" title="Permalink to this equation">#</a></span>\[\begin{align}
 T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 \end{align}\]</div>
 <p>We can implement this equation in python to find the numeric value.</p>

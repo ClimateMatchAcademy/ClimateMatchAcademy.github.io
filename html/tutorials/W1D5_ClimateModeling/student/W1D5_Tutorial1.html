@@ -1139,14 +1139,14 @@ title="Print to PDF"
 <div class="section" id="section-1-blackbody-radiation">
 <h1>Section 1 : Blackbody Radiation<a class="headerlink" href="#section-1-blackbody-radiation" title="Permalink to this headline">#</a></h1>
 <p>Suppose Earth behaves as a perfect blackbody radiatior, emitting <strong>outgoing longwave radiation (OLR)</strong> for a given <strong>emission temperature</strong> (<span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) following the Stefan-Boltzmann law.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-031fa39b-c075-4909-9a81-9879a8f3ca5e">
-<span class="eqno">(2)<a class="headerlink" href="#equation-031fa39b-c075-4909-9a81-9879a8f3ca5e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-21416598-9bfa-4a52-92d4-26f3de510b11">
+<span class="eqno">(2)<a class="headerlink" href="#equation-21416598-9bfa-4a52-92d4-26f3de510b11" title="Permalink to this equation">#</a></span>\[\begin{align}
 OLR = \sigma T^4
 \end{align}\]</div>
 <p>Where the Stefan-Boltzmann constant <span class="math notranslate nohighlight">\(\sigma = 5.67 \times 10^{-8} W m^{-2} K^{-4}\)</span>.</p>
 <p>Rearranging the equation above, we can solve for the emission temperature of Earth, <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b76826de-314c-4cd0-abec-230835923daa">
-<span class="eqno">(3)<a class="headerlink" href="#equation-b76826de-314c-4cd0-abec-230835923daa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0cf0df1a-7994-47f7-8b41-7a4f6fcb8f6d">
+<span class="eqno">(3)<a class="headerlink" href="#equation-0cf0df1a-7994-47f7-8b41-7a4f6fcb8f6d" title="Permalink to this equation">#</a></span>\[\begin{align}
 T = \sqrt[4]{\frac{OLR}{\sigma}}
 \end{align}\]</div>
 <p>Using <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span>, python allows us to calculate this.</p>
@@ -1208,8 +1208,8 @@ T = \sqrt[4]{\frac{OLR}{\sigma}}
 <p>The expected surface temperature using blackbody radiation was much colder than we observe it to be. Using the blackbody radiation model, we assume that there is nothing that lies between Earth’s surface and space that interacts with Earth’s emitted radiation. From the initial lecture on the global energy budget we know this is not true. Earth has an atmosphere, and within it are many gases and that changes the picture of pure blackbody radiation we used before. The effect of these gases on radiation, called the <strong>greenhouse effect</strong>, is what warms earth to a habitable temperture.</p>
 <p>A first approach is to model the greenhouse effect on outgoing longwave radiation (OLR) to space by adding a transmissivity coefficient. The <strong>transmissivity coeficient (</strong><span class="math notranslate nohighlight">\(\mathbf{\tau}\)</span><strong>)</strong> represents the fraction of the radiation emitted from Earth that actually makes it to space. This coefficient is a number that lies between 0 and 1, and represents the <em>effects</em> of all the greenhouse gases on radiation, rather than including them explicity in the model. This is called a <strong>parametrization</strong>, and it will be discussed in more detail in tomorrows lecture.</p>
 <p>Applying this to the original model for blackbody radiation, we find the modified model to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c77773e-5027-428d-a567-a17af770034b">
-<span class="eqno">(4)<a class="headerlink" href="#equation-2c77773e-5027-428d-a567-a17af770034b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7adf081c-d019-44b9-9faa-28fdf2a998f7">
+<span class="eqno">(4)<a class="headerlink" href="#equation-7adf081c-d019-44b9-9faa-28fdf2a998f7" title="Permalink to this equation">#</a></span>\[\begin{align}
 OLR = \tau \sigma T^4
 \end{align}\]</div>
 <p>Using  <span class="math notranslate nohighlight">\(OLR = 239 W m^{-2}\)</span> and <span class="math notranslate nohighlight">\(T = 288 K\)</span>, estimate <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
