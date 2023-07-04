@@ -49,10 +49,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Setup" href="W1D5_Tutorial3.html" />
-    <link rel="prev" title="Setup" href="W1D5_Tutorial1.html" />
+    <link rel="prev" title="Tutorial 1 : A Simple Greenhouse Model" href="W1D5_Tutorial1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -89,6 +90,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/cma-logo-square-4xp.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
@@ -506,7 +512,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="W1D5_Tutorial1.html">
-     Setup
+     <strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -601,17 +609,23 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+     <strong>
+      Tutorial Objectives
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
+     <strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
+     <strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -649,17 +663,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     <strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     <strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
+     <strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
     </a>
    </li>
   </ul>
@@ -1168,8 +1188,8 @@ title="Print to PDF"
 <h1>Section 1 : Insolation and Albedo<a class="headerlink" href="#section-1-insolation-and-albedo" title="Permalink to this headline">#</a></h1>
 <p>Just as Earth emits radiation, so does the sun. The incoming solar radiation, called <strong>insolation</strong>, is observed to be <span class="math notranslate nohighlight">\(Q = 340 W m^{-2}\)</span>.</p>
 <p>Some of this radiation is reflected back to space (for example off of ice and snow). From observations the amount reflected back is <span class="math notranslate nohighlight">\(F_{ref} = 100 W m^{-2}\)</span>. The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-1131f6f7-7587-4cb4-a466-71191ef1f3bd">
-<span class="eqno">(5)<a class="headerlink" href="#equation-1131f6f7-7587-4cb4-a466-71191ef1f3bd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-57831c5e-03de-473a-b7df-334a8260a637">
+<span class="eqno">(6)<a class="headerlink" href="#equation-57831c5e-03de-473a-b7df-334a8260a637" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \frac{F_{ref}}{Q}
 \end{align}\]</div>
 <p>Albedo is a unitless number between 0 and 1. We can use this formula and python to find the albedo of Earth.</p>
@@ -1208,8 +1228,8 @@ title="Print to PDF"
 <div class="section" id="section-2-absorbed-shortwave-radiation">
 <h1>Section 2 : Absorbed Shortwave Radiation<a class="headerlink" href="#section-2-absorbed-shortwave-radiation" title="Permalink to this headline">#</a></h1>
 <p>The <strong>absorbed shortwave radiation (ASR)</strong> is the amount of this isolation that is <em>not</em> reflected, and actually makes it to Earth’s surface. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c900a678-aa9f-448a-93b8-81399856bd70">
-<span class="eqno">(6)<a class="headerlink" href="#equation-c900a678-aa9f-448a-93b8-81399856bd70" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6d775bed-6bcc-4ffa-ab2d-ba43fa795723">
+<span class="eqno">(7)<a class="headerlink" href="#equation-6d775bed-6bcc-4ffa-ab2d-ba43fa795723" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = Q-F_{ref} = (1-\alpha)Q
 \end{align}\]</div>
 <p>Using observations and python we can esimate the absorbed shortwave radiation.</p>
@@ -1244,19 +1264,19 @@ ASR = Q-F_{ref} = (1-\alpha)Q
 <div class="section" id="section-3-equilibrium-temperature">
 <h1>Section 3 : Equilibrium Temperature<a class="headerlink" href="#section-3-equilibrium-temperature" title="Permalink to this headline">#</a></h1>
 <p>Energy Balance is achieved when radiation absorbed by Earth’s surface (ASR) is equal to longwave radiation going out to space (OLR). That is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-150dcf30-988e-4941-b2ea-a32bfa19e1fe">
-<span class="eqno">(7)<a class="headerlink" href="#equation-150dcf30-988e-4941-b2ea-a32bfa19e1fe" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-71b13620-a6ab-49a7-9d8b-68af742cdcf3">
+<span class="eqno">(8)<a class="headerlink" href="#equation-71b13620-a6ab-49a7-9d8b-68af742cdcf3" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = OLR
 \end{align}\]</div>
 <p>By substituting in the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
 <p>Recall <span class="math notranslate nohighlight">\(OLR = \tau\sigma T^4\)</span> and <span class="math notranslate nohighlight">\(ASR = (1-\alpha)Q\)</span>. The <strong>equilibrium temperature</strong> is the temperature the system would have if energy balance was perfectly reached. Assuming energy balance, we will call the emission temperature denoted previously the equilibrium temperature (<span class="math notranslate nohighlight">\(T_{eq}\)</span>) instead. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9839fc3b-29bd-4162-b92f-0c085778232e">
-<span class="eqno">(8)<a class="headerlink" href="#equation-9839fc3b-29bd-4162-b92f-0c085778232e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-599b157c-e354-4d9d-8c4a-e3a0a987359f">
+<span class="eqno">(9)<a class="headerlink" href="#equation-599b157c-e354-4d9d-8c4a-e3a0a987359f" title="Permalink to this equation">#</a></span>\[\begin{align}
 (1-\alpha)Q = ASR = OLR = \tau\sigma T_{eq}^4
 \end{align}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(T_{eq}\)</span> we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-90d0f1b3-5eb2-4555-bb1f-05caa31e9e26">
-<span class="eqno">(9)<a class="headerlink" href="#equation-90d0f1b3-5eb2-4555-bb1f-05caa31e9e26" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-07b32546-01d1-4ec7-914e-0e9eae740c4b">
+<span class="eqno">(10)<a class="headerlink" href="#equation-07b32546-01d1-4ec7-914e-0e9eae740c4b" title="Permalink to this equation">#</a></span>\[\begin{align}
 T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 \end{align}\]</div>
 <p>We can implement this equation in python to find the numeric value.</p>
@@ -1425,7 +1445,7 @@ T_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Setup</p>
+            <p class="prev-next-title"><strong>Tutorial 1 : A Simple Greenhouse Model</strong></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="W1D5_Tutorial3.html" title="next page">

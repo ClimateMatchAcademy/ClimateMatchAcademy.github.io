@@ -49,6 +49,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Tutorial 5: Radiative Equilibrium" href="W1D5_Tutorial5.html" />
@@ -89,6 +90,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/cma-logo-square-4xp.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
@@ -506,7 +512,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="W1D5_Tutorial1.html">
-     Setup
+     <strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -601,17 +609,23 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+     <strong>
+      Tutorial Objectives
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
+     <strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
+     <strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -649,17 +663,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     <strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     <strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
+     <strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
     </a>
    </li>
   </ul>
@@ -1162,8 +1182,8 @@ title="Print to PDF"
 <h1>Section 1 : Temperature Dependent Albedo<a class="headerlink" href="#section-1-temperature-dependent-albedo" title="Permalink to this headline">#</a></h1>
 <p>When earth’s surface warms, snow and ice melt. This decreases the amount of solar radiation that is reflected off Earth’s surface, and lowers the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong>. This in turn warms the climate and more snow and ice melt. This is referred to as a <strong>postive feedback</strong>. Positive feedbacks amplify the changes that are already occurring. This particular feedback is referred to as the <strong>ice-albedo feedback</strong>.</p>
 <p>A simple introduction of this feature is through a temperature dependent albedo defined by a ramp function (see lecture slides).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e140a6d3-c0bb-4fa8-af72-c5cf963b0324">
-<span class="eqno">(12)<a class="headerlink" href="#equation-e140a6d3-c0bb-4fa8-af72-c5cf963b0324" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d7c0dc77-a1d3-48e0-beeb-5720e7ead238">
+<span class="eqno">(13)<a class="headerlink" href="#equation-d7c0dc77-a1d3-48e0-beeb-5720e7ead238" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \left\{
         \begin{array}{cl}
         0.3 &amp; T \gt 280 K \\
@@ -1334,8 +1354,8 @@ title="Print to PDF"
 <div class="section" id="section-3-finding-equilibria-numerically-determining-convergence-or-divergence">
 <h1>Section 3: Finding Equilibria Numerically, Determining Convergence or Divergence<a class="headerlink" href="#section-3-finding-equilibria-numerically-determining-convergence-or-divergence" title="Permalink to this headline">#</a></h1>
 <p>To verify the equilibria identified graphically in the previous section, we can use python to find the solutions to the equation when the rate of change in temeparture is zero. That is find the solution to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-39926fe2-38a8-42b4-971f-a082cdda3a74">
-<span class="eqno">(13)<a class="headerlink" href="#equation-39926fe2-38a8-42b4-971f-a082cdda3a74" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-50578196-583b-457a-9943-2237f8c31a46">
+<span class="eqno">(14)<a class="headerlink" href="#equation-50578196-583b-457a-9943-2237f8c31a46" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 = ASR-OLR
 \end{align}\]</div>
 <p>To aid us, we will use a ‘root-finding function’ from the scipy package.</p>

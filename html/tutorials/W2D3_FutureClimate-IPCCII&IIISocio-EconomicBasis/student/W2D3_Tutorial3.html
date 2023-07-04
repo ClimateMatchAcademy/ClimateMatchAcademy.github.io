@@ -47,10 +47,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tutorial 4 - Text analysis of COP tweets" href="W2D3_Tutorial4.html" />
-    <link rel="prev" title="Tutorial 2 - A first look at integrated assessment models" href="W2D3_Tutorial2.html" />
+    <link rel="next" title="Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters" href="W2D3_Tutorial4.html" />
+    <link rel="prev" title="Tutorial 2: Transition Goals and Integrated Assessment Models" href="W2D3_Tutorial2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -87,6 +88,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/cma-logo-square-4xp.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
@@ -504,7 +510,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
-     Setup
+     <strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -599,17 +607,23 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+     <strong>
+      Tutorial Objectives
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
+     <strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
+     <strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -647,17 +661,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     <strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     <strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
+     <strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
     </a>
    </li>
   </ul>
@@ -787,6 +807,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&urlpath=lab/tree/course-content/book/tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial3.ipynb&branch=main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -942,7 +991,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <iframe height="800px" src="https://climatematchacademy.github.io/margoweb/" width="100%"></iframe>
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:100% !important;}&lt;/style&gt;&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -974,13 +1033,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorial 2 - A first look at integrated assessment models</p>
+            <p class="prev-next-title"><strong>Tutorial 2: Transition Goals and Integrated Assessment Models</strong></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="W2D3_Tutorial4.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial 4 - Text analysis of COP tweets</p>
+        <p class="prev-next-title"><strong>Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

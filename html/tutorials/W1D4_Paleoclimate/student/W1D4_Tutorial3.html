@@ -47,6 +47,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Tutorial 4: Reconstructing Past Changes in Atmospheric Climate" href="W1D4_Tutorial4.html" />
@@ -87,6 +88,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/cma-logo-square-4xp.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Climate Science</h1>
@@ -504,7 +510,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
-     Setup
+     <strong>
+      Tutorial 1 : A Simple Greenhouse Model
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -599,17 +607,23 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
-     Tutorial 1 - Limits to growth in World3: A toy world model of diminishing non-renewable resources
+     <strong>
+      Tutorial Objectives
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
-     Tutorial 2 - A first look at integrated assessment models
+     <strong>
+      Tutorial 2: Transition Goals and Integrated Assessment Models
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
-     Tutorial 4 - Text analysis of COP tweets
+     <strong>
+      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -647,17 +661,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     <strong>
+      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     <strong>
+      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 9:  Exploring other applications
+     <strong>
+      Tutorial 4:  Exploring other applications
+     </strong>
     </a>
    </li>
   </ul>
@@ -1343,14 +1363,7 @@ title="Print to PDF"
 <p>Using the coordinate information output from the <code class="docutils literal notranslate"><span class="pre">filter_data()</span></code> function, make a plot of the locations of the proxies using the markers and colors from Tutorial 1. Note that data close together may not be very visible.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
-<span class="c1"># Students: Fill in missing code (...) and comment or remove the next line</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Student exercise: Plot the locations of the proxy data.&quot;</span><span class="p">)</span>
-<span class="c1">#################################################</span>
-
-<span class="c1"># to_remove solution</span>
-
-<span class="c1"># initate plot with the specific figure size</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initate plot with the specific figure size</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 
 <span class="c1"># set base map projection</span>
@@ -1365,12 +1378,13 @@ title="Print to PDF"
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
 
 <span class="c1"># add the proxy locations</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Geodetic</span><span class="p">(),</span><span class="n">label</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-          <span class="n">s</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.52734375</span><span class="p">,</span> <span class="mf">0.8046875</span> <span class="p">,</span> <span class="mf">0.97916667</span><span class="p">],</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Geodetic</span><span class="p">(),</span><span class="n">label</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-          <span class="n">s</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.73828125</span><span class="p">,</span> <span class="mf">0.71484375</span><span class="p">,</span> <span class="mf">0.41796875</span><span class="p">],</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Geodetic</span><span class="p">(),</span><span class="n">label</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-          <span class="n">s</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># Uncomment and complete following line</span>
+<span class="c1"># ax.scatter(...,transform=ccrs.Geodetic(),label = ...,</span>
+<span class="c1">#           s= 50, marker = &#39;d&#39;,color = [ 0.52734375, 0.8046875 , 0.97916667],edgecolor=&#39;k&#39;, zorder = 2)</span>
+<span class="c1"># ax.scatter(...,transform=ccrs.Geodetic(),label = ...,</span>
+<span class="c1">#           s= 50, marker = &#39;p&#39;,color = [ 0.73828125, 0.71484375, 0.41796875],edgecolor=&#39;k&#39;, zorder = 2)</span>
+<span class="c1"># ax.scatter(...,transform=ccrs.Geodetic(),label = ...,</span>
+<span class="c1">#           s= 50, marker = &#39;8&#39;,color = [ 1, 0, 0],edgecolor=&#39;k&#39;, zorder = 2)</span>
 
 <span class="c1"># change the map view to zoom in on central Pacific</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span> <span class="n">crs</span> <span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
@@ -1386,9 +1400,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D4_Paleoclimate/solutions/W1D4_Tutorial3_Solution_81410cd3.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main//tutorials/W1D4_Paleoclimate/solutions/W1D4_Tutorial3_Solution_be44e192.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D4_Paleoclimate/static/W1D4_Tutorial3_Solution_81410cd3_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D4_Paleoclimate/static/W1D4_Tutorial3_Solution_81410cd3_1.png" style="width: 717.0px; height: 257.0px;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D4_Paleoclimate/static/W1D4_Tutorial3_Solution_be44e192_1.png"><img alt="Solution hint" class="align-left" src="https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D4_Paleoclimate/static/W1D4_Tutorial3_Solution_be44e192_1.png" style="width: 717.0px; height: 257.0px;" /></a>
 <p>Since we are going to compare temperature datasets based on different terrestrial climate archives (lake sediments, tree rings and speleothems), the quantitative values of the measurements in each record will differ (i.e., the lake sediment and tree ring data are temperature in degrees C, but the speleothem data is oxygen isotopes in per mille). Therefore, to more easily and accurately compare temperature between the records, it’s helpful to standardize the data as we did in tutorial 2. The <code class="docutils literal notranslate"><span class="pre">.standardize()</span></code> function removes the estimated mean of the time series and divides by its estimated standard deviation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
