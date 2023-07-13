@@ -222,6 +222,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
+     <strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -1657,8 +1660,8 @@ title="Print to PDF"
 <p>You are now almost ready to plot!</p>
 <p>However, you currently have seperate zonal and meridional wind velocity components <span class="math notranslate nohighlight">\((u,v)\)</span>. An effective way of visualizing the total surface wind stress is to create a global map of the <em>magnitude</em> and <em>direction</em> of the wind velocity vector. This type of plot is known as a vector field. A <a class="reference external" href="https://glossary.ametsoc.org/wiki/Vector">vector</a> is a special mathematical quantity that has both magnitude and direction, just like the wind! The velocity components describe the intensity of wind blowing in the zonal (<span class="math notranslate nohighlight">\(u\)</span>) or meridional (<span class="math notranslate nohighlight">\(v\)</span>) directions. Specifically, wind can blow eastward (positive <span class="math notranslate nohighlight">\(u\)</span>) or westward (negative <span class="math notranslate nohighlight">\(u\)</span>), as well as northward (positive <span class="math notranslate nohighlight">\(v\)</span>) or southward (negative <span class="math notranslate nohighlight">\(v\)</span>).</p>
 <p>The total velocity vector is the <em>vector sum</em> of these two components and exhibits varying magnitude and direction. The magnitude (<span class="math notranslate nohighlight">\(||u||\)</span>) and direction (<span class="math notranslate nohighlight">\(θ\)</span>) of the total velocity vector can be determined using the following equations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-09cdb01a-4a7a-41d6-a097-1005acee4da9">
-<span class="eqno">(3)<a class="headerlink" href="#equation-09cdb01a-4a7a-41d6-a097-1005acee4da9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b5407782-9ddb-4272-aa25-047af119ba0f">
+<span class="eqno">(3)<a class="headerlink" href="#equation-b5407782-9ddb-4272-aa25-047af119ba0f" title="Permalink to this equation">#</a></span>\[\begin{align}
 ||u|| = \sqrt{u^2 + v^2},  \ \  \ \ \theta = tan^{-1}(\frac{v}{u})
 \end{align}\]</div>
 <p>When plotting a vector field using a computer, it is commonly referred to as a quiver plot. In our case, we will utilize a <a class="reference external" href="https://rabernat.github.io/intro_to_physical_oceanography/07_ekman.html">quiver function created by Ryan Abernathey</a> that calculates the magnitude and direction of the total velocity vector based on the given zonal and meridional components.</p>

@@ -222,6 +222,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
+     <strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -1699,8 +1702,8 @@ For this you will load ERA5 wind data from <a class="reference external" href="h
 <h2>Section 1.1: Annual Mean Wind Speed<a class="headerlink" href="#section-1-1-annual-mean-wind-speed" title="Permalink to this headline">#</a></h2>
 <p>You should start investigating this data by examining the global surface winds. These winds are represented as vectors, consisting of a zonal component denoted as <code class="docutils literal notranslate"><span class="pre">u10</span></code> and a meridional component denoted as <code class="docutils literal notranslate"><span class="pre">v10</span></code>.</p>
 <p>Recall from the previous tutorial that the magnitude of the wind vector represents the wind speed you will use later in the tutorial, given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8e1e1912-34ae-4a86-8dcd-30da8da29732">
-<span class="eqno">(2)<a class="headerlink" href="#equation-8e1e1912-34ae-4a86-8dcd-30da8da29732" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c38e148a-adaa-424b-9e64-a30bbed938ed">
+<span class="eqno">(2)<a class="headerlink" href="#equation-c38e148a-adaa-424b-9e64-a30bbed938ed" title="Permalink to this equation">#</a></span>\[\begin{align}
 ||u|| = \sqrt{u^2 + v^2}
 \end{align}\]</div>
 <p>To examine long-term changes in the wind field you should visualize the zonal wind component <span class="math notranslate nohighlight">\(u\)</span> and the meridional wind component <span class="math notranslate nohighlight">\(v\)</span> with monthly-mean data. With the help of <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, you can derive monthly means from higher-resolution data (such as those used in tutorial 2) using the <code class="docutils literal notranslate"><span class="pre">xr.resample('1M').mean('time')</span></code> function.</p>

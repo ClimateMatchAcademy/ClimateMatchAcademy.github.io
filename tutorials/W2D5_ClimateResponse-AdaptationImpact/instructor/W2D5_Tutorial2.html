@@ -222,6 +222,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
+     <strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -2242,14 +2245,14 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 <summary> <font color='violet'>What is MAE and MSE   </font></summary>
 In addition to r^2, Mean Absolute Error (MAE) and Mean Squared Error (MSE) are both metrics used to evaluate the performance of a regression model. They both measure the difference between the predicted values and the actual values of the target variable.
 <p>The MAE is calculated by taking the average of the absolute differences between the predicted and actual values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-58dfec3d-0b04-41dd-822a-1c90444e3a4a">
-<span class="eqno">(20)<a class="headerlink" href="#equation-58dfec3d-0b04-41dd-822a-1c90444e3a4a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-711503d3-229e-4286-a4fb-7566d34541f8">
+<span class="eqno">(20)<a class="headerlink" href="#equation-711503d3-229e-4286-a4fb-7566d34541f8" title="Permalink to this equation">#</a></span>\[\begin{align}
 MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y_i}|
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of samples, <span class="math notranslate nohighlight">\(y_i\)</span> is the actual value of the target variable for sample <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(\hat{y}_i\)</span> is the predicted value of the target variable for sample <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>The RMSE is calculated by taking the square root of the average of the squared differences between the predicted and actual values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ec1dc654-5ce8-4b6e-b42c-dbeb7553f808">
-<span class="eqno">(21)<a class="headerlink" href="#equation-ec1dc654-5ce8-4b6e-b42c-dbeb7553f808" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-637be205-c3f9-4186-9a1b-a7a121a15c56">
+<span class="eqno">(21)<a class="headerlink" href="#equation-637be205-c3f9-4186-9a1b-a7a121a15c56" title="Permalink to this equation">#</a></span>\[\begin{align}
  RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y_i})^2}
 \end{align}\]</div>
 <p>The main difference between MAE and RMSE is that RMSE gives more weight to larger errors, because the differences are squared. Therefore, if there are some large errors in the predictions, the RMSE will be higher than the MAE.</p>

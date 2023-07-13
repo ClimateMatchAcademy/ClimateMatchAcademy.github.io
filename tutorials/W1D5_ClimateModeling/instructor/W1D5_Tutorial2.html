@@ -222,6 +222,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
+     <strong>
+      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
+     </strong>
     </a>
    </li>
    <li class="toctree-l2">
@@ -1645,8 +1648,8 @@ title="Print to PDF"
 <p><img alt="Global Mean Energy Budget" src="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_7_2.png" />
 Figure 7.2 | Schematic representation of the global mean energy budget of the Earth (upper panel), and its equivalent without considerations of cloud effects (lower panel). Numbers indicate best estimates for the magnitudes of the globally averaged energy balance components in W m–2 together with their uncertainty ranges in parentheses (5–95% confidence range), representing climate conditions at the beginning of the 21st century. Note that the cloud-free energy budget shown in the lower panel is not the one that Earth would achieve in equilibrium when no clouds could form. It rather represents the global mean fluxes as determined solely by removing the clouds but otherwise retaining the entire atmospheric structure. This enables the quantification of the effects of clouds on the Earth energy budget and corresponds to the way clear-sky fluxes are calculated in climate models. Thus, the cloud-free energy budget is not closed and therefore the sensible and latent heat fluxes are not quantified in the lower panel. Figure adapted from Wild et al. (2015, 2019). (Credit: <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_7_2.png">IPCC AR6 Report</a>)</p>
 <p>The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-fbcaeda3-c999-442f-8a6a-3943f1247793">
-<span class="eqno">(8)<a class="headerlink" href="#equation-fbcaeda3-c999-442f-8a6a-3943f1247793" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f247a1de-0961-4a91-af7f-5306885f3c5a">
+<span class="eqno">(8)<a class="headerlink" href="#equation-f247a1de-0961-4a91-af7f-5306885f3c5a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \frac{F\_{ref}}{Q}
 \end{align}\]</div>
 <p>Albedo is a unitless number between 0 and 1. We can use this formula to find the albedo of Earth.</p>
@@ -1690,8 +1693,8 @@ Figure 7.2 | Schematic representation of the global mean energy budget of the Ea
 <div class="section" id="section-1-2-absorbed-shortwave-radiation-asr">
 <h2><strong>Section 1.2 : Absorbed Shortwave Radiation (ASR)</strong><a class="headerlink" href="#section-1-2-absorbed-shortwave-radiation-asr" title="Permalink to this headline">#</a></h2>
 <p>The <strong>absorbed shortwave radiation (ASR)</strong> is the amount of this isolation that is <em>not</em> reflected, and actually makes it to Earth’s surface. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a9ef2040-241c-4435-8926-1ede87c4bf5f">
-<span class="eqno">(9)<a class="headerlink" href="#equation-a9ef2040-241c-4435-8926-1ede87c4bf5f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-56f88408-4ae2-45ae-8c99-484b209cd75e">
+<span class="eqno">(9)<a class="headerlink" href="#equation-56f88408-4ae2-45ae-8c99-484b209cd75e" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = Q-F\_{ref} = (1-\alpha)Q
 \end{align}\]</div>
 <p>From observations, we can esimate the absorbed shortwave radiation.</p>
@@ -1732,19 +1735,19 @@ ASR = Q-F\_{ref} = (1-\alpha)Q
 <div class="section" id="section-2-1-equilibrium-temperature">
 <h2><strong>Section 2.1: Equilibrium Temperature</strong><a class="headerlink" href="#section-2-1-equilibrium-temperature" title="Permalink to this headline">#</a></h2>
 <p>Energy Balance is achieved when radiation absorbed by Earth’s surface (ASR) is equal to longwave radiation going out to space (OLR). That is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dc5ee324-86c3-4936-8bee-e799bc4e5145">
-<span class="eqno">(10)<a class="headerlink" href="#equation-dc5ee324-86c3-4936-8bee-e799bc4e5145" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e768decf-9d1b-4447-b303-54b2e9f2fcc2">
+<span class="eqno">(10)<a class="headerlink" href="#equation-e768decf-9d1b-4447-b303-54b2e9f2fcc2" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = OLR
 \end{align}\]</div>
 <p>By substituting into the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
 <p>Recall <span class="math notranslate nohighlight">\(OLR = \tau\sigma T^4\)</span> and <span class="math notranslate nohighlight">\(ASR = (1-\alpha)Q\)</span>. The <strong>equilibrium temperature</strong> is the temperature the system would have if energy balance was perfectly reached. Assuming energy balance, we will call the emission temperature denoted previously the equilibrium temperature (<span class="math notranslate nohighlight">\(T_{eq}\)</span>) instead. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-68780503-cef7-4879-950e-5d7e17a5c565">
-<span class="eqno">(11)<a class="headerlink" href="#equation-68780503-cef7-4879-950e-5d7e17a5c565" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-868b808e-b37e-456e-acf0-a3a992daf164">
+<span class="eqno">(11)<a class="headerlink" href="#equation-868b808e-b37e-456e-acf0-a3a992daf164" title="Permalink to this equation">#</a></span>\[\begin{align}
 (1-\alpha)Q = ASR = OLR = \tau\sigma T\_{eq}^4
 \end{align}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(T_{eq}\)</span> we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d893448a-10fc-4481-8010-54639d430c16">
-<span class="eqno">(12)<a class="headerlink" href="#equation-d893448a-10fc-4481-8010-54639d430c16" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d6d6565b-d6e1-4bbd-a27c-194002e9eb55">
+<span class="eqno">(12)<a class="headerlink" href="#equation-d6d6565b-d6e1-4bbd-a27c-194002e9eb55" title="Permalink to this equation">#</a></span>\[\begin{align}
 T\_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 \end{align}\]</div>
 <p>Let’s calculate what this should be for Earth using observations:</p>
