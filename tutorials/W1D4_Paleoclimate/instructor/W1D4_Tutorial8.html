@@ -47,6 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -220,65 +222,47 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
-     <strong>
-      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
-     </strong>
+     Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial2.html">
-     <strong>
-      Tutorial 2: Selection, Interpolation and Slicing
-     </strong>
+     Tutorial 2: Selection, Interpolation and Slicing
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial3.html">
-     <strong>
-      Tutorial 3: Opening and Plotting netCDF Data
-     </strong>
+     Tutorial 3: Opening and Plotting netCDF Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial4.html">
-     <strong>
-      Tutorial 4: Arithmetic and Aggregation Methods
-     </strong>
+     Tutorial 4: Arithmetic and Aggregation Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial5.html">
-     <strong>
-      Tutorial 5: Xarray Data Analysis and Climatology
-     </strong>
+     Tutorial 5: Xarray Data Analysis and Climatology
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial6.html">
-     <strong>
-      Tutorial 6: Compute and Plot Temperature Anomalies
-     </strong>
+     Tutorial 6: Compute and Plot Temperature Anomalies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial7.html">
-     <strong>
-      Tutorial 7: Other Computational Tools in Xarray
-     </strong>
+     Tutorial 7: Other Computational Tools in Xarray
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial8.html">
-     <strong>
-      Tutorial 8: Masking with One Condition
-     </strong>
+     Tutorial 8: Masking with One Condition
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial9.html">
-     <strong>
-      Tutorial 9: Masking with Multiple Conditions
-     </strong>
+     Tutorial 9: Masking with Multiple Conditions
     </a>
    </li>
    <li class="toctree-l2">
@@ -289,6 +273,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -310,63 +299,52 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial1.html">
-     <strong>
-      Tutorial 1: Finding a Phenomenon and Asking a Question About It
-     </strong>
+     Tutorial 1: Finding a Phenomenon and Asking a Question About It
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial2.html">
-     <strong>
-      Tutorial 2: Doing a Literature Review
-     </strong>
+     Tutorial 2: Doing a Literature Review
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial3.html">
-     <strong>
-      Tutorial 3: Identifying the Basic Ingredients
-     </strong>
+     Tutorial 3: Identifying the Basic Ingredients
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial4.html">
-     <strong>
-      Tutorial 4: Formulating a Hypothesis
-     </strong>
+     Tutorial 4: Formulating a Hypothesis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial5.html">
-     <strong>
-      Tutorial 5: Drafting the Analysis
-     </strong>
+     Tutorial 5: Drafting the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial6.html">
-     <strong>
-      Tutorial 6: Implementing the Analysis
-     </strong>
+     Tutorial 6: Implementing the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial7.html">
-     <strong>
-      Tutorial 7: Interpreting the Results
-     </strong>
+     Tutorial 7: Interpreting the Results
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial8.html">
-     <strong>
-      Tutorial 8: Communicating Your Conclusions
-     </strong>
+     Tutorial 8: Communicating Your Conclusions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Outro.html">
      Outro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -395,9 +373,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial1.html">
-     <strong>
-      Tutorial 1: Calculating ENSO with Xarray
-     </strong>
+     Tutorial 1: Calculating ENSO with Xarray
     </a>
    </li>
    <li class="toctree-l2">
@@ -409,30 +385,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial3.html">
-     <strong>
-      Tutorial 3: Atmospheric  Circulation
-     </strong>
+     Tutorial 3: Atmospheric  Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial4.html">
-     <strong>
-      Tutorial 4: Oceanic Wind-driven Circulation
-     </strong>
+     Tutorial 4: Oceanic Wind-driven Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial5.html">
-     <strong>
-      Tutorial 5: Thermohaline Circulation
-     </strong>
+     Tutorial 5: Thermohaline Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial6.html">
-     <strong>
-      Tutorial 6: Ocean Heat Content
-     </strong>
+     Tutorial 6: Ocean Heat Content
     </a>
    </li>
    <li class="toctree-l2">
@@ -443,6 +411,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -975,6 +948,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/keynote.html">
+   Project Day keynote (W2D2)
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../../projects/docs/project_guidance.html">
    Daily guide for projects
   </a>
@@ -992,42 +970,40 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
@@ -1573,6 +1549,58 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>LST</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1996</td>
+      <td>25.7</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1986</td>
+      <td>25.6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1976</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1966</td>
+      <td>24.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1956</td>
+      <td>24.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1589,6 +1617,16 @@ title="Print to PDF"
 <span class="n">proxy_t</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;C1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1000x400 with 1 Axes&gt;,
+ &lt;Axes: xlabel=&#39;Time [yrs]&#39;, ylabel=&#39;Surface Temperature [ºC]&#39;&gt;)
+</pre></div>
+</div>
+<img alt="../../../_images/W1D4_Tutorial8_10_2.png" src="../../../_images/W1D4_Tutorial8_10_2.png" />
 </div>
 </div>
 <div class="section" id="questions-1">
@@ -1629,6 +1667,317 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>bcc_csm1_1</th>
+      <th>CCSM4</th>
+      <th>FGOALS_gl</th>
+      <th>FGOALS_s2</th>
+      <th>IPSL_CM5A_LR</th>
+      <th>MPI_ESM_P</th>
+      <th>CSIRO</th>
+      <th>GISS-E2-R_r1i1p121</th>
+      <th>GISS-E2-R_r1i1p127</th>
+      <th>...</th>
+      <th>CESM_member_1</th>
+      <th>CESM_member_2</th>
+      <th>CESM_member_3</th>
+      <th>CESM_member_4</th>
+      <th>CESM_member_5</th>
+      <th>CESM_member_6</th>
+      <th>CESM_member_7</th>
+      <th>CESM_member_8</th>
+      <th>CESM_member_9</th>
+      <th>CESM_member_10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>850</td>
+      <td>-0.570693</td>
+      <td>-0.431830</td>
+      <td>NaN</td>
+      <td>-0.620995</td>
+      <td>-0.475963</td>
+      <td>-0.170230</td>
+      <td>NaN</td>
+      <td>0.116333</td>
+      <td>0.155407</td>
+      <td>...</td>
+      <td>0.036672</td>
+      <td>0.067692</td>
+      <td>0.085340</td>
+      <td>-0.000616</td>
+      <td>0.157021</td>
+      <td>0.048458</td>
+      <td>0.038173</td>
+      <td>-0.027151</td>
+      <td>0.143404</td>
+      <td>-0.053464</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>851</td>
+      <td>-0.698903</td>
+      <td>-0.411177</td>
+      <td>NaN</td>
+      <td>-0.753160</td>
+      <td>-0.742970</td>
+      <td>-0.303124</td>
+      <td>-0.398695</td>
+      <td>0.068174</td>
+      <td>0.210337</td>
+      <td>...</td>
+      <td>0.246816</td>
+      <td>0.181400</td>
+      <td>0.251417</td>
+      <td>0.170710</td>
+      <td>0.165139</td>
+      <td>0.324856</td>
+      <td>0.191677</td>
+      <td>0.120951</td>
+      <td>0.216921</td>
+      <td>0.068698</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>852</td>
+      <td>-0.575440</td>
+      <td>-0.404802</td>
+      <td>NaN</td>
+      <td>-0.743508</td>
+      <td>-0.758939</td>
+      <td>-0.422623</td>
+      <td>-0.406343</td>
+      <td>0.060088</td>
+      <td>0.240585</td>
+      <td>...</td>
+      <td>0.187429</td>
+      <td>0.065922</td>
+      <td>0.190229</td>
+      <td>0.264551</td>
+      <td>0.092629</td>
+      <td>0.386593</td>
+      <td>0.068904</td>
+      <td>0.292246</td>
+      <td>0.101564</td>
+      <td>0.200259</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>853</td>
+      <td>-0.724757</td>
+      <td>-0.552719</td>
+      <td>NaN</td>
+      <td>-0.869331</td>
+      <td>-0.746460</td>
+      <td>-0.335177</td>
+      <td>-0.353557</td>
+      <td>-0.074396</td>
+      <td>0.030596</td>
+      <td>...</td>
+      <td>0.202443</td>
+      <td>0.089054</td>
+      <td>-0.031298</td>
+      <td>0.205805</td>
+      <td>0.049447</td>
+      <td>0.023312</td>
+      <td>-0.041356</td>
+      <td>0.206064</td>
+      <td>0.212954</td>
+      <td>0.288272</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>854</td>
+      <td>-0.724328</td>
+      <td>-0.734938</td>
+      <td>NaN</td>
+      <td>-0.826238</td>
+      <td>-0.684093</td>
+      <td>-0.650792</td>
+      <td>-0.416140</td>
+      <td>-0.402800</td>
+      <td>-0.330589</td>
+      <td>...</td>
+      <td>0.062795</td>
+      <td>0.137882</td>
+      <td>-0.233049</td>
+      <td>-0.227240</td>
+      <td>-0.156577</td>
+      <td>-0.339176</td>
+      <td>-0.103825</td>
+      <td>0.058420</td>
+      <td>-0.006102</td>
+      <td>-0.006619</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1161</th>
+      <td>2011</td>
+      <td>1.013544</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1162</th>
+      <td>2012</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1163</th>
+      <td>2013</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1164</th>
+      <td>2014</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1165</th>
+      <td>2015</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>1166 rows × 22 columns</p>
+</div></div></div>
 </div>
 <p>Note that the data file includes several ensemble members for <a class="reference external" href="https://www.cesm.ucar.edu/">Community Earth System Model (CESM)</a> and <a class="reference external" href="https://www.giss.nasa.gov/">Goddard Institute for Space Studies (GISS)</a> simulations. Ensembles are essentially groups of climate model simulations used for climate projections, or in this case, reconstructions. You will learn about this in much more detail on W1D5: Climate Modeling.</p>
 <p>For now, we can replace these with their ensemble mean series.</p>
@@ -1679,6 +2028,197 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>bcc_csm1_1</th>
+      <th>CCSM4</th>
+      <th>FGOALS_gl</th>
+      <th>FGOALS_s2</th>
+      <th>IPSL_CM5A_LR</th>
+      <th>MPI_ESM_P</th>
+      <th>CSIRO</th>
+      <th>HadCM3</th>
+      <th>CESM</th>
+      <th>GISS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>850</td>
+      <td>-0.570693</td>
+      <td>-0.431830</td>
+      <td>NaN</td>
+      <td>-0.620995</td>
+      <td>-0.475963</td>
+      <td>-0.170230</td>
+      <td>NaN</td>
+      <td>-0.620517</td>
+      <td>0.049553</td>
+      <td>0.127429</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>851</td>
+      <td>-0.698903</td>
+      <td>-0.411177</td>
+      <td>NaN</td>
+      <td>-0.753160</td>
+      <td>-0.742970</td>
+      <td>-0.303124</td>
+      <td>-0.398695</td>
+      <td>-0.553043</td>
+      <td>0.193858</td>
+      <td>0.138796</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>852</td>
+      <td>-0.575440</td>
+      <td>-0.404802</td>
+      <td>NaN</td>
+      <td>-0.743508</td>
+      <td>-0.758939</td>
+      <td>-0.422623</td>
+      <td>-0.406343</td>
+      <td>-0.560791</td>
+      <td>0.185033</td>
+      <td>0.098170</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>853</td>
+      <td>-0.724757</td>
+      <td>-0.552719</td>
+      <td>NaN</td>
+      <td>-0.869331</td>
+      <td>-0.746460</td>
+      <td>-0.335177</td>
+      <td>-0.353557</td>
+      <td>-0.438949</td>
+      <td>0.120470</td>
+      <td>-0.054552</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>854</td>
+      <td>-0.724328</td>
+      <td>-0.734938</td>
+      <td>NaN</td>
+      <td>-0.826238</td>
+      <td>-0.684093</td>
+      <td>-0.650792</td>
+      <td>-0.416140</td>
+      <td>-0.812194</td>
+      <td>-0.081349</td>
+      <td>-0.407169</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1161</th>
+      <td>2011</td>
+      <td>1.013544</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1162</th>
+      <td>2012</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1163</th>
+      <td>2013</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1164</th>
+      <td>2014</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1165</th>
+      <td>2015</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>1166 rows × 11 columns</p>
+</div></div></div>
 </div>
 <p>In our new dataframe, you can now see that the ensemble members for CESM and GISS are now replaced with one ensemble mean for each model simulation.</p>
 <p>Now we can create a Pyleoclim <code class="docutils literal notranslate"><span class="pre">Series</span></code> object for each simulated GMST time series, which will allow us to easily plot the time series for each simulation and perform data analysis using various built-in tools.</p>
@@ -1699,6 +2239,30 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can now plot each simulation. For example, let’s plot the CCSM4 GMST anomaly:</p>
 <div class="cell docutils container">
@@ -1706,6 +2270,13 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ts_dict</span><span class="p">[</span><span class="s2">&quot;CCSM4&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1000x400 with 1 Axes&gt;,
+ &lt;Axes: xlabel=&#39;Time [yrs]&#39;, ylabel=&#39;GMST anomaly [ºC]&#39;&gt;)
+</pre></div>
+</div>
+<img alt="../../../_images/W1D4_Tutorial8_22_1.png" src="../../../_images/W1D4_Tutorial8_22_1.png" />
 </div>
 </div>
 <p>But what if we wanted to plot all of the PMIP3 time series at once? We can do that using the <code class="docutils literal notranslate"><span class="pre">MultipleSeries</span></code> object in Pyleoclim, which takes a list of <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects as input. To do so, we have to convert the dictionary of <code class="docutils literal notranslate"><span class="pre">Series</span></code> into a list and then create a <code class="docutils literal notranslate"><span class="pre">MultipleSeries</span></code> object.</p>
@@ -1729,6 +2300,13 @@ title="Print to PDF"
 <span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1000x400 with 1 Axes&gt;,
+ &lt;Axes: xlabel=&#39;Time [yrs]&#39;, ylabel=&#39;GMST anomaly [ºC]&#39;&gt;)
+</pre></div>
+</div>
+<img alt="../../../_images/W1D4_Tutorial8_26_1.png" src="../../../_images/W1D4_Tutorial8_26_1.png" />
 </div>
 </div>
 <p>Note that like the paleo proxy data we have looked at, these model simulations are also referred to as reconstructions as they are attempts to recreate past climates.</p>
@@ -1786,6 +2364,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-4.0, 2.0)
+</pre></div>
+</div>
+<img alt="../../../_images/W1D4_Tutorial8_31_1.png" src="../../../_images/W1D4_Tutorial8_31_1.png" />
+</div>
 </div>
 <div class="section" id="questions-3-climate-connection">
 <h2><strong>Questions 3: Climate Connection</strong><a class="headerlink" href="#questions-3-climate-connection" title="Permalink to this headline">#</a></h2>
@@ -1821,8 +2405,8 @@ title="Print to PDF"
 <p>Code for this tutorial is based on existing notebooks from LinkedEarth that explore <a class="reference external" href="https://github.com/LinkedEarth/paleoHackathon/blob/main/notebooks/PaleoHack-nb08_Model-DataConfrontationInTimeDomain.ipynb">paleoclimate model-data comparisons</a> using <a class="reference external" href="https://github.com/LinkedEarth/paleoHackathon/blob/main/notebooks/PaleoHack-nb07_Model-DataConfrontationInFrequencyDomain.ipynb">PMIP3 model simulations</a>.</p>
 <p>Data from the following sources are used in this tutorial:</p>
 <ul class="simple">
-<li><p>Braconnot, P., Harrison, S., Kageyama, M. et al. Evaluation of climate models using palaeoclimatic data. Nature Clim Change 2, 417–424 (2012). https://doi.org/10.1038/nclimate1456</p></li>
-<li><p>Tierney, J., Mayes, M., Meyer, N. et al. Late-twentieth-century warming in Lake Tanganyika unprecedented since AD 500. Nature Geosci 3, 422–425 (2010). https://doi.org/10.1038/ngeo865</p></li>
+<li><p>Braconnot, P., Harrison, S., Kageyama, M. et al. Evaluation of climate models using palaeoclimatic data. Nature Clim Change 2, 417–424 (2012). <a class="reference external" href="https://doi.org/10.1038/nclimate1456">https://doi.org/10.1038/nclimate1456</a></p></li>
+<li><p>Tierney, J., Mayes, M., Meyer, N. et al. Late-twentieth-century warming in Lake Tanganyika unprecedented since AD 500. Nature Geosci 3, 422–425 (2010). <a class="reference external" href="https://doi.org/10.1038/ngeo865">https://doi.org/10.1038/ngeo865</a></p></li>
 </ul>
 </div>
 

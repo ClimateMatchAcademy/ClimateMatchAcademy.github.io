@@ -47,6 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -220,65 +222,47 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
-     <strong>
-      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
-     </strong>
+     Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial2.html">
-     <strong>
-      Tutorial 2: Selection, Interpolation and Slicing
-     </strong>
+     Tutorial 2: Selection, Interpolation and Slicing
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial3.html">
-     <strong>
-      Tutorial 3: Opening and Plotting netCDF Data
-     </strong>
+     Tutorial 3: Opening and Plotting netCDF Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial4.html">
-     <strong>
-      Tutorial 4: Arithmetic and Aggregation Methods
-     </strong>
+     Tutorial 4: Arithmetic and Aggregation Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial5.html">
-     <strong>
-      Tutorial 5: Xarray Data Analysis and Climatology
-     </strong>
+     Tutorial 5: Xarray Data Analysis and Climatology
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial6.html">
-     <strong>
-      Tutorial 6: Compute and Plot Temperature Anomalies
-     </strong>
+     Tutorial 6: Compute and Plot Temperature Anomalies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial7.html">
-     <strong>
-      Tutorial 7: Other Computational Tools in Xarray
-     </strong>
+     Tutorial 7: Other Computational Tools in Xarray
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial8.html">
-     <strong>
-      Tutorial 8: Masking with One Condition
-     </strong>
+     Tutorial 8: Masking with One Condition
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial9.html">
-     <strong>
-      Tutorial 9: Masking with Multiple Conditions
-     </strong>
+     Tutorial 9: Masking with Multiple Conditions
     </a>
    </li>
    <li class="toctree-l2">
@@ -289,6 +273,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D1_ClimateSystemOverview/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../W1D1_ClimateSystemOverview/instructor/W1D1_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -310,63 +299,52 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Tutorial1.html">
-     <strong>
-      Tutorial 1: Finding a Phenomenon and Asking a Question About It
-     </strong>
+     Tutorial 1: Finding a Phenomenon and Asking a Question About It
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Tutorial2.html">
-     <strong>
-      Tutorial 2: Doing a Literature Review
-     </strong>
+     Tutorial 2: Doing a Literature Review
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Tutorial3.html">
-     <strong>
-      Tutorial 3: Identifying the Basic Ingredients
-     </strong>
+     Tutorial 3: Identifying the Basic Ingredients
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Tutorial4.html">
-     <strong>
-      Tutorial 4: Formulating a Hypothesis
-     </strong>
+     Tutorial 4: Formulating a Hypothesis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Tutorial5.html">
-     <strong>
-      Tutorial 5: Drafting the Analysis
-     </strong>
+     Tutorial 5: Drafting the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Tutorial6.html">
-     <strong>
-      Tutorial 6: Implementing the Analysis
-     </strong>
+     Tutorial 6: Implementing the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Tutorial7.html">
-     <strong>
-      Tutorial 7: Interpreting the Results
-     </strong>
+     Tutorial 7: Interpreting the Results
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Tutorial8.html">
-     <strong>
-      Tutorial 8: Communicating Your Conclusions
-     </strong>
+     Tutorial 8: Communicating Your Conclusions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_Outro.html">
      Outro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Projects_GoodResearchPractices/instructor/Projects_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -395,9 +373,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial1.html">
-     <strong>
-      Tutorial 1: Calculating ENSO with Xarray
-     </strong>
+     Tutorial 1: Calculating ENSO with Xarray
     </a>
    </li>
    <li class="toctree-l2">
@@ -409,30 +385,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial3.html">
-     <strong>
-      Tutorial 3: Atmospheric  Circulation
-     </strong>
+     Tutorial 3: Atmospheric  Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial4.html">
-     <strong>
-      Tutorial 4: Oceanic Wind-driven Circulation
-     </strong>
+     Tutorial 4: Oceanic Wind-driven Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial5.html">
-     <strong>
-      Tutorial 5: Thermohaline Circulation
-     </strong>
+     Tutorial 5: Thermohaline Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial6.html">
-     <strong>
-      Tutorial 6: Ocean Heat Content
-     </strong>
+     Tutorial 6: Ocean Heat Content
     </a>
    </li>
    <li class="toctree-l2">
@@ -443,6 +411,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -975,6 +948,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/keynote.html">
+   Project Day keynote (W2D2)
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../projects/docs/project_guidance.html">
    Daily guide for projects
   </a>
@@ -992,42 +970,40 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Ocean_acidification.html">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
@@ -1256,25 +1232,25 @@ title="Print to PDF"
                 
   <div class="section" id="suggested-further-reading">
 <h1>Suggested Further Reading<a class="headerlink" href="#suggested-further-reading" title="Permalink to this headline">#</a></h1>
-<p>The KNMI Climate Explorer is great resource to interactively work with both observational and climate model data, including extreme value analysis: https://climexp.knmi.nl/</p>
-<p>For recent studies on if/how anthropogenic climate change contributed to a particular extreme event in the recent news, follow World Weather Attribution (https://www.worldweatherattribution.org/)</p>
-<p>To access a large amount of climate data (in particular model data), including some computational resources for analysis, check out the Pangeo platform (which was one of the inspirations for Climatematch) at pangeo.io.</p>
+<p>The KNMI Climate Explorer is great resource to interactively work with both observational and climate model data, including extreme value analysis: <a class="reference external" href="https://climexp.knmi.nl/">https://climexp.knmi.nl/</a></p>
+<p>For recent studies on if/how anthropogenic climate change contributed to a particular extreme event in the recent news, follow World Weather Attribution (<a class="reference external" href="https://www.worldweatherattribution.org/">https://www.worldweatherattribution.org/</a>)</p>
+<p>To access a large amount of climate data (in particular model data), including some computational resources for analysis, check out the Pangeo platform (which was one of the inspirations for Climatematch) at <a class="reference external" href="http://pangeo.io">pangeo.io</a>.</p>
 <p>There is a wealth of recent literature on extreme events in climate, one of the most topical areas of climate change research of the past decade.</p>
 <p>Extreme events and attribution:</p>
 <ul class="simple">
-<li><p>Otto, Friederike E.L. “Attribution of Weather and Climate Events.” Annual Review of Environment and Resources 42, no. 1 (October 17, 2017): 627–46. https://doi.org/10.1146/annurev-environ-102016-060847.</p></li>
-<li><p>Stott, Peter A., Nikolaos Christidis, Friederike E. L. Otto, Ying Sun, Jean-Paul Vanderlinden, Geert Jan van Oldenborgh, Robert Vautard, et al. “Attribution of Extreme Weather and Climate-Related Events.” Wiley Interdisciplinary Reviews: Climate Change 7, no. 1 (January 1, 2016): 23–41. https://doi.org/10.1002/wcc.380.</p></li>
-<li><p>Otto, Friederike E.L. “Extreme Weather and Climate.” In Environmental Science. Oxford, UK: Oxford Bibliographies, 2017. https://doi.org/10.1093/obo/9780199363445-0067.</p></li>
-<li><p>Robin, Yoann, and Aurélien Ribes. “Nonstationary Extreme Value Analysis for Event Attribution Combining Climate Models and Observations.” Advances in Statistical Climatology, Meteorology and Oceanography 6, no. 2 (November 18, 2020): 205–21. https://doi.org/10.5194/ascmo-6-205-2020.</p></li>
+<li><p>Otto, Friederike E.L. “Attribution of Weather and Climate Events.” Annual Review of Environment and Resources 42, no. 1 (October 17, 2017): 627–46. <a class="reference external" href="https://doi.org/10.1146/annurev-environ-102016-060847">https://doi.org/10.1146/annurev-environ-102016-060847</a>.</p></li>
+<li><p>Stott, Peter A., Nikolaos Christidis, Friederike E. L. Otto, Ying Sun, Jean-Paul Vanderlinden, Geert Jan van Oldenborgh, Robert Vautard, et al. “Attribution of Extreme Weather and Climate-Related Events.” Wiley Interdisciplinary Reviews: Climate Change 7, no. 1 (January 1, 2016): 23–41. <a class="reference external" href="https://doi.org/10.1002/wcc.380">https://doi.org/10.1002/wcc.380</a>.</p></li>
+<li><p>Otto, Friederike E.L. “Extreme Weather and Climate.” In Environmental Science. Oxford, UK: Oxford Bibliographies, 2017. <a class="reference external" href="https://doi.org/10.1093/obo/9780199363445-0067">https://doi.org/10.1093/obo/9780199363445-0067</a>.</p></li>
+<li><p>Robin, Yoann, and Aurélien Ribes. “Nonstationary Extreme Value Analysis for Event Attribution Combining Climate Models and Observations.” Advances in Statistical Climatology, Meteorology and Oceanography 6, no. 2 (November 18, 2020): 205–21. <a class="reference external" href="https://doi.org/10.5194/ascmo-6-205-2020">https://doi.org/10.5194/ascmo-6-205-2020</a>.</p></li>
 <li><p>Seneviratne, S. I., X. Zhang, M. Adnan, W. Badi, C. Dereczynski, A. Di Luca, S. Ghosh, et al. “Weather and Climate Extreme Events in a Changing Climate.” In Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change, edited by V. Masson-Delmotte, P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, et al. Cambridge University Press, 2021.</p></li>
 </ul>
 <p>An example study on how thresholds can exacerbate an increasing frequency of extreme events:</p>
 <ul class="simple">
-<li><p>Mora, Camilo, Bénédicte Dousset, Iain R. Caldwell, Farrah E. Powell, Rollan C. Geronimo, Coral R. Bielecki, Chelsie W. W. Counsell, et al. “Global Risk of Deadly Heat.” Nature Climate Change 7, no. 7 (July 2017): 501–6. https://doi.org/10.1038/nclimate3322.</p></li>
+<li><p>Mora, Camilo, Bénédicte Dousset, Iain R. Caldwell, Farrah E. Powell, Rollan C. Geronimo, Coral R. Bielecki, Chelsie W. W. Counsell, et al. “Global Risk of Deadly Heat.” Nature Climate Change 7, no. 7 (July 2017): 501–6. <a class="reference external" href="https://doi.org/10.1038/nclimate3322">https://doi.org/10.1038/nclimate3322</a>.</p></li>
 </ul>
 <p>For a more in-depth mathematical treatment of the concepts discussed:</p>
 <ul class="simple">
-<li><p>Coles, Stuart. An Introduction to Statistical Modeling of Extreme Values. Springer Series in Statistics. London: Springer London, 2001. https://doi.org/10.1007/978-1-4471-3675-0.</p></li>
+<li><p>Coles, Stuart. An Introduction to Statistical Modeling of Extreme Values. Springer Series in Statistics. London: Springer London, 2001. <a class="reference external" href="https://doi.org/10.1007/978-1-4471-3675-0">https://doi.org/10.1007/978-1-4471-3675-0</a>.</p></li>
 </ul>
 </div>
 

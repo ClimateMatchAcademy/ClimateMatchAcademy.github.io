@@ -47,6 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -220,65 +222,47 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
-     <strong>
-      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
-     </strong>
+     Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial2.html">
-     <strong>
-      Tutorial 2: Selection, Interpolation and Slicing
-     </strong>
+     Tutorial 2: Selection, Interpolation and Slicing
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial3.html">
-     <strong>
-      Tutorial 3: Opening and Plotting netCDF Data
-     </strong>
+     Tutorial 3: Opening and Plotting netCDF Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial4.html">
-     <strong>
-      Tutorial 4: Arithmetic and Aggregation Methods
-     </strong>
+     Tutorial 4: Arithmetic and Aggregation Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial5.html">
-     <strong>
-      Tutorial 5: Xarray Data Analysis and Climatology
-     </strong>
+     Tutorial 5: Xarray Data Analysis and Climatology
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial6.html">
-     <strong>
-      Tutorial 6: Compute and Plot Temperature Anomalies
-     </strong>
+     Tutorial 6: Compute and Plot Temperature Anomalies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial7.html">
-     <strong>
-      Tutorial 7: Other Computational Tools in Xarray
-     </strong>
+     Tutorial 7: Other Computational Tools in Xarray
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial8.html">
-     <strong>
-      Tutorial 8: Masking with One Condition
-     </strong>
+     Tutorial 8: Masking with One Condition
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial9.html">
-     <strong>
-      Tutorial 9: Masking with Multiple Conditions
-     </strong>
+     Tutorial 9: Masking with Multiple Conditions
     </a>
    </li>
    <li class="toctree-l2">
@@ -289,6 +273,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -310,63 +299,52 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial1.html">
-     <strong>
-      Tutorial 1: Finding a Phenomenon and Asking a Question About It
-     </strong>
+     Tutorial 1: Finding a Phenomenon and Asking a Question About It
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial2.html">
-     <strong>
-      Tutorial 2: Doing a Literature Review
-     </strong>
+     Tutorial 2: Doing a Literature Review
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial3.html">
-     <strong>
-      Tutorial 3: Identifying the Basic Ingredients
-     </strong>
+     Tutorial 3: Identifying the Basic Ingredients
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial4.html">
-     <strong>
-      Tutorial 4: Formulating a Hypothesis
-     </strong>
+     Tutorial 4: Formulating a Hypothesis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial5.html">
-     <strong>
-      Tutorial 5: Drafting the Analysis
-     </strong>
+     Tutorial 5: Drafting the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial6.html">
-     <strong>
-      Tutorial 6: Implementing the Analysis
-     </strong>
+     Tutorial 6: Implementing the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial7.html">
-     <strong>
-      Tutorial 7: Interpreting the Results
-     </strong>
+     Tutorial 7: Interpreting the Results
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial8.html">
-     <strong>
-      Tutorial 8: Communicating Your Conclusions
-     </strong>
+     Tutorial 8: Communicating Your Conclusions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Outro.html">
      Outro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -395,9 +373,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial1.html">
-     <strong>
-      Tutorial 1: Calculating ENSO with Xarray
-     </strong>
+     Tutorial 1: Calculating ENSO with Xarray
     </a>
    </li>
    <li class="toctree-l2">
@@ -409,30 +385,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial3.html">
-     <strong>
-      Tutorial 3: Atmospheric  Circulation
-     </strong>
+     Tutorial 3: Atmospheric  Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial4.html">
-     <strong>
-      Tutorial 4: Oceanic Wind-driven Circulation
-     </strong>
+     Tutorial 4: Oceanic Wind-driven Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial5.html">
-     <strong>
-      Tutorial 5: Thermohaline Circulation
-     </strong>
+     Tutorial 5: Thermohaline Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial6.html">
-     <strong>
-      Tutorial 6: Ocean Heat Content
-     </strong>
+     Tutorial 6: Ocean Heat Content
     </a>
    </li>
    <li class="toctree-l2">
@@ -443,6 +411,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -975,6 +948,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/keynote.html">
+   Project Day keynote (W2D2)
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../../projects/docs/project_guidance.html">
    Daily guide for projects
   </a>
@@ -992,42 +970,40 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
@@ -1320,7 +1296,7 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#section-1-exploring-the-ipcc-s-socioeconomic-scenarios">
+  <a class="reference internal nav-link" href="#section-1-exploring-the-ipccs-socioeconomic-scenarios">
    <strong>
     Section 1: Exploring the IPCC’s Socioeconomic Scenarios
    </strong>
@@ -1545,7 +1521,7 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#section-1-exploring-the-ipcc-s-socioeconomic-scenarios">
+  <a class="reference internal nav-link" href="#section-1-exploring-the-ipccs-socioeconomic-scenarios">
    <strong>
     Section 1: Exploring the IPCC’s Socioeconomic Scenarios
    </strong>
@@ -1779,6 +1755,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>.container { width:100% !important; }</style></div></div>
 </div>
 </div>
 <div class="section" id="helper-functions">
@@ -1924,8 +1902,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="section" id="section-1-exploring-the-ipcc-s-socioeconomic-scenarios">
-<h1><strong>Section 1: Exploring the IPCC’s Socioeconomic Scenarios</strong><a class="headerlink" href="#section-1-exploring-the-ipcc-s-socioeconomic-scenarios" title="Permalink to this headline">#</a></h1>
+<div class="section" id="section-1-exploring-the-ipccs-socioeconomic-scenarios">
+<h1><strong>Section 1: Exploring the IPCC’s Socioeconomic Scenarios</strong><a class="headerlink" href="#section-1-exploring-the-ipccs-socioeconomic-scenarios" title="Permalink to this headline">#</a></h1>
 <p>In this, and subsequent, tutorials, you will explore Integrated Assessment Models (IAMs) which are the standard class of models used to make climate change projections. IAMs couple a climate model to an economic model, allowing us to evaluate the two-way coupling between economic productivity and climate change severity. IAMs can also account for changes that result from mitigation efforts, which lessen anthropogenic emissions. In other words, IAMs are models that link human economic activity with climate change.</p>
 <p>Let’s start by investigating some IAM model output, which will prepare you to explore <code class="docutils literal notranslate"><span class="pre">World3</span></code> (which gives similar socioeconomic output) later in this tutorial.</p>
 <p>All data from the main simulations of the IAMs used in the IPCC reports is freely available for viewing <a class="reference external" href="https://tntcat.iiasa.ac.at/SspDb/dsd">here</a>. The simulations are labeled by both the Shared Socioeconomic Pathway (SSP1, SSP2, SSP3, SSP4, and SSP5) and the forcing level (greenhouse gas forcing of 2.6, 7.0, 8.5 W m<sup>2</sup> etc. by 2100). The 5 SSPS are:</p>
@@ -1967,6 +1945,17 @@ You will learn more about how these 5 SSPs were determined in future tutorials.<
     <span class="p">)</span>  <span class="c1"># plot the data</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/openpyxl/styles/stylesheet.py:226: UserWarning: Workbook contains no default style, apply openpyxl&#39;s default
+  warn(&quot;Workbook contains no default style, apply openpyxl&#39;s default&quot;)
+/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/openpyxl/styles/stylesheet.py:226: UserWarning: Workbook contains no default style, apply openpyxl&#39;s default
+  warn(&quot;Workbook contains no default style, apply openpyxl&#39;s default&quot;)
+/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/openpyxl/styles/stylesheet.py:226: UserWarning: Workbook contains no default style, apply openpyxl&#39;s default
+  warn(&quot;Workbook contains no default style, apply openpyxl&#39;s default&quot;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D3_Tutorial1_13_1.png" src="../../../_images/W2D3_Tutorial1_13_1.png" />
 </div>
 </div>
 <p>The projections in the plots you just created show changes in climate forcing (left), population (middle) and CO<sub>2</sub> emissions (right) across the five different SSP scenarios computed at thier baseline forcing level (different for each scenario), which are each represented by a distinct color in each plot.</p>
@@ -2015,6 +2004,8 @@ You will learn more about how these 5 SSPs were determined in future tutorials.<
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="https://osf.io/download/hzrsn/" width="1000" class="unconfined"/></div></div>
 </div>
 <div class="section" id="question-2-1">
 <h3><strong>Question 2.1</strong><a class="headerlink" href="#question-2-1" title="Permalink to this headline">#</a></h3>
@@ -2039,6 +2030,8 @@ You will learn more about how these 5 SSPs were determined in future tutorials.<
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="https://osf.io/download/hzrsn/" width="3000" class="unconfined"/></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2068,6 +2061,8 @@ You will learn more about how these 5 SSPs were determined in future tutorials.<
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="https://osf.io/download/h3mj2/" width="250"/></div></div>
 </div>
 <p>This image can be used to follow a <em>pathway</em> describing the flow of model variable dependencies to gain insight into how the model works (note this use of the word ‘pathway’ is distinct from that in ‘socioeconomic pathways’). When a pathway comes back to itself, this is a termed a feedback pathway (or feedback loop) by which changes can be amplified or attenuated by the way the model couples distinct variables. Recall from W1D1 that there are two types of feedbacks: positives feedbacks (change in variable A causes a change in variable B, which in turn causes a change in variable A in the same direction as the initial change) and negative feedbaks (change in variable A causes a change in variable B, which in turn causes a change in variable A in the opposite direction as the initial change).</p>
 <p>Let’s look at some important feedback pathways in the model that appear in this image (also see pg. 95 of <a class="reference external" href="http://www.donellameadows.org/wp-content/userfiles/Limits-to-Growth-digital-scan-version.pdf">Limits of growth</a>):</p>
@@ -2161,6 +2156,13 @@ You will learn more about how these 5 SSPs were determined in future tutorials.<
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/openpyxl/styles/stylesheet.py:226: UserWarning: Workbook contains no default style, apply openpyxl&#39;s default
+  warn(&quot;Workbook contains no default style, apply openpyxl&#39;s default&quot;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D3_Tutorial1_37_1.png" src="../../../_images/W2D3_Tutorial1_37_1.png" />
+</div>
 </div>
 <p>Initially, industrial production (rising orange), food per capita (rising green) and population (rising red) experience growth. However, as non-renewable resources start rapidly decline (falling blue), industrial production begins to decline (falling orange). This decline subsequently causes a decrease in food production (falling green), which causes an increase in the death rate (rising pink) and a decline in population (falling red) during the latter half of the 21st century. This scenario is resource-constrained because the collapse in growth that occured in the middle of the 21st century was initially driven by a decline in available resources.</p>
 <p>For comparison, the red dashed line represents the population projection for the IPCC baseline scenario of SSP2, a ‘Middle of the road’ scenario in which current trends continue (effecively the business-as-usual SSP scenario). Note the difference with the population projection of <code class="docutils literal notranslate"><span class="pre">world3</span></code>’s BAU scenario. While a priori unclear, the origin of this discrepancy likely arises from the different values that were chosen for the many parameters as well as which components and interactions were assumed when designing a world model or IAM. One obvious difference is the assumption of continued economic growth (decoupled from resource use) in SSP2. The large prediction uncertainty inherent in this modelling activity limits its predictive power. However, characteristic mechanisms (e.g. feedback pathways) are shared across these very different models and imply characteristic phenomena (e.g. population saturation).</p>
@@ -2186,6 +2188,13 @@ You will learn more about how these 5 SSPs were determined in future tutorials.<
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/openpyxl/styles/stylesheet.py:226: UserWarning: Workbook contains no default style, apply openpyxl&#39;s default
+  warn(&quot;Workbook contains no default style, apply openpyxl&#39;s default&quot;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D3_Tutorial1_44_1.png" src="../../../_images/W2D3_Tutorial1_44_1.png" />
+</div>
 </div>
 <p>Notice that the decline in industrial production (orange) still occurs in this scenario, but it is delayed by a few decades due to the larger initial resource pool (blue). However, unlike the previous case that was resource-constrained, the extended period of exponential industrial growth (orange) in this scenario leads to a significant increase in pollution (purple). As a result, the population crash (red), which is now driven by both increased pollution (purple) and diminishing resources (blue), is faster and more substantial than the <em>BAU</em> scenario’s population crash.</p>
 <p>In this BAU3 scenario, the population growth and crash more closely resembles the population projection for the IPCC baseline scenario of SSP2 than the BAU scenario, but there is still a contrast between the two population projections.</p>
@@ -2202,6 +2211,13 @@ You will learn more about how these 5 SSPs were determined in future tutorials.<
 <span class="c1"># plt.savefig(&quot;world3_timeseries_case_3.png&quot;,transparent=True,bbox_inches=&quot;tight&quot;,dpi=300)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/openpyxl/styles/stylesheet.py:226: UserWarning: Workbook contains no default style, apply openpyxl&#39;s default
+  warn(&quot;Workbook contains no default style, apply openpyxl&#39;s default&quot;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D3_Tutorial1_48_1.png" src="../../../_images/W2D3_Tutorial1_48_1.png" />
 </div>
 </div>
 <p>Notice that by reducing production (orange), pollution levels are also reduced (purple), which in turn limits the decline in population to a plateau (red). This approach preserves a significant amount of non-renewable resource (blue). However, over time, the asymptotic death rate (pink) gradually increases, approaching that of the BAU3 scenario without the reduced production. As a result, the population plateau is not sustained, and the population continues to decline slowly beyond the year 2100.</p>
@@ -2220,6 +2236,11 @@ You will learn more about how these 5 SSPs were determined in future tutorials.<
 <span class="sd">1. Some examples are environmental degradation, economic instability (e.g., recessions and downturns), and conflicts or disasters (e.g., war and natural disasters)</span>
 <span class="sd">2. Important features that are missing: e.g., technological innovation; government policies &amp; regulations; education and health services, etc.). Some additional model limitations are listed in the next cell.</span>
 <span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n1. Some examples are environmental degradation, economic instability (e.g., recessions and downturns), and conflicts or disasters (e.g., war and natural disasters)\n2. Important features that are missing: e.g., technological innovation; government policies &amp; regulations; education and health services, etc.). Some additional model limitations are listed in the next cell.\n&#39;
 </pre></div>
 </div>
 </div>

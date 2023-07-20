@@ -47,6 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
@@ -222,65 +224,47 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
-     <strong>
-      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
-     </strong>
+     Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial2.html">
-     <strong>
-      Tutorial 2: Selection, Interpolation and Slicing
-     </strong>
+     Tutorial 2: Selection, Interpolation and Slicing
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial3.html">
-     <strong>
-      Tutorial 3: Opening and Plotting netCDF Data
-     </strong>
+     Tutorial 3: Opening and Plotting netCDF Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial4.html">
-     <strong>
-      Tutorial 4: Arithmetic and Aggregation Methods
-     </strong>
+     Tutorial 4: Arithmetic and Aggregation Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial5.html">
-     <strong>
-      Tutorial 5: Xarray Data Analysis and Climatology
-     </strong>
+     Tutorial 5: Xarray Data Analysis and Climatology
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial6.html">
-     <strong>
-      Tutorial 6: Compute and Plot Temperature Anomalies
-     </strong>
+     Tutorial 6: Compute and Plot Temperature Anomalies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial7.html">
-     <strong>
-      Tutorial 7: Other Computational Tools in Xarray
-     </strong>
+     Tutorial 7: Other Computational Tools in Xarray
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial8.html">
-     <strong>
-      Tutorial 8: Masking with One Condition
-     </strong>
+     Tutorial 8: Masking with One Condition
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial9.html">
-     <strong>
-      Tutorial 9: Masking with Multiple Conditions
-     </strong>
+     Tutorial 9: Masking with Multiple Conditions
     </a>
    </li>
    <li class="toctree-l2">
@@ -291,6 +275,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -312,63 +301,52 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial1.html">
-     <strong>
-      Tutorial 1: Finding a Phenomenon and Asking a Question About It
-     </strong>
+     Tutorial 1: Finding a Phenomenon and Asking a Question About It
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial2.html">
-     <strong>
-      Tutorial 2: Doing a Literature Review
-     </strong>
+     Tutorial 2: Doing a Literature Review
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial3.html">
-     <strong>
-      Tutorial 3: Identifying the Basic Ingredients
-     </strong>
+     Tutorial 3: Identifying the Basic Ingredients
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial4.html">
-     <strong>
-      Tutorial 4: Formulating a Hypothesis
-     </strong>
+     Tutorial 4: Formulating a Hypothesis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial5.html">
-     <strong>
-      Tutorial 5: Drafting the Analysis
-     </strong>
+     Tutorial 5: Drafting the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial6.html">
-     <strong>
-      Tutorial 6: Implementing the Analysis
-     </strong>
+     Tutorial 6: Implementing the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial7.html">
-     <strong>
-      Tutorial 7: Interpreting the Results
-     </strong>
+     Tutorial 7: Interpreting the Results
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial8.html">
-     <strong>
-      Tutorial 8: Communicating Your Conclusions
-     </strong>
+     Tutorial 8: Communicating Your Conclusions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Outro.html">
      Outro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -397,9 +375,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial1.html">
-     <strong>
-      Tutorial 1: Calculating ENSO with Xarray
-     </strong>
+     Tutorial 1: Calculating ENSO with Xarray
     </a>
    </li>
    <li class="toctree-l2">
@@ -411,30 +387,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial3.html">
-     <strong>
-      Tutorial 3: Atmospheric  Circulation
-     </strong>
+     Tutorial 3: Atmospheric  Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial4.html">
-     <strong>
-      Tutorial 4: Oceanic Wind-driven Circulation
-     </strong>
+     Tutorial 4: Oceanic Wind-driven Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial5.html">
-     <strong>
-      Tutorial 5: Thermohaline Circulation
-     </strong>
+     Tutorial 5: Thermohaline Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial6.html">
-     <strong>
-      Tutorial 6: Ocean Heat Content
-     </strong>
+     Tutorial 6: Ocean Heat Content
     </a>
    </li>
    <li class="toctree-l2">
@@ -445,6 +413,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -977,6 +950,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/keynote.html">
+   Project Day keynote (W2D2)
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../../projects/docs/project_guidance.html">
    Daily guide for projects
   </a>
@@ -994,42 +972,40 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
@@ -1913,6 +1889,317 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>year</th>
+      <th>weekofyear</th>
+      <th>week_start_date</th>
+      <th>ndvi_ne</th>
+      <th>ndvi_nw</th>
+      <th>ndvi_se</th>
+      <th>ndvi_sw</th>
+      <th>precipitation_amt_mm</th>
+      <th>reanalysis_air_temp_k</th>
+      <th>...</th>
+      <th>reanalysis_precip_amt_kg_per_m2</th>
+      <th>reanalysis_relative_humidity_percent</th>
+      <th>reanalysis_sat_precip_amt_mm</th>
+      <th>reanalysis_specific_humidity_g_per_kg</th>
+      <th>reanalysis_tdtr_k</th>
+      <th>station_avg_temp_c</th>
+      <th>station_diur_temp_rng_c</th>
+      <th>station_max_temp_c</th>
+      <th>station_min_temp_c</th>
+      <th>station_precip_mm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>18</td>
+      <td>1990-04-30</td>
+      <td>0.122600</td>
+      <td>0.103725</td>
+      <td>0.198483</td>
+      <td>0.177617</td>
+      <td>12.42</td>
+      <td>297.572857</td>
+      <td>...</td>
+      <td>32.00</td>
+      <td>73.365714</td>
+      <td>12.42</td>
+      <td>14.012857</td>
+      <td>2.628571</td>
+      <td>25.442857</td>
+      <td>6.900000</td>
+      <td>29.4</td>
+      <td>20.0</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>19</td>
+      <td>1990-05-07</td>
+      <td>0.169900</td>
+      <td>0.142175</td>
+      <td>0.162357</td>
+      <td>0.155486</td>
+      <td>22.82</td>
+      <td>298.211429</td>
+      <td>...</td>
+      <td>17.94</td>
+      <td>77.368571</td>
+      <td>22.82</td>
+      <td>15.372857</td>
+      <td>2.371429</td>
+      <td>26.714286</td>
+      <td>6.371429</td>
+      <td>31.7</td>
+      <td>22.2</td>
+      <td>8.6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>20</td>
+      <td>1990-05-14</td>
+      <td>0.032250</td>
+      <td>0.172967</td>
+      <td>0.157200</td>
+      <td>0.170843</td>
+      <td>34.54</td>
+      <td>298.781429</td>
+      <td>...</td>
+      <td>26.10</td>
+      <td>82.052857</td>
+      <td>34.54</td>
+      <td>16.848571</td>
+      <td>2.300000</td>
+      <td>26.714286</td>
+      <td>6.485714</td>
+      <td>32.2</td>
+      <td>22.8</td>
+      <td>41.4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>21</td>
+      <td>1990-05-21</td>
+      <td>0.128633</td>
+      <td>0.245067</td>
+      <td>0.227557</td>
+      <td>0.235886</td>
+      <td>15.36</td>
+      <td>298.987143</td>
+      <td>...</td>
+      <td>13.90</td>
+      <td>80.337143</td>
+      <td>15.36</td>
+      <td>16.672857</td>
+      <td>2.428571</td>
+      <td>27.471429</td>
+      <td>6.771429</td>
+      <td>33.3</td>
+      <td>23.3</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>22</td>
+      <td>1990-05-28</td>
+      <td>0.196200</td>
+      <td>0.262200</td>
+      <td>0.251200</td>
+      <td>0.247340</td>
+      <td>7.52</td>
+      <td>299.518571</td>
+      <td>...</td>
+      <td>12.20</td>
+      <td>80.460000</td>
+      <td>7.52</td>
+      <td>17.210000</td>
+      <td>3.014286</td>
+      <td>28.942857</td>
+      <td>9.371429</td>
+      <td>35.0</td>
+      <td>23.9</td>
+      <td>5.8</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1451</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>21</td>
+      <td>2010-05-28</td>
+      <td>0.342750</td>
+      <td>0.318900</td>
+      <td>0.256343</td>
+      <td>0.292514</td>
+      <td>55.30</td>
+      <td>299.334286</td>
+      <td>...</td>
+      <td>45.00</td>
+      <td>88.765714</td>
+      <td>55.30</td>
+      <td>18.485714</td>
+      <td>9.800000</td>
+      <td>28.633333</td>
+      <td>11.933333</td>
+      <td>35.4</td>
+      <td>22.4</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>1452</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>22</td>
+      <td>2010-06-04</td>
+      <td>0.160157</td>
+      <td>0.160371</td>
+      <td>0.136043</td>
+      <td>0.225657</td>
+      <td>86.47</td>
+      <td>298.330000</td>
+      <td>...</td>
+      <td>207.10</td>
+      <td>91.600000</td>
+      <td>86.47</td>
+      <td>18.070000</td>
+      <td>7.471429</td>
+      <td>27.433333</td>
+      <td>10.500000</td>
+      <td>34.7</td>
+      <td>21.7</td>
+      <td>36.6</td>
+    </tr>
+    <tr>
+      <th>1453</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>23</td>
+      <td>2010-06-11</td>
+      <td>0.247057</td>
+      <td>0.146057</td>
+      <td>0.250357</td>
+      <td>0.233714</td>
+      <td>58.94</td>
+      <td>296.598571</td>
+      <td>...</td>
+      <td>50.60</td>
+      <td>94.280000</td>
+      <td>58.94</td>
+      <td>17.008571</td>
+      <td>7.500000</td>
+      <td>24.400000</td>
+      <td>6.900000</td>
+      <td>32.2</td>
+      <td>19.2</td>
+      <td>7.4</td>
+    </tr>
+    <tr>
+      <th>1454</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>24</td>
+      <td>2010-06-18</td>
+      <td>0.333914</td>
+      <td>0.245771</td>
+      <td>0.278886</td>
+      <td>0.325486</td>
+      <td>59.67</td>
+      <td>296.345714</td>
+      <td>...</td>
+      <td>62.33</td>
+      <td>94.660000</td>
+      <td>59.67</td>
+      <td>16.815714</td>
+      <td>7.871429</td>
+      <td>25.433333</td>
+      <td>8.733333</td>
+      <td>31.2</td>
+      <td>21.0</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>1455</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>25</td>
+      <td>2010-06-25</td>
+      <td>0.298186</td>
+      <td>0.232971</td>
+      <td>0.274214</td>
+      <td>0.315757</td>
+      <td>63.22</td>
+      <td>298.097143</td>
+      <td>...</td>
+      <td>36.90</td>
+      <td>89.082857</td>
+      <td>63.22</td>
+      <td>17.355714</td>
+      <td>11.014286</td>
+      <td>27.475000</td>
+      <td>9.900000</td>
+      <td>33.7</td>
+      <td>22.2</td>
+      <td>20.4</td>
+    </tr>
+  </tbody>
+</table>
+<p>1456 rows × 24 columns</p>
+</div></div></div>
 </div>
 <p>We can see some of the variables discussed in the video. For full documentation of these features, see the associated description <a class="reference external" href="https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/page/82/">here</a>.</p>
 <p>In climate science, visualizing data is an important step in understanding patterns and trends in environmental data. It can also help identify outliers and inconsistencies that need to be addressed before modeling. Therefore, in the next subsection, we will visualize the climate and environmental data to gain insights and identify potential issues.</p>
@@ -1946,6 +2233,35 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>city                                       0
+year                                       0
+weekofyear                                 0
+week_start_date                            0
+ndvi_ne                                  194
+ndvi_nw                                   52
+ndvi_se                                   22
+ndvi_sw                                   22
+precipitation_amt_mm                      13
+reanalysis_air_temp_k                     10
+reanalysis_avg_temp_k                     10
+reanalysis_dew_point_temp_k               10
+reanalysis_max_air_temp_k                 10
+reanalysis_min_air_temp_k                 10
+reanalysis_precip_amt_kg_per_m2           10
+reanalysis_relative_humidity_percent      10
+reanalysis_sat_precip_amt_mm              13
+reanalysis_specific_humidity_g_per_kg     10
+reanalysis_tdtr_k                         10
+station_avg_temp_c                        43
+station_diur_temp_rng_c                   43
+station_max_temp_c                        20
+station_min_temp_c                        14
+station_precip_mm                         22
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <p>The above histograms show the number of data points that have the value given on the x-axis. As we can see, there is some missing data as well, particularly some of the Normalized Difference Vegetation Index (NDVI) measures. So far we have only been looking at the environmental data. Let’s load the corresponding weekly dengue fever cases as well.</p>
 </div>
@@ -1966,6 +2282,113 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>year</th>
+      <th>weekofyear</th>
+      <th>total_cases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>18</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>19</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>20</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>21</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>22</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1451</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>21</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1452</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>22</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>1453</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>23</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1454</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>24</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1455</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>25</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+<p>1456 rows × 4 columns</p>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="section-1-5-visualize-the-weekly-dengue-fever-cases">
@@ -1989,6 +2412,9 @@ title="Print to PDF"
 <span class="n">_</span> <span class="o">=</span> <span class="n">df_labels</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;total_cases&quot;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/W2D5_Tutorial2_27_0.png" src="../../../_images/W2D5_Tutorial2_27_0.png" />
 </div>
 </div>
 <ol class="simple">
@@ -2027,6 +2453,15 @@ title="Print to PDF"
 <span class="n">new</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&lt;Axes: title={&#39;center&#39;: &#39;iq&#39;}&gt;, &lt;Axes: title={&#39;center&#39;: &#39;sj&#39;}&gt;],
+      dtype=object)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D5_Tutorial2_30_1.png" src="../../../_images/W2D5_Tutorial2_30_1.png" />
+<img alt="../../../_images/W2D5_Tutorial2_30_2.png" src="../../../_images/W2D5_Tutorial2_30_2.png" />
+<img alt="../../../_images/W2D5_Tutorial2_30_3.png" src="../../../_images/W2D5_Tutorial2_30_3.png" />
 </div>
 </div>
 </div>
@@ -2070,6 +2505,32 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Null and missing value before cleaning weekofyear                                 0
+ndvi_ne                                  194
+ndvi_nw                                   52
+ndvi_se                                   22
+ndvi_sw                                   22
+precipitation_amt_mm                      13
+reanalysis_air_temp_k                     10
+reanalysis_avg_temp_k                     10
+reanalysis_dew_point_temp_k               10
+reanalysis_max_air_temp_k                 10
+reanalysis_min_air_temp_k                 10
+reanalysis_precip_amt_kg_per_m2           10
+reanalysis_relative_humidity_percent      10
+reanalysis_sat_precip_amt_mm              13
+reanalysis_specific_humidity_g_per_kg     10
+reanalysis_tdtr_k                         10
+station_avg_temp_c                        43
+station_diur_temp_rng_c                   43
+station_max_temp_c                        20
+station_min_temp_c                        14
+station_precip_mm                         22
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2082,6 +2543,32 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>weekofyear                               0
+ndvi_ne                                  0
+ndvi_nw                                  0
+ndvi_se                                  0
+ndvi_sw                                  0
+precipitation_amt_mm                     0
+reanalysis_air_temp_k                    0
+reanalysis_avg_temp_k                    0
+reanalysis_dew_point_temp_k              0
+reanalysis_max_air_temp_k                0
+reanalysis_min_air_temp_k                0
+reanalysis_precip_amt_kg_per_m2          0
+reanalysis_relative_humidity_percent     0
+reanalysis_sat_precip_amt_mm             0
+reanalysis_specific_humidity_g_per_kg    0
+reanalysis_tdtr_k                        0
+station_avg_temp_c                       0
+station_diur_temp_rng_c                  0
+station_max_temp_c                       0
+station_min_temp_c                       0
+station_precip_mm                        0
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2089,6 +2576,317 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>weekofyear</th>
+      <th>ndvi_ne</th>
+      <th>ndvi_nw</th>
+      <th>ndvi_se</th>
+      <th>ndvi_sw</th>
+      <th>precipitation_amt_mm</th>
+      <th>reanalysis_air_temp_k</th>
+      <th>reanalysis_avg_temp_k</th>
+      <th>reanalysis_dew_point_temp_k</th>
+      <th>reanalysis_max_air_temp_k</th>
+      <th>...</th>
+      <th>reanalysis_precip_amt_kg_per_m2</th>
+      <th>reanalysis_relative_humidity_percent</th>
+      <th>reanalysis_sat_precip_amt_mm</th>
+      <th>reanalysis_specific_humidity_g_per_kg</th>
+      <th>reanalysis_tdtr_k</th>
+      <th>station_avg_temp_c</th>
+      <th>station_diur_temp_rng_c</th>
+      <th>station_max_temp_c</th>
+      <th>station_min_temp_c</th>
+      <th>station_precip_mm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>18</td>
+      <td>0.122600</td>
+      <td>0.103725</td>
+      <td>0.198483</td>
+      <td>0.177617</td>
+      <td>12.42</td>
+      <td>297.572857</td>
+      <td>297.742857</td>
+      <td>292.414286</td>
+      <td>299.8</td>
+      <td>...</td>
+      <td>32.00</td>
+      <td>73.365714</td>
+      <td>12.42</td>
+      <td>14.012857</td>
+      <td>2.628571</td>
+      <td>25.442857</td>
+      <td>6.900000</td>
+      <td>29.4</td>
+      <td>20.0</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>19</td>
+      <td>0.169900</td>
+      <td>0.142175</td>
+      <td>0.162357</td>
+      <td>0.155486</td>
+      <td>22.82</td>
+      <td>298.211429</td>
+      <td>298.442857</td>
+      <td>293.951429</td>
+      <td>300.9</td>
+      <td>...</td>
+      <td>17.94</td>
+      <td>77.368571</td>
+      <td>22.82</td>
+      <td>15.372857</td>
+      <td>2.371429</td>
+      <td>26.714286</td>
+      <td>6.371429</td>
+      <td>31.7</td>
+      <td>22.2</td>
+      <td>8.6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20</td>
+      <td>0.032250</td>
+      <td>0.172967</td>
+      <td>0.157200</td>
+      <td>0.170843</td>
+      <td>34.54</td>
+      <td>298.781429</td>
+      <td>298.878571</td>
+      <td>295.434286</td>
+      <td>300.5</td>
+      <td>...</td>
+      <td>26.10</td>
+      <td>82.052857</td>
+      <td>34.54</td>
+      <td>16.848571</td>
+      <td>2.300000</td>
+      <td>26.714286</td>
+      <td>6.485714</td>
+      <td>32.2</td>
+      <td>22.8</td>
+      <td>41.4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>21</td>
+      <td>0.128633</td>
+      <td>0.245067</td>
+      <td>0.227557</td>
+      <td>0.235886</td>
+      <td>15.36</td>
+      <td>298.987143</td>
+      <td>299.228571</td>
+      <td>295.310000</td>
+      <td>301.4</td>
+      <td>...</td>
+      <td>13.90</td>
+      <td>80.337143</td>
+      <td>15.36</td>
+      <td>16.672857</td>
+      <td>2.428571</td>
+      <td>27.471429</td>
+      <td>6.771429</td>
+      <td>33.3</td>
+      <td>23.3</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22</td>
+      <td>0.196200</td>
+      <td>0.262200</td>
+      <td>0.251200</td>
+      <td>0.247340</td>
+      <td>7.52</td>
+      <td>299.518571</td>
+      <td>299.664286</td>
+      <td>295.821429</td>
+      <td>301.9</td>
+      <td>...</td>
+      <td>12.20</td>
+      <td>80.460000</td>
+      <td>7.52</td>
+      <td>17.210000</td>
+      <td>3.014286</td>
+      <td>28.942857</td>
+      <td>9.371429</td>
+      <td>35.0</td>
+      <td>23.9</td>
+      <td>5.8</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1451</th>
+      <td>21</td>
+      <td>0.342750</td>
+      <td>0.318900</td>
+      <td>0.256343</td>
+      <td>0.292514</td>
+      <td>55.30</td>
+      <td>299.334286</td>
+      <td>300.771429</td>
+      <td>296.825714</td>
+      <td>309.7</td>
+      <td>...</td>
+      <td>45.00</td>
+      <td>88.765714</td>
+      <td>55.30</td>
+      <td>18.485714</td>
+      <td>9.800000</td>
+      <td>28.633333</td>
+      <td>11.933333</td>
+      <td>35.4</td>
+      <td>22.4</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>1452</th>
+      <td>22</td>
+      <td>0.160157</td>
+      <td>0.160371</td>
+      <td>0.136043</td>
+      <td>0.225657</td>
+      <td>86.47</td>
+      <td>298.330000</td>
+      <td>299.392857</td>
+      <td>296.452857</td>
+      <td>308.5</td>
+      <td>...</td>
+      <td>207.10</td>
+      <td>91.600000</td>
+      <td>86.47</td>
+      <td>18.070000</td>
+      <td>7.471429</td>
+      <td>27.433333</td>
+      <td>10.500000</td>
+      <td>34.7</td>
+      <td>21.7</td>
+      <td>36.6</td>
+    </tr>
+    <tr>
+      <th>1453</th>
+      <td>23</td>
+      <td>0.247057</td>
+      <td>0.146057</td>
+      <td>0.250357</td>
+      <td>0.233714</td>
+      <td>58.94</td>
+      <td>296.598571</td>
+      <td>297.592857</td>
+      <td>295.501429</td>
+      <td>305.5</td>
+      <td>...</td>
+      <td>50.60</td>
+      <td>94.280000</td>
+      <td>58.94</td>
+      <td>17.008571</td>
+      <td>7.500000</td>
+      <td>24.400000</td>
+      <td>6.900000</td>
+      <td>32.2</td>
+      <td>19.2</td>
+      <td>7.4</td>
+    </tr>
+    <tr>
+      <th>1454</th>
+      <td>24</td>
+      <td>0.333914</td>
+      <td>0.245771</td>
+      <td>0.278886</td>
+      <td>0.325486</td>
+      <td>59.67</td>
+      <td>296.345714</td>
+      <td>297.521429</td>
+      <td>295.324286</td>
+      <td>306.1</td>
+      <td>...</td>
+      <td>62.33</td>
+      <td>94.660000</td>
+      <td>59.67</td>
+      <td>16.815714</td>
+      <td>7.871429</td>
+      <td>25.433333</td>
+      <td>8.733333</td>
+      <td>31.2</td>
+      <td>21.0</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>1455</th>
+      <td>25</td>
+      <td>0.298186</td>
+      <td>0.232971</td>
+      <td>0.274214</td>
+      <td>0.315757</td>
+      <td>63.22</td>
+      <td>298.097143</td>
+      <td>299.835714</td>
+      <td>295.807143</td>
+      <td>307.8</td>
+      <td>...</td>
+      <td>36.90</td>
+      <td>89.082857</td>
+      <td>63.22</td>
+      <td>17.355714</td>
+      <td>11.014286</td>
+      <td>27.475000</td>
+      <td>9.900000</td>
+      <td>33.7</td>
+      <td>22.2</td>
+      <td>20.4</td>
+    </tr>
+  </tbody>
+</table>
+<p>1199 rows × 21 columns</p>
+</div></div></div>
 </div>
 <p>Notice that the number of rows in the dataset has decreased from 1456 to 1199. We need to ensure that the dataset with dengue cases has the same rows dropped as we just did above.</p>
 <div class="cell docutils container">
@@ -2099,6 +2897,113 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>year</th>
+      <th>weekofyear</th>
+      <th>total_cases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>18</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>19</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>20</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>21</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>sj</td>
+      <td>1990</td>
+      <td>22</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1451</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>21</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1452</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>22</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>1453</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>23</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1454</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>24</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1455</th>
+      <td>iq</td>
+      <td>2010</td>
+      <td>25</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+<p>1199 rows × 4 columns</p>
+</div></div></div>
 </div>
 <p>To build a model with the climate data, we need to divide it into a training and test set to ensure that the model works well on held-out data. This is important because, as we have seen, evaluating the model on the exact data it was trained on can be misleading.</p>
 <div class="cell docutils container">
@@ -2131,6 +3036,13 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 <span class="c1"># check that this is true</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length of training data: &quot;</span><span class="p">,</span> <span class="n">df_cleaned_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length of test data: &quot;</span><span class="p">,</span> <span class="n">df_cleaned_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>80% of the data is split into the training set and remaining 20% into the test set.
+length of training data:  980
+length of test data:  219
 </pre></div>
 </div>
 </div>
@@ -2206,6 +3118,18 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>r^2 on training data is: 
+0.2034827989471234
+r^2 on test data is: 
+0.2390867041490582
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Predicted values vs. the actual values for the test data&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D5_Tutorial2_47_2.png" src="../../../_images/W2D5_Tutorial2_47_2.png" />
+</div>
 </div>
 <details>
 <summary> <font color='orangered'>Click here description of plot  </font></summary>
@@ -2240,19 +3164,25 @@ Engage in a discussion with your group and see if anyone has noticed a trend tha
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAE: 15.311067947855515
+RMSE: 26.02975103868108
+</pre></div>
+</div>
+</div>
 </div>
 <details>
 <summary> <font color='violet'>What is MAE and MSE   </font></summary>
 In addition to r^2, Mean Absolute Error (MAE) and Mean Squared Error (MSE) are both metrics used to evaluate the performance of a regression model. They both measure the difference between the predicted values and the actual values of the target variable.
 <p>The MAE is calculated by taking the average of the absolute differences between the predicted and actual values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-711503d3-229e-4286-a4fb-7566d34541f8">
-<span class="eqno">(20)<a class="headerlink" href="#equation-711503d3-229e-4286-a4fb-7566d34541f8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cce9dc13-7d4f-4ee9-9d4e-579a7e971440">
+<span class="eqno">(20)<a class="headerlink" href="#equation-cce9dc13-7d4f-4ee9-9d4e-579a7e971440" title="Permalink to this equation">#</a></span>\[\begin{align}
 MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y_i}|
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of samples, <span class="math notranslate nohighlight">\(y_i\)</span> is the actual value of the target variable for sample <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(\hat{y}_i\)</span> is the predicted value of the target variable for sample <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>The RMSE is calculated by taking the square root of the average of the squared differences between the predicted and actual values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-637be205-c3f9-4186-9a1b-a7a121a15c56">
-<span class="eqno">(21)<a class="headerlink" href="#equation-637be205-c3f9-4186-9a1b-a7a121a15c56" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d3e4c704-8fbb-4d6e-8a67-4dc34a465ac7">
+<span class="eqno">(21)<a class="headerlink" href="#equation-d3e4c704-8fbb-4d6e-8a67-4dc34a465ac7" title="Permalink to this equation">#</a></span>\[\begin{align}
  RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y_i})^2}
 \end{align}\]</div>
 <p>The main difference between MAE and RMSE is that RMSE gives more weight to larger errors, because the differences are squared. Therefore, if there are some large errors in the predictions, the RMSE will be higher than the MAE.</p>
@@ -2270,6 +3200,317 @@ MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y_i}|
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>weekofyear</th>
+      <th>ndvi_ne</th>
+      <th>ndvi_nw</th>
+      <th>ndvi_se</th>
+      <th>ndvi_sw</th>
+      <th>precipitation_amt_mm</th>
+      <th>reanalysis_air_temp_k</th>
+      <th>reanalysis_avg_temp_k</th>
+      <th>reanalysis_dew_point_temp_k</th>
+      <th>reanalysis_max_air_temp_k</th>
+      <th>...</th>
+      <th>reanalysis_precip_amt_kg_per_m2</th>
+      <th>reanalysis_relative_humidity_percent</th>
+      <th>reanalysis_sat_precip_amt_mm</th>
+      <th>reanalysis_specific_humidity_g_per_kg</th>
+      <th>reanalysis_tdtr_k</th>
+      <th>station_avg_temp_c</th>
+      <th>station_diur_temp_rng_c</th>
+      <th>station_max_temp_c</th>
+      <th>station_min_temp_c</th>
+      <th>station_precip_mm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12</th>
+      <td>30</td>
+      <td>0.150567</td>
+      <td>0.171700</td>
+      <td>0.226900</td>
+      <td>0.214557</td>
+      <td>16.48</td>
+      <td>299.558571</td>
+      <td>299.635714</td>
+      <td>295.960000</td>
+      <td>301.8</td>
+      <td>...</td>
+      <td>42.53</td>
+      <td>80.742857</td>
+      <td>16.48</td>
+      <td>17.341429</td>
+      <td>2.071429</td>
+      <td>28.114286</td>
+      <td>6.357143</td>
+      <td>31.7</td>
+      <td>22.8</td>
+      <td>32.6</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>38</td>
+      <td>0.196350</td>
+      <td>0.182433</td>
+      <td>0.254829</td>
+      <td>0.305686</td>
+      <td>143.73</td>
+      <td>299.857143</td>
+      <td>299.900000</td>
+      <td>296.431429</td>
+      <td>301.7</td>
+      <td>...</td>
+      <td>36.60</td>
+      <td>81.637143</td>
+      <td>143.73</td>
+      <td>17.892857</td>
+      <td>1.742857</td>
+      <td>28.242857</td>
+      <td>8.114286</td>
+      <td>32.8</td>
+      <td>23.9</td>
+      <td>3.3</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>45</td>
+      <td>0.152600</td>
+      <td>0.181775</td>
+      <td>0.178329</td>
+      <td>0.186629</td>
+      <td>20.46</td>
+      <td>299.972857</td>
+      <td>300.035714</td>
+      <td>296.564286</td>
+      <td>302.2</td>
+      <td>...</td>
+      <td>14.40</td>
+      <td>81.715714</td>
+      <td>20.46</td>
+      <td>18.074286</td>
+      <td>2.385714</td>
+      <td>28.471429</td>
+      <td>8.428571</td>
+      <td>33.3</td>
+      <td>23.9</td>
+      <td>6.6</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>6</td>
+      <td>0.380100</td>
+      <td>0.228567</td>
+      <td>0.255043</td>
+      <td>0.225800</td>
+      <td>0.00</td>
+      <td>297.740000</td>
+      <td>297.928571</td>
+      <td>293.150000</td>
+      <td>299.7</td>
+      <td>...</td>
+      <td>19.69</td>
+      <td>75.794286</td>
+      <td>0.00</td>
+      <td>14.541429</td>
+      <td>2.428571</td>
+      <td>25.057143</td>
+      <td>6.885714</td>
+      <td>30.0</td>
+      <td>20.6</td>
+      <td>7.3</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>9</td>
+      <td>0.170200</td>
+      <td>0.208600</td>
+      <td>0.137520</td>
+      <td>0.191433</td>
+      <td>31.79</td>
+      <td>297.505714</td>
+      <td>297.828571</td>
+      <td>293.407143</td>
+      <td>299.8</td>
+      <td>...</td>
+      <td>23.80</td>
+      <td>77.977143</td>
+      <td>31.79</td>
+      <td>14.794286</td>
+      <td>2.114286</td>
+      <td>25.257143</td>
+      <td>7.200000</td>
+      <td>30.6</td>
+      <td>20.0</td>
+      <td>30.7</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1442</th>
+      <td>12</td>
+      <td>0.266286</td>
+      <td>0.301233</td>
+      <td>0.296000</td>
+      <td>0.295743</td>
+      <td>51.29</td>
+      <td>299.004286</td>
+      <td>300.300000</td>
+      <td>297.555714</td>
+      <td>307.9</td>
+      <td>...</td>
+      <td>214.90</td>
+      <td>93.082857</td>
+      <td>51.29</td>
+      <td>19.368571</td>
+      <td>8.028571</td>
+      <td>27.466667</td>
+      <td>9.333333</td>
+      <td>34.5</td>
+      <td>21.0</td>
+      <td>20.0</td>
+    </tr>
+    <tr>
+      <th>1445</th>
+      <td>15</td>
+      <td>0.157686</td>
+      <td>0.156614</td>
+      <td>0.184014</td>
+      <td>0.135886</td>
+      <td>17.33</td>
+      <td>298.305714</td>
+      <td>299.557143</td>
+      <td>297.002857</td>
+      <td>307.3</td>
+      <td>...</td>
+      <td>150.80</td>
+      <td>93.655714</td>
+      <td>17.33</td>
+      <td>18.677143</td>
+      <td>7.228571</td>
+      <td>27.150000</td>
+      <td>9.600000</td>
+      <td>33.0</td>
+      <td>21.2</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>1446</th>
+      <td>16</td>
+      <td>0.231486</td>
+      <td>0.294686</td>
+      <td>0.331657</td>
+      <td>0.244400</td>
+      <td>86.70</td>
+      <td>298.438571</td>
+      <td>299.507143</td>
+      <td>297.678571</td>
+      <td>304.7</td>
+      <td>...</td>
+      <td>81.40</td>
+      <td>95.995714</td>
+      <td>86.70</td>
+      <td>19.448571</td>
+      <td>7.757143</td>
+      <td>27.850000</td>
+      <td>9.600000</td>
+      <td>33.5</td>
+      <td>22.5</td>
+      <td>51.1</td>
+    </tr>
+    <tr>
+      <th>1447</th>
+      <td>17</td>
+      <td>0.239743</td>
+      <td>0.259271</td>
+      <td>0.307786</td>
+      <td>0.307943</td>
+      <td>26.00</td>
+      <td>299.048571</td>
+      <td>300.028571</td>
+      <td>296.468571</td>
+      <td>308.4</td>
+      <td>...</td>
+      <td>23.60</td>
+      <td>87.657143</td>
+      <td>26.00</td>
+      <td>18.068571</td>
+      <td>8.257143</td>
+      <td>28.850000</td>
+      <td>12.125000</td>
+      <td>36.2</td>
+      <td>21.4</td>
+      <td>35.4</td>
+    </tr>
+    <tr>
+      <th>1455</th>
+      <td>25</td>
+      <td>0.298186</td>
+      <td>0.232971</td>
+      <td>0.274214</td>
+      <td>0.315757</td>
+      <td>63.22</td>
+      <td>298.097143</td>
+      <td>299.835714</td>
+      <td>295.807143</td>
+      <td>307.8</td>
+      <td>...</td>
+      <td>36.90</td>
+      <td>89.082857</td>
+      <td>63.22</td>
+      <td>17.355714</td>
+      <td>11.014286</td>
+      <td>27.475000</td>
+      <td>9.900000</td>
+      <td>33.7</td>
+      <td>22.2</td>
+      <td>20.4</td>
+    </tr>
+  </tbody>
+</table>
+<p>219 rows × 21 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2314,6 +3555,16 @@ MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y_i}|
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R-squared on training data is:  0.21168850488102486
+R-squared on test data is:  0.24105188413973255
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Predicted vs Actual number of dengue cases (with city as a regressor)&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D5_Tutorial2_58_2.png" src="../../../_images/W2D5_Tutorial2_58_2.png" />
+</div>
 </div>
 <details>
 <summary> <font color='orangered'>Click here description of plot  </font></summary>
@@ -2325,6 +3576,12 @@ The accuracy of the model can also be evaluated numerically by computing metrics
 <span class="n">y_pred_city</span> <span class="o">=</span> <span class="n">reg_model_city</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_cleaned_city_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MAE:&quot;</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">cases_city_test</span><span class="p">,</span> <span class="n">y_pred_city</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RMSE:&quot;</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">cases_city_test</span><span class="p">,</span> <span class="n">y_pred_city</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAE: 15.512498624872908
+RMSE: 25.996116315321995
 </pre></div>
 </div>
 </div>
@@ -2363,6 +3620,26 @@ The accuracy of the model can also be evaluated numerically by computing metrics
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>r^2 on training data is: 
+0.3246821324717427
+r^2 on test data is: 
+0.35899282857577675
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/wesley/miniconda3/envs/climatematch/lib/python3.10/site-packages/sklearn/linear_model/_glm/glm.py:284: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result(&quot;lbfgs&quot;, opt_res)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Predicted Cases&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D5_Tutorial2_63_3.png" src="../../../_images/W2D5_Tutorial2_63_3.png" />
+</div>
 </div>
 <details>
 <summary> <font color='orangered'>Click here description of plot  </font></summary>
@@ -2373,6 +3650,12 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">poisson_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_cleaned_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MAE:&quot;</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RMSE:&quot;</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAE: 15.17043396867858
+RMSE: 26.18151362013638
 </pre></div>
 </div>
 </div>
@@ -2473,6 +3756,18 @@ Use <code class="docutils literal notranslate"><span class="pre">RandomForestReg
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R^2 on training data is: 
+0.8996826775919754
+R^2 on test data is: 
+0.36818013923763937
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Random Forest Regression&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D5_Tutorial2_74_2.png" src="../../../_images/W2D5_Tutorial2_74_2.png" />
+</div>
 </div>
 <details>
 <summary> <font color='orangered'>Click here description of plot  </font></summary>
@@ -2483,6 +3778,12 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_cleaned_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MAE:&quot;</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RMSE:&quot;</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">cases_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAE: 13.151461187214613
+RMSE: 23.71914689072405
 </pre></div>
 </div>
 </div>
@@ -2574,6 +3875,13 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_437968/4130765582.py:25: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha=&quot;right&quot;, fontsize=12)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D5_Tutorial2_81_1.png" src="../../../_images/W2D5_Tutorial2_81_1.png" />
+</div>
 </div>
 <details>
 <summary> <font color='orangered'>Click here for description of plot </font></summary>
@@ -2646,6 +3954,13 @@ The plot generated is a scatter plot with the actual total cases on the x-axis a
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_437968/2678944243.py:13: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha=&quot;right&quot;, fontsize=12)
+</pre></div>
+</div>
+<img alt="../../../_images/W2D5_Tutorial2_86_1.png" src="../../../_images/W2D5_Tutorial2_86_1.png" />
 </div>
 </div>
 <details>

@@ -47,6 +47,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
@@ -222,65 +224,47 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial1.html">
-     <strong>
-      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
-     </strong>
+     Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial2.html">
-     <strong>
-      Tutorial 2: Selection, Interpolation and Slicing
-     </strong>
+     Tutorial 2: Selection, Interpolation and Slicing
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial3.html">
-     <strong>
-      Tutorial 3: Opening and Plotting netCDF Data
-     </strong>
+     Tutorial 3: Opening and Plotting netCDF Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial4.html">
-     <strong>
-      Tutorial 4: Arithmetic and Aggregation Methods
-     </strong>
+     Tutorial 4: Arithmetic and Aggregation Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial5.html">
-     <strong>
-      Tutorial 5: Xarray Data Analysis and Climatology
-     </strong>
+     Tutorial 5: Xarray Data Analysis and Climatology
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial6.html">
-     <strong>
-      Tutorial 6: Compute and Plot Temperature Anomalies
-     </strong>
+     Tutorial 6: Compute and Plot Temperature Anomalies
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial7.html">
-     <strong>
-      Tutorial 7: Other Computational Tools in Xarray
-     </strong>
+     Tutorial 7: Other Computational Tools in Xarray
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial8.html">
-     <strong>
-      Tutorial 8: Masking with One Condition
-     </strong>
+     Tutorial 8: Masking with One Condition
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_Tutorial9.html">
-     <strong>
-      Tutorial 9: Masking with Multiple Conditions
-     </strong>
+     Tutorial 9: Masking with Multiple Conditions
     </a>
    </li>
    <li class="toctree-l2">
@@ -291,6 +275,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/instructor/W1D1_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -312,63 +301,52 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial1.html">
-     <strong>
-      Tutorial 1: Finding a Phenomenon and Asking a Question About It
-     </strong>
+     Tutorial 1: Finding a Phenomenon and Asking a Question About It
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial2.html">
-     <strong>
-      Tutorial 2: Doing a Literature Review
-     </strong>
+     Tutorial 2: Doing a Literature Review
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial3.html">
-     <strong>
-      Tutorial 3: Identifying the Basic Ingredients
-     </strong>
+     Tutorial 3: Identifying the Basic Ingredients
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial4.html">
-     <strong>
-      Tutorial 4: Formulating a Hypothesis
-     </strong>
+     Tutorial 4: Formulating a Hypothesis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial5.html">
-     <strong>
-      Tutorial 5: Drafting the Analysis
-     </strong>
+     Tutorial 5: Drafting the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial6.html">
-     <strong>
-      Tutorial 6: Implementing the Analysis
-     </strong>
+     Tutorial 6: Implementing the Analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial7.html">
-     <strong>
-      Tutorial 7: Interpreting the Results
-     </strong>
+     Tutorial 7: Interpreting the Results
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Tutorial8.html">
-     <strong>
-      Tutorial 8: Communicating Your Conclusions
-     </strong>
+     Tutorial 8: Communicating Your Conclusions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_Outro.html">
      Outro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Projects_GoodResearchPractices/instructor/Projects_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -397,9 +375,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial1.html">
-     <strong>
-      Tutorial 1: Calculating ENSO with Xarray
-     </strong>
+     Tutorial 1: Calculating ENSO with Xarray
     </a>
    </li>
    <li class="toctree-l2">
@@ -411,30 +387,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial3.html">
-     <strong>
-      Tutorial 3: Atmospheric  Circulation
-     </strong>
+     Tutorial 3: Atmospheric  Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial4.html">
-     <strong>
-      Tutorial 4: Oceanic Wind-driven Circulation
-     </strong>
+     Tutorial 4: Oceanic Wind-driven Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial5.html">
-     <strong>
-      Tutorial 5: Thermohaline Circulation
-     </strong>
+     Tutorial 5: Thermohaline Circulation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_Tutorial6.html">
-     <strong>
-      Tutorial 6: Ocean Heat Content
-     </strong>
+     Tutorial 6: Ocean Heat Content
     </a>
    </li>
    <li class="toctree-l2">
@@ -445,6 +413,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">
      Suggested Further Reading
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/instructor/W1D2_DaySummary.html">
+     Day Summary
     </a>
    </li>
   </ul>
@@ -977,6 +950,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../../projects/keynote.html">
+   Project Day keynote (W2D2)
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../../projects/docs/project_guidance.html">
    Daily guide for projects
   </a>
@@ -994,42 +972,40 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
      <strong>
-      Sea level rise
+      Sea Level Rise
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
      <strong>
-      Ocean acidification
+      Ocean Acidification
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
      <strong>
-      The impact of ENSO on precipitation and temperature
+      The Impact of ENSO on Precipitation and Temperature
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
-     <strong>
-      Regional precipitation variability and extreme events
-     </strong>
+     Regional Precipitation Variability and Extreme Events
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
      <strong>
-      Heatwaves: Assessing the dynamic interactions of the atmosphere and land
+      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
      <strong>
-      Monitoring and mapping wildfires using satellite data
+      Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
     </a>
    </li>
@@ -1648,8 +1624,8 @@ title="Print to PDF"
 <p><img alt="Global Mean Energy Budget" src="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_7_2.png" />
 Figure 7.2 | Schematic representation of the global mean energy budget of the Earth (upper panel), and its equivalent without considerations of cloud effects (lower panel). Numbers indicate best estimates for the magnitudes of the globally averaged energy balance components in W m–2 together with their uncertainty ranges in parentheses (5–95% confidence range), representing climate conditions at the beginning of the 21st century. Note that the cloud-free energy budget shown in the lower panel is not the one that Earth would achieve in equilibrium when no clouds could form. It rather represents the global mean fluxes as determined solely by removing the clouds but otherwise retaining the entire atmospheric structure. This enables the quantification of the effects of clouds on the Earth energy budget and corresponds to the way clear-sky fluxes are calculated in climate models. Thus, the cloud-free energy budget is not closed and therefore the sensible and latent heat fluxes are not quantified in the lower panel. Figure adapted from Wild et al. (2015, 2019). (Credit: <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/downloads/figures/IPCC_AR6_WGI_Figure_7_2.png">IPCC AR6 Report</a>)</p>
 <p>The <em>fraction</em> of reflected radiation is captured by the <strong>albedo (</strong><span class="math notranslate nohighlight">\(\mathbf{\alpha}\)</span><strong>)</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f247a1de-0961-4a91-af7f-5306885f3c5a">
-<span class="eqno">(8)<a class="headerlink" href="#equation-f247a1de-0961-4a91-af7f-5306885f3c5a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-74068b8d-41be-418a-8a7b-bbddb5a95863">
+<span class="eqno">(8)<a class="headerlink" href="#equation-74068b8d-41be-418a-8a7b-bbddb5a95863" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha = \frac{F\_{ref}}{Q}
 \end{align}\]</div>
 <p>Albedo is a unitless number between 0 and 1. We can use this formula to find the albedo of Earth.</p>
@@ -1666,6 +1642,11 @@ Figure 7.2 | Schematic representation of the global mean energy budget of the Ea
 
 <span class="c1"># display answer</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Albedo: &quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Albedo:  0.29411764705882354
 </pre></div>
 </div>
 </div>
@@ -1687,14 +1668,19 @@ Figure 7.2 | Schematic representation of the global mean energy budget of the Ea
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n1. If the insolation does not vary, a low albedo implies that Earth is less reflective (e.g less cloud, snow or ice cover) and vice versa for high albedo.\n2. Both. The reflected radiation is a function of land surface changes (e.g. glaciations and vegetation changes) and clouds (water vapor changes).  The radiation from the sun has also varied over time, which you will go into more detail in tutorial 4.\n&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="section-1-2-absorbed-shortwave-radiation-asr">
 <h2><strong>Section 1.2 : Absorbed Shortwave Radiation (ASR)</strong><a class="headerlink" href="#section-1-2-absorbed-shortwave-radiation-asr" title="Permalink to this headline">#</a></h2>
 <p>The <strong>absorbed shortwave radiation (ASR)</strong> is the amount of this isolation that is <em>not</em> reflected, and actually makes it to Earth’s surface. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-56f88408-4ae2-45ae-8c99-484b209cd75e">
-<span class="eqno">(9)<a class="headerlink" href="#equation-56f88408-4ae2-45ae-8c99-484b209cd75e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-874db927-e5ea-4c6b-a308-57e154e0f016">
+<span class="eqno">(9)<a class="headerlink" href="#equation-874db927-e5ea-4c6b-a308-57e154e0f016" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = Q-F\_{ref} = (1-\alpha)Q
 \end{align}\]</div>
 <p>From observations, we can esimate the absorbed shortwave radiation.</p>
@@ -1705,6 +1691,11 @@ ASR = Q-F\_{ref} = (1-\alpha)Q
 
 <span class="c1"># display answer</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Absorbed Shortwave Radiation: &quot;</span><span class="p">,</span> <span class="n">ASR</span><span class="p">,</span> <span class="s2">&quot; W m^-2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Absorbed Shortwave Radiation:  239.99999999999997  W m^-2
 </pre></div>
 </div>
 </div>
@@ -1726,6 +1717,11 @@ ASR = Q-F\_{ref} = (1-\alpha)Q
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n1. It is slightly more. This means that Earth is absorbing more energy than it is losing. This is just to get you thinking about energy balance that will be discussed in the remainder of the tutorial.\n2. It does not take these into account. For example, ozone is a notable greenhouse gas that absorbs in the UV range.\n&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1735,19 +1731,19 @@ ASR = Q-F\_{ref} = (1-\alpha)Q
 <div class="section" id="section-2-1-equilibrium-temperature">
 <h2><strong>Section 2.1: Equilibrium Temperature</strong><a class="headerlink" href="#section-2-1-equilibrium-temperature" title="Permalink to this headline">#</a></h2>
 <p>Energy Balance is achieved when radiation absorbed by Earth’s surface (ASR) is equal to longwave radiation going out to space (OLR). That is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e768decf-9d1b-4447-b303-54b2e9f2fcc2">
-<span class="eqno">(10)<a class="headerlink" href="#equation-e768decf-9d1b-4447-b303-54b2e9f2fcc2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-02889328-04f0-4bb0-b6ac-63b12436c5f7">
+<span class="eqno">(10)<a class="headerlink" href="#equation-02889328-04f0-4bb0-b6ac-63b12436c5f7" title="Permalink to this equation">#</a></span>\[\begin{align}
 ASR = OLR
 \end{align}\]</div>
 <p>By substituting into the equations from previous sections, we can find the surface temperature of Earth needed to maintain this balance. This is called the <strong>equilibrium temperature (</strong> <span class="math notranslate nohighlight">\(\mathbf{T_{eq}}\)</span> <strong>)</strong>.</p>
 <p>Recall <span class="math notranslate nohighlight">\(OLR = \tau\sigma T^4\)</span> and <span class="math notranslate nohighlight">\(ASR = (1-\alpha)Q\)</span>. The <strong>equilibrium temperature</strong> is the temperature the system would have if energy balance was perfectly reached. Assuming energy balance, we will call the emission temperature denoted previously the equilibrium temperature (<span class="math notranslate nohighlight">\(T_{eq}\)</span>) instead. Thus,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-868b808e-b37e-456e-acf0-a3a992daf164">
-<span class="eqno">(11)<a class="headerlink" href="#equation-868b808e-b37e-456e-acf0-a3a992daf164" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e904a0e3-5daf-40f2-91f6-636885e44892">
+<span class="eqno">(11)<a class="headerlink" href="#equation-e904a0e3-5daf-40f2-91f6-636885e44892" title="Permalink to this equation">#</a></span>\[\begin{align}
 (1-\alpha)Q = ASR = OLR = \tau\sigma T\_{eq}^4
 \end{align}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(T_{eq}\)</span> we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d6d6565b-d6e1-4bbd-a27c-194002e9eb55">
-<span class="eqno">(12)<a class="headerlink" href="#equation-d6d6565b-d6e1-4bbd-a27c-194002e9eb55" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f3b0fd5d-4712-43cb-8106-5d614cea6fc2">
+<span class="eqno">(12)<a class="headerlink" href="#equation-f3b0fd5d-4712-43cb-8106-5d614cea6fc2" title="Permalink to this equation">#</a></span>\[\begin{align}
 T\_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 \end{align}\]</div>
 <p>Let’s calculate what this should be for Earth using observations:</p>
@@ -1764,6 +1760,11 @@ T\_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 
 <span class="c1"># display answer</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Equilibrium Temperature: &quot;</span><span class="p">,</span> <span class="n">T_eq</span><span class="p">,</span> <span class="s2">&quot;K or&quot;</span><span class="p">,</span> <span class="n">T_eq</span> <span class="o">-</span> <span class="mi">273</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Equilibrium Temperature:  288.300287595812 K or 15.300287595811994 C
 </pre></div>
 </div>
 </div>
@@ -1789,6 +1790,11 @@ T\_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>New Equilibrium Temperature:  293.5542225759401 K or 20.554222575940116 C
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="questions-3-1-climate-connection">
 <h3><strong>Questions 3.1: Climate Connection</strong><a class="headerlink" href="#questions-3-1-climate-connection" title="Permalink to this headline">#</a></h3>
@@ -1804,6 +1810,11 @@ T\_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 <span class="sd">1. A decrease. A lower transmissivity means the atmosphere is less transparent, and therefore less radiation escapes to space.</span>
 <span class="sd">2. It is much higher because the greenhouse effect is stronger and trapping more heat.</span>
 <span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n1. A decrease. A lower transmissivity means the atmosphere is less transparent, and therefore less radiation escapes to space.\n2. It is much higher because the greenhouse effect is stronger and trapping more heat.\n&#39;
 </pre></div>
 </div>
 </div>
@@ -1881,6 +1892,16 @@ T\_{eq} = \sqrt[4]{\frac{(1-\alpha)Q}{\tau\sigma}}
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Equilibrium Temperature&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_427509/905551656.py:18: RuntimeWarning: divide by zero encountered in double_scalars
+  return (((1 - alpha) * Q) / (tau * sigma)) ** (1 / 4)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Equilibrium Temperature&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/W1D5_Tutorial2_36_2.png" src="../../../_images/W1D5_Tutorial2_36_2.png" />
 </div>
 </div>
 </div>
